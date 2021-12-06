@@ -35,7 +35,7 @@ export default class GroupsContainer extends Component {
               src={item.image_url}
               text={item.event_name}
               label={item.date}
-              path='/services'
+              //path='/services'
             />
       </Col>
     ));
