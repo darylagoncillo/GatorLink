@@ -14,6 +14,9 @@ import React, { Component } from "react";
 import data from "../../../event-data.json";
 import "./components.css";
 
+import './Cards.css';
+import CardItem from './EventCard';
+
 export default class GroupsContainer extends Component {
   constructor(props) {
     super(props);
@@ -28,13 +31,12 @@ export default class GroupsContainer extends Component {
   renderEvents() {
     return this.state.events.map((item) => (
       <Col md="4">
-        <Card className="event-card">
-          <Card.Img variant="top" src={item.image_url} />
-          <Card.Body>
-            <Card.Title>{item.event_name}</Card.Title>
-            <Card.Text>{item.date}</Card.Text>
-          </Card.Body>
-        </Card>
+        <CardItem
+              src={item.image_url}
+              text={item.event_name}
+              label={item.date}
+              path='/services'
+            />
       </Col>
     ));
   }
