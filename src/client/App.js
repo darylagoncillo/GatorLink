@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 
 import "./app.css";
-import Home from "./Components/Home";
+import Home from "./Templates/Home";
 
 export default class Routing extends Component {
   constructor(props) {
