@@ -3,6 +3,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 
 import "./app.css";
 import Home from "./Templates/Home";
+import Events from "./Templates/Events";
 
 export default class Routing extends Component {
   constructor(props) {
@@ -18,7 +19,7 @@ export default class Routing extends Component {
           render={(props) => <Home {...props} component={Home} />}
         />
 
-        {/* <Route component={Home} path="/home" /> */}
+        <Route component={Events} path="/Events" />
       </BrowserRouter>
     );
   }

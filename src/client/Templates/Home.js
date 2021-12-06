@@ -17,21 +17,6 @@ export default class Home extends Component {
     return (
       <div className="body">
         <Navigation />
-        <br />
-        <Container>
-          <Row>
-            <Col md="3">
-              <div className="sidebar">
-                <p>sidebar</p>
-              </div>
-            </Col>
-            <Col>
-              <div className="content">
-                <p>content</p>
-              </div>
-            </Col>
-          </Row>
-        </Container>
       </div>
     );
   }

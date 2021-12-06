@@ -1,5 +1,6 @@
+import { Button, Container, Row, Col } from "react-bootstrap";
 import React, { Component } from "react";
-import { Navbar, Container, Nav } from "react-bootstrap";
+
 import Navigation from "../Components/Navigation";
 
 export default class Events extends Component {
@@ -10,8 +11,23 @@ export default class Events extends Component {
 
   render() {
     return (
-      <div>
+      <div className="body">
         <Navigation />
+        <br />
+        <Container>
+          <Row>
+            <Col md="3">
+              <div className="sidebar">
+                <p>sidebar</p>
+              </div>
+            </Col>
+            <Col>
+              <div className="content">
+                <p>content</p>
+              </div>
+            </Col>
+          </Row>
+        </Container>
       </div>
     );
   }
