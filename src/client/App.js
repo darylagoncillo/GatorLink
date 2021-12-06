@@ -4,6 +4,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import "./app.css";
 import Home from "./Templates/Home";
 import Events from "./Templates/Events";
+import Groups from "./Templates/Groups";
 
 export default class Routing extends Component {
   constructor(props) {
@@ -20,6 +21,7 @@ export default class Routing extends Component {
         />
 
         <Route component={Events} path="/Events" />
+        <Route component={Groups} path="/Groups" />
       </BrowserRouter>
     );
   }

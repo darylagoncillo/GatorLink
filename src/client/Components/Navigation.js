@@ -34,7 +34,7 @@ class Navigation extends Component {
               >
                 <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="/Events">Events</Nav.Link>
-                <Nav.Link href="Groups">Groups</Nav.Link>
+                <Nav.Link href="/Groups">Groups</Nav.Link>
               </Nav>
               <Nav className="ml-auto">
                 <Form className="d-flex ">
