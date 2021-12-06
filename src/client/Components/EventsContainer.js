@@ -11,7 +11,7 @@ import {
   NavDropdown,
 } from "react-bootstrap";
 import React, { Component } from "react";
-import data from "../../../data.json";
+import data from "../../../event-data.json";
 import "./components.css";
 
 export default class EventsContainer extends Component {
