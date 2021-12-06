@@ -8,14 +8,17 @@ import {
   Button,
   NavDropdown,
 } from "react-bootstrap";
+import { withRouter } from "react-router";
+import "./components.css";
 
-export default class Navigation extends Component {
+class Navigation extends Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
 
   render() {
+    const { location } = this.props;
     return (
       <div>
         <Navbar bg="light" expand="lg">
@@ -27,11 +30,11 @@ export default class Navigation extends Component {
                 className="me-auto my-2 my-lg-0"
                 style={{ maxHeight: "100px" }}
                 navbarScroll
+                activeKey={location.pathname}
               >
                 <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="/Events">Events</Nav.Link>
-                <Nav.Link href="/Groups">Groups</Nav.Link>
-                <Nav.Link href="/Friends">Friends</Nav.Link>
+                <Nav.Link href="Groups">Groups</Nav.Link>
               </Nav>
               <Nav className="ml-auto">
                 <Form className="d-flex ">
@@ -66,3 +69,4 @@ export default class Navigation extends Component {
     );
   }
 }
+export default withRouter(Navigation);

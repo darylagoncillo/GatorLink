@@ -16,11 +16,12 @@ export default class Events extends Component {
         <br />
         <Container>
           <Row>
-            <Col md="3">
+            <Col md="3" sm="12">
               <div className="sidebar">
                 <p>sidebar</p>
               </div>
             </Col>
+
             <Col>
               <div className="content">
                 <p>content</p>
