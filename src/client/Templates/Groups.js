@@ -2,7 +2,7 @@ import { Button, Container, Row, Col } from "react-bootstrap";
 import React, { Component } from "react";
 
 import Navigation from "../Components/Navigation";
-import EventsContainer from "../Components/EventsContainer";
+import GroupsContainer from "../Components/GroupsContainer";
 
 export default class Groups extends Component {
   constructor(props) {
@@ -25,7 +25,7 @@ export default class Groups extends Component {
 
             <Col>
               <div className="content">
-                <EventsContainer />
+                <GroupsContainer />
               </div>
             </Col>
           </Row>
