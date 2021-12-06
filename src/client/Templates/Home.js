@@ -1,4 +1,4 @@
-import { Button } from "react-bootstrap";
+import { Button, Container, Row, Col } from "react-bootstrap";
 import React, { Component } from "react";
 
 import Navigation from "../Components/Navigation";
@@ -11,40 +11,27 @@ export default class Home extends Component {
       time: "6:48 pm",
       show: true,
     };
-    this.showMessage = this.showMessage.bind(this);
-    this.getMessage = this.getMessage.bind(this);
-  }
-
-  showMessage() {
-    if (this.state.show === true) {
-      this.setState({
-        show: false,
-      });
-    } else {
-      this.setState({
-        show: true,
-      });
-    }
-  }
-
-  getMessage() {
-    if (this.state.show === true) {
-      return this.state.message;
-    }
-
-    return "";
   }
 
   render() {
     return (
-      <div>
-        <div>
-          <Navigation />
-        </div>
-        <div>
-          <Button onClick={this.showMessage}>Click me</Button>
-          <p>{this.getMessage()}</p>
-        </div>
+      <div className="body">
+        <Navigation />
+        <br />
+        <Container>
+          <Row>
+            <Col md="3">
+              <div className="sidebar">
+                <p>sidebar</p>
+              </div>
+            </Col>
+            <Col>
+              <div className="content">
+                <p>content</p>
+              </div>
+            </Col>
+          </Row>
+        </Container>
       </div>
     );
   }
