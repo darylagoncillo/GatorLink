@@ -1,0 +1,54 @@
+﻿{
+  "Events": [
+    {
+      "event_id": "1",
+      "event_name": "Basketball Intramural Playoffs",
+      "image_url": "https://news.sfsu.edu/sites/default/files/u34/gator_web.png",
+      "date": "Thursday, October 28",
+      "time": "12PM PST",
+      "event-type": "In-Person",
+      "host": "San Francisco State University Athletics",
+      "description": "Playoffs have begun! Support your peers this weekend at the Mashouf Wellness Center at 12PM for the first round of the Basketball Intramural Playoffs.",
+      "attending": "32",
+      "interested": "23"
+    },
+    {
+      "event_id": "2",
+      "event_name": "Job Networking",
+      "image_url": "https://news.sfsu.edu/sites/default/files/u34/gator_web.png",
+      "date": "Thursay, November 4-6",
+      "attending": "514"
+    },
+    {
+      "event_id": "3",
+      "event_name": "SFSU Music Festival",
+      "image_url": "https://news.sfsu.edu/sites/default/files/u34/gator_web.png",
+      "date": "December 3-4",
+      "attending": "9"
+    },
+    {
+      "event_id": "4",
+      "event_name": "SFSU Art Gallery Showing",
+      "image_url": "https://news.sfsu.edu/sites/default/files/u34/gator_web.png",
+      "date": "Sunday ",
+      "time": "1PM",
+      "attending": "183"
+    },
+    {
+      "event_id": "5",
+      "event_name": "VCT Valorant Competitive",
+      "image_url": "https://news.sfsu.edu/sites/default/files/u34/gator_web.png",
+      "date": "Tomorrow",
+      "time": "6PM",
+      "attending": "345"
+    },
+    {
+      "event_id": "6",
+      "event_name": "Dance Recital",
+      "image_url": "https://news.sfsu.edu/sites/default/files/u34/gator_web.png",
+      "date": "Friday",
+      "time": "8:30",
+      "attending": "267"
+    }
+  ]
+}

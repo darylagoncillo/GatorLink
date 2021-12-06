@@ -5,7 +5,7 @@ import Cards from '../Components/Cards';
 import Navigation from "../Components/Navigation";
 import EventsContainer from "../Components/EventsContainer";
 
-export default class Groups extends Component {
+export default class Events extends Component {
   constructor(props) {
     super(props);
     this.state = {};
