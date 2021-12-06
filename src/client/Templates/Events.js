@@ -1,5 +1,6 @@
 import { Button, Container, Row, Col } from "react-bootstrap";
 import React, { Component } from "react";
+import Cards from '../Components/Cards';
 
 import Navigation from "../Components/Navigation";
 import EventsContainer from "../Components/EventsContainer";
@@ -26,6 +27,7 @@ export default class Groups extends Component {
             <Col>
               <div className="content">
                 <EventsContainer />
+                <Cards />
               </div>
             </Col>
           </Row>
