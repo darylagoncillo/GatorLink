@@ -17,6 +17,7 @@ import "./components.css";
 import './Cards.css';
 import CardItem from './EventCard';
 
+
 export default class GroupsContainer extends Component {
   constructor(props) {
     super(props);
