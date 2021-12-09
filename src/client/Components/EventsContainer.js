@@ -70,6 +70,8 @@ export default class GroupsContainer extends Component {
             </Navbar.Collapse>
           </Container>
         </Navbar>
+        <Button variant="secondary">Go Back</Button>{' '}
+        <Button variant="warning">Create an Event</Button>
         <br />
         <Row>{this.renderEvents()}</Row>
       </div>
