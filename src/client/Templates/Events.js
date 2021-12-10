@@ -3,6 +3,7 @@ import React, { Component } from "react";
 
 import Navigation from "../Components/Navigation";
 import EventsContainer from "../Components/EventsContainer";
+import EventSidebar from "../Components/EventSidebar";
 
 export default class Events extends Component {
   constructor(props) {
@@ -19,7 +20,7 @@ export default class Events extends Component {
           <Row>
             <Col md="3" sm="12">
               <div className="sidebar">
-                <p>sidebar</p>
+                <EventSidebar />
               </div>
             </Col>
 

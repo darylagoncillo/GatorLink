@@ -12,9 +12,9 @@ import {
 } from "react-bootstrap";
 import React, { Component } from "react";
 import data from "../../../event-data.json";
-import "./components.css";
 
 import './Cards.css';
+
 import CardItem from './EventCard';
 
 
