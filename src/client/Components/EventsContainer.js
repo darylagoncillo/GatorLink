@@ -14,8 +14,8 @@ import React, { Component } from "react";
 import data from "../../../event-data.json";
 import "./components.css";
 
-import './Cards.css';
-import CardItem from './EventCard';
+import "./Cards.css";
+import CardItem from "./EventCard";
 
 export default class GroupsContainer extends Component {
   constructor(props) {
@@ -32,11 +32,11 @@ export default class GroupsContainer extends Component {
     return this.state.events.map((item) => (
       <Col md="4">
         <CardItem
-              src={item.image_url}
-              text={item.event_name}
-              label={item.date}
-              path='/services'
-            />
+          src={item.image_url}
+          text={item.event_name}
+          label={item.date}
+          path="/services"
+        />
       </Col>
     ));
   }
