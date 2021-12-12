@@ -30,12 +30,28 @@ export default class GroupsContainer extends Component {
     };
 
     this.renderEvents = this.renderEvents.bind(this);
-    this.toggleModal = this.toggleModal.bind(this);
+    this.toggleCreateModal = this.toggleCreateModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+    this.openModal = this.openModal.bind(this);
   }
 
-  toggleModal() {
+  toggleCreateModal() {
     this.setState({
       newEventModal: !this.state.newEventModal,
+    });
+  }
+
+  closeModal() {
+    this.setState({
+      newEventModal: false,
+      eventModal: null,
+    });
+  }
+
+  openModal(id) {
+    this.setState({
+      newEventModal: false,
+      eventModal: id,
     });
   }
 
@@ -52,26 +68,29 @@ export default class GroupsContainer extends Component {
 
   renderEvents() {
     return this.state.events.map((item) => {
-      if (this.state.selectedCategory === null) {
+      if (
+        this.state.selectedCategory === null ||
+        this.state.selectedCategory === item.category
+      ) {
         return (
           <Col md="4">
             <CardItem
               src={item.image_url}
               text={item.event_name}
               label={item.date}
+              event_id={item.event_id}
+              openModal={this.openModal}
             />
-          </Col>
-        );
-      }
 
-      if (this.state.selectedCategory === item.category) {
-        return (
-          <Col md="4">
-            <CardItem
-              src={item.image_url}
-              text={item.event_name}
-              label={item.date}
-            />
+            <Modal
+              shouldCloseOnOverlayClick
+              onRequestClose={this.closeModal}
+              isOpen={this.state.eventModal === item.event_id}
+            >
+              <h4>
+                <BsArrowLeft onClick={this.closeModal} />
+              </h4>
+            </Modal>
           </Col>
         );
       }
@@ -105,18 +124,18 @@ export default class GroupsContainer extends Component {
           </Container>
         </Navbar>
         <Button variant="secondary">Go Back</Button>{" "}
-        <Button variant="warning" onClick={this.toggleModal}>
+        <Button variant="warning" onClick={this.toggleCreateModal}>
           Create an Event
         </Button>
         <br />
         <Row>{this.renderEvents()}</Row>
         <Modal
           shouldCloseOnOverlayClick
-          onRequestClose={this.toggleModal}
+          onRequestClose={this.toggleCreateModal}
           isOpen={this.state.newEventModal}
         >
           <h4>
-            <BsArrowLeft onClick={this.toggleModal} />
+            <BsArrowLeft onClick={this.toggleCreateModal} />
           </h4>
         </Modal>
       </div>
