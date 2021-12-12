@@ -11,25 +11,38 @@ import {
   ListGroup,
   NavDropdown,
 } from "react-bootstrap";
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import data from "../../../event-data.json";
 import CardItem from "./EventCard";
 
 import "./Cards.css";
+
+function RenderCategories(categories, selectCategory) {
+  return categories.map((item) => (
+    <ListGroup.Item
+      action
+      as="li"
+      onClick={() => {
+        selectCategory(item);
+      }}
+    >
+      {item}
+    </ListGroup.Item>
+  ));
+}
 
 function EventSidebar(props) {
   return (
     <>
       <div className="event-sidebar">
         <ListGroup defaultActiveKey="#link1">
-          <ListGroup.Item />
-          <ListGroup.Item action href="/Events">
+          <ListGroup.Item action href="#">
             Home
           </ListGroup.Item>
-          <ListGroup.Item action href="/Events">
+          <ListGroup.Item action href="#">
             Birthdays
           </ListGroup.Item>
-          <ListGroup.Item action href="/Events">
+          <ListGroup.Item action href="#">
             Notifications
           </ListGroup.Item>
         </ListGroup>
@@ -37,35 +50,8 @@ function EventSidebar(props) {
       <h6>Your Upcoming Events</h6>
       <p>THU, OCT 28 AT 12PM PST BASKETBALL INTRAMURAL PLAYOFFS</p>
       <h5>Categories</h5>
-      <ListGroup defaultActiveKey="#link1">
-        <ListGroup.Item action href="/Events">
-          Sports
-        </ListGroup.Item>
-      </ListGroup>
-      <ListGroup defaultActiveKey="#link2">
-        <ListGroup.Item action href="/Events">
-          Music
-        </ListGroup.Item>
-      </ListGroup>
-      <ListGroup defaultActiveKey="#link3">
-        <ListGroup.Item action href="/Events">
-          Gaming
-        </ListGroup.Item>
-      </ListGroup>
-      <ListGroup defaultActiveKey="#link4">
-        <ListGroup.Item action href="/Events">
-          Dance
-        </ListGroup.Item>
-      </ListGroup>
-      <ListGroup defaultActiveKey="#link5">
-        <ListGroup.Item action href="/Events">
-          Art
-        </ListGroup.Item>
-      </ListGroup>
-      <ListGroup defaultActiveKey="#link6">
-        <ListGroup.Item action href="/Events">
-          Networking
-        </ListGroup.Item>
+      <ListGroup as="ul">
+        {RenderCategories(props.categories, props.selectCategory)}
       </ListGroup>
     </>
   );

@@ -24,16 +24,24 @@ export default class Events extends Component {
   constructor(props) {
     super(props);
 
+    const categories = [];
+
+    data.Events.forEach((element) => {
+      categories.push(element.category);
+    });
+
     this.state = {
       events: data.Events,
       newEventModal: false,
       selectedCategory: null,
+      categories,
     };
 
     this.renderEvents = this.renderEvents.bind(this);
     this.toggleCreateModal = this.toggleCreateModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
+    this.selectCategory = this.selectCategory.bind(this);
   }
 
   toggleCreateModal() {
@@ -61,10 +69,11 @@ export default class Events extends Component {
       this.setState({
         selectedCategory: null,
       });
+    } else {
+      this.setState({
+        selectedCategory: category,
+      });
     }
-    this.setState({
-      selectedCategory: category,
-    });
   }
 
   renderEvents() {
@@ -107,7 +116,10 @@ export default class Events extends Component {
           <Row>
             <Col md="3" sm="12">
               <div className="sidebar">
-                <EventSidebar />
+                <EventSidebar
+                  categories={this.state.categories}
+                  selectCategory={this.selectCategory}
+                />
               </div>
             </Col>
 
@@ -115,7 +127,9 @@ export default class Events extends Component {
               <div className="content">
                 <Navbar bg="light" expand="lg">
                   <Container>
-                    <Navbar.Brand href="/">Discover Events</Navbar.Brand>
+                    <Navbar.Brand href="/">
+                      Discover {this.state.selectedCategory} Events
+                    </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                       <Nav className="ml-auto">
