@@ -11,8 +11,13 @@ import {
   NavDropdown,
 } from "react-bootstrap";
 import React, { Component } from "react";
+import Modal from "react-modal";
+import { BsArrowLeft, BsThreeDotsVertical } from "react-icons/bs";
 import data from "../../../event-data.json";
-import "./components.css";
+
+import "./Cards.css";
+
+import CardItem from "./EventCard";
 
 export default class GroupsContainer extends Component {
   constructor(props) {
@@ -20,23 +25,76 @@ export default class GroupsContainer extends Component {
 
     this.state = {
       events: data.Events,
+      newEventModal: false,
+      selectedCategory: null,
     };
 
     this.renderEvents = this.renderEvents.bind(this);
+    this.toggleCreateModal = this.toggleCreateModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+    this.openModal = this.openModal.bind(this);
+  }
+
+  toggleCreateModal() {
+    this.setState({
+      newEventModal: !this.state.newEventModal,
+    });
+  }
+
+  closeModal() {
+    this.setState({
+      newEventModal: false,
+      eventModal: null,
+    });
+  }
+
+  openModal(id) {
+    this.setState({
+      newEventModal: false,
+      eventModal: id,
+    });
+  }
+
+  selectCategory(category) {
+    if (this.state.selectedCategory === category) {
+      this.setState({
+        selectedCategory: null,
+      });
+    }
+    this.setState({
+      selectedCategory: category,
+    });
   }
 
   renderEvents() {
-    return this.state.events.map((item) => (
-      <Col md="4">
-        <Card className="event-card">
-          <Card.Img variant="top" src={item.image_url} />
-          <Card.Body>
-            <Card.Title>{item.event_name}</Card.Title>
-            <Card.Text>{item.date}</Card.Text>
-          </Card.Body>
-        </Card>
-      </Col>
-    ));
+    return this.state.events.map((item) => {
+      if (
+        this.state.selectedCategory === null ||
+        this.state.selectedCategory === item.category
+      ) {
+        return (
+          <Col md="4">
+            <CardItem
+              src={item.image_url}
+              text={item.event_name}
+              label={item.date}
+              event_id={item.event_id}
+              openModal={this.openModal}
+            />
+
+            <Modal
+              shouldCloseOnOverlayClick
+              onRequestClose={this.closeModal}
+              isOpen={this.state.eventModal === item.event_id}
+            >
+              <h4>
+                <BsArrowLeft onClick={this.closeModal} />
+              </h4>
+            </Modal>
+          </Col>
+        );
+      }
+    });
   }
 
   render() {
@@ -44,17 +102,17 @@ export default class GroupsContainer extends Component {
       <div>
         <Navbar bg="light" expand="lg">
           <Container>
-            <Navbar.Brand href="/">Discover Groups</Navbar.Brand>
+            <Navbar.Brand href="/">Discover Events</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ml-auto">
                 <NavDropdown title="Sort By" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.1">Top</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.2">
-                    Another action
+                    This Week
                   </NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.3">
-                    Something
+                    This Week
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item href="#action/3.4">
@@ -65,8 +123,21 @@ export default class GroupsContainer extends Component {
             </Navbar.Collapse>
           </Container>
         </Navbar>
+        <Button variant="secondary">Go Back</Button>{" "}
+        <Button variant="warning" onClick={this.toggleCreateModal}>
+          Create an Event
+        </Button>
         <br />
         <Row>{this.renderEvents()}</Row>
+        <Modal
+          shouldCloseOnOverlayClick
+          onRequestClose={this.toggleCreateModal}
+          isOpen={this.state.newEventModal}
+        >
+          <h4>
+            <BsArrowLeft onClick={this.toggleCreateModal} />
+          </h4>
+        </Modal>
       </div>
     );
   }
