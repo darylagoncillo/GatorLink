@@ -45,9 +45,9 @@ class Navigation extends Component {
                     aria-label="Search"
                   />
                   <Button variant="outline-success">Search</Button>
-                  <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">
-                      Action
+                  <NavDropdown title="Profile" id="basic-nav-dropdown">
+                    <NavDropdown.Item href="/EditProfile">
+                      Edit Profile
                     </NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.2">
                       Another action
