@@ -11,6 +11,8 @@ import {
   NavDropdown,
 } from "react-bootstrap";
 import React, { Component } from "react";
+import Modal from "react-modal";
+import { BsArrowLeft, BsThreeDotsVertical } from "react-icons/bs";
 import data from "../../../event-data.json";
 
 import "./Cards.css";
@@ -23,21 +25,57 @@ export default class GroupsContainer extends Component {
 
     this.state = {
       events: data.Events,
+      newEventModal: false,
+      selectedCategory: null,
     };
 
     this.renderEvents = this.renderEvents.bind(this);
+    this.toggleModal = this.toggleModal.bind(this);
+  }
+
+  toggleModal() {
+    this.setState({
+      newEventModal: !this.state.newEventModal,
+    });
+  }
+
+  selectCategory(category) {
+    if (this.state.selectedCategory === category) {
+      this.setState({
+        selectedCategory: null,
+      });
+    }
+    this.setState({
+      selectedCategory: category,
+    });
   }
 
   renderEvents() {
-    return this.state.events.map((item) => (
-      <Col md="4">
-        <CardItem
-          src={item.image_url}
-          text={item.event_name}
-          label={item.date}
-        />
-      </Col>
-    ));
+    return this.state.events.map((item) => {
+      if (this.state.selectedCategory === null) {
+        return (
+          <Col md="4">
+            <CardItem
+              src={item.image_url}
+              text={item.event_name}
+              label={item.date}
+            />
+          </Col>
+        );
+      }
+
+      if (this.state.selectedCategory === item.category) {
+        return (
+          <Col md="4">
+            <CardItem
+              src={item.image_url}
+              text={item.event_name}
+              label={item.date}
+            />
+          </Col>
+        );
+      }
+    });
   }
 
   render() {
@@ -67,9 +105,20 @@ export default class GroupsContainer extends Component {
           </Container>
         </Navbar>
         <Button variant="secondary">Go Back</Button>{" "}
-        <Button variant="warning">Create an Event</Button>
+        <Button variant="warning" onClick={this.toggleModal}>
+          Create an Event
+        </Button>
         <br />
         <Row>{this.renderEvents()}</Row>
+        <Modal
+          shouldCloseOnOverlayClick
+          onRequestClose={this.toggleModal}
+          isOpen={this.state.newEventModal}
+        >
+          <h4>
+            <BsArrowLeft onClick={this.toggleModal} />
+          </h4>
+        </Modal>
       </div>
     );
   }

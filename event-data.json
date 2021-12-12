@@ -10,21 +10,24 @@
       "host": "San Francisco State University Athletics",
       "description": "Playoffs have begun! Support your peers this weekend at the Mashouf Wellness Center at 12PM for the first round of the Basketball Intramural Playoffs.",
       "attending": "32",
-      "interested": "23"
+      "interested": "23",
+      "category": "Sports"
     },
     {
       "event_id": "2",
       "event_name": "Job Networking",
       "image_url": "EventPictures/img-2.jpg",
       "date": "Thursay, November 4-6",
-      "attending": "514"
+      "attending": "514",
+      "category": "Networking"
     },
     {
       "event_id": "3",
       "event_name": "SFSU Music Festival",
       "image_url": "EventPictures/img-3.jpg",
       "date": "December 3-4",
-      "attending": "9"
+      "attending": "9",
+      "category": "Music"
     },
     {
       "event_id": "4",
@@ -32,7 +35,8 @@
       "image_url": "EventPictures/img-4.jpg",
       "date": "Sunday ",
       "time": "1PM",
-      "attending": "183"
+      "attending": "183",
+      "category": "Art"
     },
     {
       "event_id": "5",
@@ -40,7 +44,8 @@
       "image_url": "EventPictures/img-5.jpg",
       "date": "Tomorrow",
       "time": "6PM",
-      "attending": "345"
+      "attending": "345",
+      "category": "Gaming"
     },
     {
       "event_id": "6",
@@ -48,7 +53,8 @@
       "image_url": "EventPictures/img-6.jpg",
       "date": "Friday",
       "time": "8:30",
-      "attending": "267"
+      "attending": "267",
+      "category": "Dance"
     }
   ]
 }

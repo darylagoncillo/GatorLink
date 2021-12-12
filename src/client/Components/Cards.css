@@ -7,13 +7,6 @@ h1 {
   text-align: center;
 }
 
-<<<<<<< HEAD
-.cards__item {
-  display: flex;
-  flex: 1;
-  margin: 10px;
-  height: 92%;
-=======
 h5 {
   margin-left: 15px;
   margin-top: 1px;
@@ -62,7 +55,6 @@ button {
   display: flex;
   flex: 1;
   margin: 0 1rem;
->>>>>>> 5c85b70f74ec736956aa94c04dd2f5dd09b92928
   border-radius: 10px;
 }
 
@@ -132,8 +124,6 @@ button {
   font-size: 18px;
   line-height: 16px;
 }
-<<<<<<< HEAD
-=======
 
 @media only screen and (min-width: 1200px) {
   .content__blog__container {
@@ -152,4 +142,3 @@ button {
     margin-bottom: 2rem;
   }
 }
->>>>>>> 5c85b70f74ec736956aa94c04dd2f5dd09b92928
