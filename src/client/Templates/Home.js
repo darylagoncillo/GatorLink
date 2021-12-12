@@ -2,6 +2,7 @@ import { Button, Container, Row, Col } from "react-bootstrap";
 import React, { Component } from "react";
 
 import Navigation from "../Components/Navigation";
+import Banners from "../Components/HeroContainer";
 
 export default class Home extends Component {
   constructor(props) {
@@ -17,6 +18,7 @@ export default class Home extends Component {
     return (
       <div className="body">
         <Navigation />
+        <Banners/>
       </div>
     );
   }

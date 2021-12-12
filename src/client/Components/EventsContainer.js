@@ -12,9 +12,9 @@ import {
 } from "react-bootstrap";
 import React, { Component } from "react";
 import data from "../../../event-data.json";
-import "./components.css";
 
 import "./Cards.css";
+
 import CardItem from "./EventCard";
 
 export default class GroupsContainer extends Component {
@@ -35,7 +35,6 @@ export default class GroupsContainer extends Component {
           src={item.image_url}
           text={item.event_name}
           label={item.date}
-          path="/services"
         />
       </Col>
     ));
@@ -51,12 +50,12 @@ export default class GroupsContainer extends Component {
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ml-auto">
                 <NavDropdown title="Sort By" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.1">Top</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.2">
-                    Another action
+                    This Week
                   </NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.3">
-                    Something
+                    This Week
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item href="#action/3.4">
@@ -67,6 +66,8 @@ export default class GroupsContainer extends Component {
             </Navbar.Collapse>
           </Container>
         </Navbar>
+        <Button variant="secondary">Go Back</Button>{" "}
+        <Button variant="warning">Create an Event</Button>
         <br />
         <Row>{this.renderEvents()}</Row>
       </div>
