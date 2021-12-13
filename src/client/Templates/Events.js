@@ -11,7 +11,7 @@ import {
   NavDropdown,
 } from "react-bootstrap";
 import React, { Component } from "react";
-
+import "../Components/Cards.css";
 import Modal from "react-modal";
 import { BsArrowLeft, BsThreeDotsVertical } from "react-icons/bs";
 import Navigation from "../Components/Navigation";

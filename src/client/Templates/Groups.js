@@ -17,16 +17,17 @@ import { BsArrowLeft, BsThreeDotsVertical } from "react-icons/bs";
 import Navigation from "../Components/Navigation";
 
 import EventSidebar from "../Components/EventSidebar";
-import data from "../../../event-data.json";
+import data from "../../../group-data.json";
 
 import CardItem from "../Components/EventCard";
+import GroupSidebar from "../Components/EventSidebar";
 
 export default class Groups extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      groups: data.Events,
+      groups: data.Groups,
       newGroupModal: false,
       selectedCategory: null,
     };
@@ -77,17 +78,17 @@ export default class Groups extends Component {
         return (
           <Col md="4">
             <CardItem
-              src={item.image_url}
-              text={item.event_name}
-              label={item.date}
-              event_id={item.event_id}
+              src={item.img_url}
+              text={item.group_name}
+              label={item.members + " Members"}
+              group_id={item.group_id}
               openModal={this.openModal}
             />
 
             <Modal
               shouldCloseOnOverlayClick
               onRequestClose={this.closeModal}
-              isOpen={this.state.groupModal === item.event_id}
+              isOpen={this.state.groupModal === item.group_id}
             >
               <h4>
                 <BsArrowLeft onClick={this.closeModal} />
@@ -107,9 +108,10 @@ export default class Groups extends Component {
         <Container>
           <Row>
             <Col md="3" sm="12">
-              <div className="sidebar">
-                <p>sidebar</p>
-              </div>
+              {/* <GroupSidebar
+                groups={this.state.groups}
+                selectCategory={this.selectCategory}
+              /> */}
             </Col>
 
             <Col>

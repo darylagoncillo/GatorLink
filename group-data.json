@@ -1,0 +1,68 @@
+{
+  "Groups": [
+    {
+      "group_id": "1",
+      "group_name": "SFSU Athletrics",
+      "img_url": "GroupPictures/athletics.png",
+      "members": "230"
+    },
+    {
+      "group_id": "2",
+      "group_name": "Musicians Wanted",
+      "img_url": "GroupPictures/musicianswanted.png",
+      "members": "100"
+    },
+    {
+      "group_id": "3",
+      "group_name": "SFSU Buy + Sell",
+      "img_url": "GroupPictures/buysell.png",
+      "members": "69"
+    },
+    {
+      "group_id": "4",
+      "group_name": "SFSU Comedy Club",
+      "img_url": "GroupPictures/comedyclub.png",
+      "members": "56"
+    },
+    {
+      "group_id": "5",
+      "group_name": "Anime Fans",
+      "img_url": "GroupPictures/animeclub.png",
+      "members": "50"
+    },
+    {
+      "group_id": "6",
+      "group_name": "SFSU Car Club",
+      "img_url": "GroupPictures/carclub.png",
+      "members": "45"
+    },
+    {
+      "group_id": "7",
+      "group_name": "Grilling Club",
+      "img_url": "GroupPictures/grillingclub.png",
+      "members": "20"
+    },
+    {
+      "group_id": "8",
+      "group_name": "Dance Club",
+      "img_url": "GroupPictures/danceclub.png",
+      "members": "15"
+    },
+    {
+      "group_id": "9",
+      "group_name": "CS Club",
+      "img_url": "GroupPictures/csclub.png",
+      "members": "12"
+    },
+    {
+      "group_id": "10",
+      "group_name": "SFSU Cinema Club",
+      "img_url": "GroupPictures/cinemaclub.png",
+      "description": "A space to talk about films or chat with others about related topics.",
+      "creator": "Jose Castanon",
+      "members": "1",
+      "category": "Film",
+      "contact": "sfsucinema"
+    }
+  ]
+}
