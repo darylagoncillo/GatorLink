@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Profile.css";
-import profilePicture from "../../images/profile-img.jpg";
 import {
   Button,
   Container,
@@ -14,25 +13,26 @@ import {
   Card,
   NavDropdown,
 } from "react-bootstrap";
+import profilePicture from "../../images/profile-img.jpg";
 
 function Profile(props) {
   return (
-    <>
-      <Container className="profile-container">
-        <div class="row">
-          <div class="col-md-3 col-sm-12">
-            <div class="sidebar">
-              <div class="event-sidebar"></div>
+    <div className="body">
+      <Container fluid className="page-content">
+        <div className="row">
+          <Col md="3" sm="12" xs="12">
+            <div className="sidebar">
+              <div className="event-sidebar" />
               <div className="box-1">
                 <h5>Profile</h5>
-                <div class="list-group">
+                <div className="list-group">
                   <Card className="text-center">
                     <Card.Body>
                       <Card.Img
                         className="card-img"
                         variant="top"
                         src={profilePicture}
-                      ></Card.Img>
+                      />
                       <p>Name</p>
                       <Card.Text>
                         Sed ut perspiciatis unde omnis iste natus error sit
@@ -47,19 +47,19 @@ function Profile(props) {
                   <h5>Shortcuts</h5>
                 </div>
 
-                <div class="list-group">
+                <div className="list-group">
                   <Card className="card-2">
                     <a
                       href="/Events"
                       data-rb-event-key="/Events"
-                      class="list-group-item list-group-item-action"
+                      className="list-group-item list-group-item-action"
                     >
                       Events
                     </a>
                     <a
                       href="/Groups"
                       data-rb-event-key="/Groups"
-                      class="list-group-item list-group-item-action"
+                      className="list-group-item list-group-item-action"
                     >
                       Groups
                     </a>
@@ -67,7 +67,7 @@ function Profile(props) {
                     <a
                       href="/Events"
                       data-rb-event-key="/Events"
-                      class="list-group-item list-group-item-action"
+                      className="list-group-item list-group-item-action"
                     >
                       Friends
                     </a>
@@ -76,41 +76,41 @@ function Profile(props) {
                 <div className="box-1">
                   <h5>Social Media Handles</h5>
                 </div>
-                <div class="list-group">
+                <div className="list-group">
                   <a
                     href="/Events"
                     data-rb-event-key="/Events"
-                    class="list-group-item list-group-item-action"
+                    className="list-group-item list-group-item-action"
                   >
                     Twitter
                   </a>
                 </div>
-                <div class="list-group">
+                <div className="list-group">
                   <a
                     href="/Events"
                     data-rb-event-key="/Events"
-                    class="list-group-item list-group-item-action"
+                    className="list-group-item list-group-item-action"
                   >
                     Instagram
                   </a>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col">
+          </Col>
+          <Col md="9" sm="12" xs="12">
             <div className="content">
               <Navbar bg="light" expand="lg">
                 <Container>
                   <Navbar.Brand href="/">Events</Navbar.Brand>
-                  <Button className="eventButton" >More Events</Button>
+                  <Button className="eventButton">More Events</Button>
                   <Navbar.Toggle aria-controls="basic-navbar-nav" />
                   <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ml-auto"></Nav>
+                    <Nav className="ml-auto" />
                   </Navbar.Collapse>
                 </Container>
               </Navbar>
-              <div class="row">
-                <div class="col-sm-4">
+              <div className="row">
+                <div className="col-sm-4">
                   <Card className="profile-card">
                     <Card.Body>
                       <p>Events</p>
@@ -124,7 +124,7 @@ function Profile(props) {
                   </Card>
                 </div>
 
-                <div class="col-sm-4">
+                <div className="col-sm-4">
                   <Card className="profile-card">
                     <Card.Body>
                       <p>Events</p>
@@ -138,7 +138,7 @@ function Profile(props) {
                   </Card>
                 </div>
 
-                <div class="col-sm-4">
+                <div className="col-sm-4">
                   <Card className="profile-card">
                     <Card.Body>
                       <p>Events</p>
@@ -153,8 +153,8 @@ function Profile(props) {
                 </div>
               </div>
 
-              <div class="row">
-                <div class="col-sm-4">
+              <div className="row">
+                <div className="col-sm-4">
                   <Card className="profile-card">
                     <Card.Body>
                       <p>Events</p>
@@ -168,7 +168,7 @@ function Profile(props) {
                   </Card>
                 </div>
 
-                <div class="col-sm-4">
+                <div className="col-sm-4">
                   <Card className="profile-card">
                     <Card.Body>
                       <p>Events</p>
@@ -182,7 +182,7 @@ function Profile(props) {
                   </Card>
                 </div>
 
-                <div class="col-sm-4">
+                <div className="col-sm-4">
                   <Card className="profile-card">
                     <Card.Body>
                       <p>Events</p>
@@ -201,62 +201,62 @@ function Profile(props) {
                 <Navbar bg="light" expand="lg">
                   <Container>
                     <Navbar.Brand href="/">Groups</Navbar.Brand>
-                    <Button className="eventButton" >Find Groups</Button>
+                    <Button className="eventButton">Find Groups</Button>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
-                      <Nav className="ml-auto"></Nav>
+                      <Nav className="ml-auto" />
                     </Navbar.Collapse>
                   </Container>
                 </Navbar>
-                <div class="row">
-                <div class="col-sm-4">
-                  <Card className="profile-card">
-                    <Card.Body>
-                      <p>Events</p>
-                      <Card.Text>
-                        Sed ut perspiciatis unde omnis iste natus error sit
-                        voluptatem accusantium doloremque laudantium, totam rem
-                        aperiam, eaque ipsa quae ab illo inventore veritatis et
-                        quasi architecto.
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
+                <div className="row">
+                  <div className="col-sm-4">
+                    <Card className="profile-card">
+                      <Card.Body>
+                        <p>Events</p>
+                        <Card.Text>
+                          Sed ut perspiciatis unde omnis iste natus error sit
+                          voluptatem accusantium doloremque laudantium, totam
+                          rem aperiam, eaque ipsa quae ab illo inventore
+                          veritatis et quasi architecto.
+                        </Card.Text>
+                      </Card.Body>
+                    </Card>
+                  </div>
 
-                <div class="col-sm-4">
-                  <Card className="profile-card">
-                    <Card.Body>
-                      <p>Events</p>
-                      <Card.Text>
-                        Sed ut perspiciatis unde omnis iste natus error sit
-                        voluptatem accusantium doloremque laudantium, totam rem
-                        aperiam, eaque ipsa quae ab illo inventore veritatis et
-                        quasi architecto.
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
+                  <div className="col-sm-4">
+                    <Card className="profile-card">
+                      <Card.Body>
+                        <p>Events</p>
+                        <Card.Text>
+                          Sed ut perspiciatis unde omnis iste natus error sit
+                          voluptatem accusantium doloremque laudantium, totam
+                          rem aperiam, eaque ipsa quae ab illo inventore
+                          veritatis et quasi architecto.
+                        </Card.Text>
+                      </Card.Body>
+                    </Card>
+                  </div>
 
-                <div class="col-sm-4">
-                  <Card className="profile-card">
-                    <Card.Body>
-                      <p>Events</p>
-                      <Card.Text>
-                        Sed ut perspiciatis unde omnis iste natus error sit
-                        voluptatem accusantium doloremque laudantium, totam rem
-                        aperiam, eaque ipsa quae ab illo inventore veritatis et
-                        quasi architecto.
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
+                  <div className="col-sm-4">
+                    <Card className="profile-card">
+                      <Card.Body>
+                        <p>Events</p>
+                        <Card.Text>
+                          Sed ut perspiciatis unde omnis iste natus error sit
+                          voluptatem accusantium doloremque laudantium, totam
+                          rem aperiam, eaque ipsa quae ab illo inventore
+                          veritatis et quasi architecto.
+                        </Card.Text>
+                      </Card.Body>
+                    </Card>
+                  </div>
                 </div>
-              </div>
               </div>
             </div>
-          </div>
+          </Col>
         </div>
       </Container>
-    </>
+    </div>
   );
 }
 

@@ -90,6 +90,7 @@ export default class Events extends Component {
               label={item.date}
               event_id={item.event_id}
               openModal={this.openModal}
+              attending={item.attending}
             />
 
             <Modal

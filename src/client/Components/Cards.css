@@ -117,13 +117,20 @@ button {
 }
 
 .cards__item__info {
-  padding: 20px 30px 30px;
+  padding: 10px 10px 10px 10px;
 }
 
 .cards__item__text {
   color: #252e48;
   font-size: 18px;
   line-height: 16px;
+  text-align: left;
+}
+.cards__item__text__2 {
+  color: #252e48;
+  font-size: 18px;
+
+  text-align: right;
 }
 
 @media only screen and (min-width: 1200px) {
