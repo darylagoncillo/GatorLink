@@ -10,6 +10,7 @@ import {
   Card,
   NavDropdown,
   ListGroup,
+  Image
 } from "react-bootstrap";
 import React, { Component } from "react";
 import "../Components/Cards.css";
@@ -19,6 +20,7 @@ import Navigation from "../Components/Navigation";
 import EventSidebar from "../Components/EventSidebar";
 import data from "../../../event-data.json";
 import EPSidebar from "../Components/EPSidebar";
+import profilePicture from "../../images/profile-img.jpg";
 
 import { ImProfile } from 'react-icons/im';
 import { BsListUl } from 'react-icons/bs';
@@ -69,6 +71,13 @@ export default class ProfileEditor extends Component {
                         </ListGroup.Item>
                       </ListGroup>
                     </Navbar.Brand>
+                  </Container>
+                  <Container>
+                    <Row>
+                      <Col xs={6} md={4}>
+                        <Image src={profilePicture} fluid roundedCircle />
+                      </Col>
+                    </Row>
                   </Container>
                 </Navbar>
               </div>
