@@ -12,6 +12,7 @@ import {
   ListGroup,
   Tab,
   Tabs,
+  Image,
 } from "react-bootstrap";
 import React, { Component } from "react";
 import "../Components/Cards.css";
@@ -30,6 +31,7 @@ import Navigation from "../Components/Navigation";
 import EventSidebar from "../Components/EventSidebar";
 import data from "../../../event-data.json";
 import EPSidebar from "../Components/EPSidebar";
+import profilePicture from "../../images/profile-img.jpg";
 
 export default class ProfileEditor extends Component {
   constructor(props) {
@@ -103,6 +105,11 @@ export default class ProfileEditor extends Component {
                         <Tab.Pane eventKey="second">hello</Tab.Pane>
                         <Tab.Pane eventKey="third">hello again</Tab.Pane>
                       </Tab.Content>
+                    </Container>
+                    <Container>
+                      <Col xs={10} md={5}>
+                        <Image src={profilePicture} fluid roundedCircle />
+                      </Col>
                     </Container>
                   </Navbar>
                 </div>
