@@ -11,7 +11,7 @@ import Search from "./Templates/Search";
 import Login from "./Templates/Login";
 import Registration from "./Templates/Registration";
 import Questionnaire from "./Templates/Questionnaire";
-import Group from "./Templates/Groups";
+import Group from "./Templates/SingleGroup";
 
 export default class Routing extends Component {
   constructor(props) {
