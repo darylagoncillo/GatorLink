@@ -141,20 +141,21 @@ export default class Groups extends Component {
                     </Navbar.Collapse>
                   </Container>
                 </Navbar>
-                <Button variant="secondary">Go Back</Button>{" "}
+
                 <Button variant="warning" onClick={this.toggleCreateModal}>
                   Create a Group
                 </Button>
                 <br />
                 <Row>{this.renderGroups()}</Row>
                 <Modal
+                  className="create-modal"
                   shouldCloseOnOverlayClick
                   onRequestClose={this.toggleCreateModal}
                   isOpen={this.state.newGroupModal}
                 >
-                  <h4>
+                  {/* <h4>
                     <BsArrowLeft onClick={this.toggleCreateModal} />
-                  </h4>
+                  </h4> */}
                 </Modal>
               </div>
             </Col>

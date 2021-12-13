@@ -158,6 +158,7 @@ export default class Events extends Component {
                 <br />
                 <Row>{this.renderEvents()}</Row>
                 <Modal
+                  className="create-modal"
                   shouldCloseOnOverlayClick
                   onRequestClose={this.toggleCreateModal}
                   isOpen={this.state.newEventModal}
