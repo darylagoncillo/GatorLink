@@ -13,6 +13,7 @@ import {
 } from "react-bootstrap";
 import React, { Component, useState } from "react";
 import "./Cards.css";
+import "./components.css";
 
 import { FaBasketballBall } from 'react-icons/fa';
 
@@ -33,7 +34,7 @@ function RenderCategories(categories, selectCategory) {
 function EventSidebar(props) {
   return (
     <>
-      <div className="event-sidebar">
+      <div className="">
         <ListGroup defaultActiveKey="#link1">
           <ListGroup.Item action href="/Events">
             Home
@@ -49,13 +50,15 @@ function EventSidebar(props) {
             Notifications
           </ListGroup.Item>
         </ListGroup>
+        <div className="event-sidebar">
+          <h6>Your Upcoming Events</h6>
+          <p>THU, OCT 28 AT 12PM PST BASKETBALL INTRAMURAL PLAYOFFS</p>
+          <h5>Categories</h5>
+        </div>
+        <ListGroup as="ul">
+          {RenderCategories(props.categories, props.selectCategory)}
+        </ListGroup>
       </div>
-      <h6>Your Upcoming Events</h6>
-      <p>THU, OCT 28 AT 12PM PST BASKETBALL INTRAMURAL PLAYOFFS</p>
-      <h5>Categories</h5>
-      <ListGroup as="ul">
-        {RenderCategories(props.categories, props.selectCategory)}
-      </ListGroup>
     </>
   );
 }

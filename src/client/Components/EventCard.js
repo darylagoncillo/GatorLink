@@ -5,7 +5,7 @@ function CardItem(props) {
   return (
     <>
       <li
-        onClick={() => props.openModal(props.event_id)}
+        onClick={() => props.history.push("/Event/1")}
         className="cards__item"
       >
         <Link className="cards__item__link" to={props.path}>

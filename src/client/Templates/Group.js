@@ -11,57 +11,50 @@ import {
   NavDropdown,
 } from "react-bootstrap";
 import React, { Component } from "react";
-import "../Components/Cards.css";
+
 import Modal from "react-modal";
 import { BsArrowLeft, BsThreeDotsVertical } from "react-icons/bs";
 import Navigation from "../Components/Navigation";
-import EventSidebar from "../Components/EventSidebar";
-import data from "../../../event-data.json";
 
+import EventSidebar from "../Components/EventSidebar";
+import data from "../../../group-data.json";
 
 import CardItem from "../Components/EventCard";
+import GroupSidebar from "../Components/EventSidebar";
 
-export default class Events extends Component {
+export default class Groups extends Component {
   constructor(props) {
     super(props);
 
-    const categories = [];
-
-    data.Events.forEach((element) => {
-      categories.push(element.category);
-    });
-
     this.state = {
-      events: data.Events,
-      newEventModal: false,
+      groups: data.Groups,
+      newGroupModal: false,
       selectedCategory: null,
-      categories,
     };
 
-    this.renderEvents = this.renderEvents.bind(this);
+    this.renderGroups = this.renderGroups.bind(this);
     this.toggleCreateModal = this.toggleCreateModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
-    this.selectCategory = this.selectCategory.bind(this);
   }
 
   toggleCreateModal() {
     this.setState({
-      newEventModal: !this.state.newEventModal,
+      newGroupModal: !this.state.newGroupModal,
     });
   }
 
   closeModal() {
     this.setState({
-      newEventModal: false,
-      eventModal: null,
+      newGroupModal: false,
+      groupModal: null,
     });
   }
 
   openModal(id) {
     this.setState({
-      newEventModal: false,
-      eventModal: id,
+      newGroupModal: false,
+      groupModal: id,
     });
   }
 
@@ -70,15 +63,14 @@ export default class Events extends Component {
       this.setState({
         selectedCategory: null,
       });
-    } else {
-      this.setState({
-        selectedCategory: category,
-      });
     }
+    this.setState({
+      selectedCategory: category,
+    });
   }
 
-  renderEvents() {
-    return this.state.events.map((item) => {
+  renderGroups() {
+    return this.state.groups.map((item) => {
       if (
         this.state.selectedCategory === null ||
         this.state.selectedCategory === item.category
@@ -86,13 +78,23 @@ export default class Events extends Component {
         return (
           <Col md="4">
             <CardItem
-              src={item.image_url}
-              text={item.event_name}
-              label={item.date}
-              event_id={item.event_id}
-              history={this.props.history}
-              attending={item.attending}
+              src={item.img_url}
+              text={item.group_name}
+              label={item.members + " Members"}
+              group_id={item.group_id}
+              attending={item.members}
+              openModal={this.openModal}
             />
+
+            <Modal
+              shouldCloseOnOverlayClick
+              onRequestClose={this.closeModal}
+              isOpen={this.state.groupModal === item.group_id}
+            >
+              <h4>
+                <BsArrowLeft onClick={this.closeModal} />
+              </h4>
+            </Modal>
           </Col>
         );
       }
@@ -106,22 +108,18 @@ export default class Events extends Component {
         <br />
         <Container fluid className="page-content">
           <Row>
-            <Col md="3" sm="12" xs="12">
-              <div className="sidebar">
-                <EventSidebar
-                  categories={this.state.categories}
-                  selectCategory={this.selectCategory}
-                />
-              </div>
+            <Col md="3" sm="12">
+              {/* <GroupSidebar
+                groups={this.state.groups}
+                selectCategory={this.selectCategory}
+              /> */}
             </Col>
 
-            <Col Col md="9" sm="12" xs="12">
+            <Col>
               <div className="content">
                 <Navbar bg="light" expand="lg">
                   <Container>
-                    <Navbar.Brand href="/">
-                      Discover {this.state.selectedCategory} Events
-                    </Navbar.Brand>
+                    <Navbar.Brand href="/">Discover Groups</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                       <Nav className="ml-auto">
@@ -144,20 +142,21 @@ export default class Events extends Component {
                     </Navbar.Collapse>
                   </Container>
                 </Navbar>
+
                 <Button variant="warning" onClick={this.toggleCreateModal}>
-                  Create an Event
+                  Create a Group
                 </Button>
                 <br />
-                <Row>{this.renderEvents()}</Row>
+                <Row>{this.renderGroups()}</Row>
                 <Modal
                   className="create-modal"
                   shouldCloseOnOverlayClick
                   onRequestClose={this.toggleCreateModal}
-                  isOpen={this.state.newEventModal}
+                  isOpen={this.state.newGroupModal}
                 >
-                  <h4>
+                  {/* <h4>
                     <BsArrowLeft onClick={this.toggleCreateModal} />
-                  </h4>
+                  </h4> */}
                 </Modal>
               </div>
             </Col>

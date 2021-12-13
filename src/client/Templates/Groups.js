@@ -19,10 +19,10 @@ import Navigation from "../Components/Navigation";
 import EventSidebar from "../Components/EventSidebar";
 import data from "../../../group-data.json";
 
-import CardItem from "../Components/EventCard";
+import CardItem from "../Components/GroupCard";
 import GroupSidebar from "../Components/EventSidebar";
 
-export default class Groups extends Component {
+export default class Group extends Component {
   constructor(props) {
     super(props);
 
@@ -79,22 +79,12 @@ export default class Groups extends Component {
           <Col md="4">
             <CardItem
               src={item.img_url}
+              history={this.props.history}
               text={item.group_name}
               label={item.members + " Members"}
               group_id={item.group_id}
               attending={item.members}
-              openModal={this.openModal}
             />
-
-            <Modal
-              shouldCloseOnOverlayClick
-              onRequestClose={this.closeModal}
-              isOpen={this.state.groupModal === item.group_id}
-            >
-              <h4>
-                <BsArrowLeft onClick={this.closeModal} />
-              </h4>
-            </Modal>
           </Col>
         );
       }
