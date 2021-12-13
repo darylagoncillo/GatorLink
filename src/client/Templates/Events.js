@@ -132,13 +132,7 @@ export default class Events extends Component {
                           <NavDropdown.Item href="#action/3.2">
                             This Week
                           </NavDropdown.Item>
-                          <NavDropdown.Item href="#action/3.3">
-                            This Week
-                          </NavDropdown.Item>
                           <NavDropdown.Divider />
-                          <NavDropdown.Item href="#action/3.4">
-                            Separated link
-                          </NavDropdown.Item>
                         </NavDropdown>
                       </Nav>
                     </Navbar.Collapse>
