@@ -9,6 +9,7 @@ import {
   FormControl,
   Card,
   NavDropdown,
+  Pagination,
 } from "react-bootstrap";
 import React, { Component } from "react";
 
@@ -146,6 +147,7 @@ export default class Groups extends Component {
                 <Button variant="warning" onClick={this.toggleCreateModal}>
                   Create a Group
                 </Button>
+
                 <br />
                 <Row>{this.renderGroups()}</Row>
                 <Modal
