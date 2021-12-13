@@ -6,7 +6,7 @@ import Home from "./Templates/Home";
 import Events from "./Templates/Events";
 import Groups from "./Templates/Groups";
 import ProfileEditor from "./Templates/ProfileEditor";
-import Event from "./Templates/Event";
+import Event from "./Templates/SingleEvent";
 import Search from "./Templates/Search";
 import Login from "./Templates/Login";
 import Registration from "./Templates/Registration";

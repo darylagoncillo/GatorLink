@@ -8,6 +8,7 @@ import {
   Form,
   FormControl,
   Card,
+  Pagination,
   NavDropdown,
 } from "react-bootstrap";
 import React, { Component } from "react";
@@ -69,11 +70,14 @@ export default class Group extends Component {
   }
 
   renderGroups() {
+    let count = 0;
     return this.state.groups.map((item) => {
       if (
-        this.state.selectedCategory === null ||
-        this.state.selectedCategory === item.category
+        (this.state.selectedCategory === null ||
+          this.state.selectedCategory === item.category) &&
+        count < 6
       ) {
+        count++;
         return (
           <Col md="4">
             <CardItem
@@ -91,6 +95,14 @@ export default class Group extends Component {
   }
 
   render() {
+    let items = [];
+    for (let number = 1; number <= 5; number++) {
+      items.push(
+        <Pagination.Item key={number} active={number === 1}>
+          {number}
+        </Pagination.Item>
+      );
+    }
     return (
       <div className="body">
         <Navigation />
@@ -112,6 +124,7 @@ export default class Group extends Component {
                   <Container>
                     <Navbar.Brand href="/">Discover Groups</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
                     <Navbar.Collapse id="basic-navbar-nav">
                       <Nav className="ml-auto">
                         <NavDropdown title="Sort By" id="basic-nav-dropdown">
@@ -133,11 +146,16 @@ export default class Group extends Component {
                     </Navbar.Collapse>
                   </Container>
                 </Navbar>
+                <Row>
+                  <Col>
+                    <Button variant="warning" onClick={this.toggleCreateModal}>
+                      Create a Group
+                    </Button>
+                  </Col>
 
-                <Button variant="warning" onClick={this.toggleCreateModal}>
-                  Create a Group
-                </Button>
-                <br />
+                  <Pagination>{items}</Pagination>
+                </Row>
+
                 <Row>{this.renderGroups()}</Row>
                 <Modal
                   className="create-modal"
