@@ -6,6 +6,7 @@ import Home from "./Templates/Home";
 import Events from "./Templates/Events";
 import Groups from "./Templates/Groups";
 import ProfileEditor from "./Templates/ProfileEditor";
+import Event from "./Templates/Event";
 
 export default class Routing extends Component {
   constructor(props) {
@@ -24,6 +25,7 @@ export default class Routing extends Component {
         <Route component={Events} path="/Events" />
         <Route component={Groups} path="/Groups" />
         <Route component={ProfileEditor} path="/EditProfile" />
+        <Route component={Event} path="/Event" />
       </BrowserRouter>
     );
   }

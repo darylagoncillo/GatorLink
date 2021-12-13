@@ -105,7 +105,7 @@ export default class Groups extends Component {
       <div className="body">
         <Navigation />
         <br />
-        <Container>
+        <Container fluid className="page-content">
           <Row>
             <Col md="3" sm="12">
               {/* <GroupSidebar

@@ -20,7 +20,7 @@ import data from "../../../event-data.json";
 
 import CardItem from "../Components/EventCard";
 
-export default class Events extends Component {
+export default class Event extends Component {
   constructor(props) {
     super(props);
 
@@ -115,7 +115,7 @@ export default class Events extends Component {
         <br />
         <Container fluid className="page-content">
           <Row>
-            <Col md="3" sm="12" xs="12">
+            <Col md="3" sm="12">
               <div className="sidebar">
                 <EventSidebar
                   categories={this.state.categories}
@@ -124,7 +124,7 @@ export default class Events extends Component {
               </div>
             </Col>
 
-            <Col Col md="9" sm="12" xs="12">
+            <Col>
               <div className="content">
                 <Navbar bg="light" expand="lg">
                   <Container>
