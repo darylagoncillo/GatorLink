@@ -83,8 +83,8 @@ export default class ProfileEditor extends Component {
                             Edit {this.state.selectedCategory} Profile
                           </Navbar.Brand>
                         </Tab.Pane>
-                        <Tab.Pane eventKey="second">hello</Tab.Pane>
-                        <Tab.Pane eventKey="third">hello again</Tab.Pane>
+                        <Tab.Pane eventKey="second">Notifications</Tab.Pane>
+                        <Tab.Pane eventKey="third">Privacy</Tab.Pane>
                       </Tab.Content>
                     </Container>
                   </Navbar>
