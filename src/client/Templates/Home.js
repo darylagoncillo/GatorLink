@@ -3,6 +3,8 @@ import React, { Component } from "react";
 
 import Navigation from "../Components/Navigation";
 import Banners from "../Components/HeroContainer";
+import Profile from "../Components/Profile";
+
 
 export default class Home extends Component {
   constructor(props) {
@@ -18,7 +20,7 @@ export default class Home extends Component {
     return (
       <div className="body">
         <Navigation />
-        <Banners/>
+        <Profile/>
       </div>
     );
   }

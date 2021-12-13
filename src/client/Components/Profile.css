@@ -1,0 +1,53 @@
+.profile-container{
+    margin-top: 25px;
+
+}
+
+.container-2{
+    margin-top: 100px;
+}
+
+
+.row{
+    margin-top: 25px;
+}
+
+.eventButton{
+    margin-left: 74%;
+}
+
+.content{
+    float: left;
+    height: 100%;
+    border: 1px solid black;
+    border-color: black;
+    border-width: 0px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
+}
+
+.text-center {
+  box-shadow: none;
+  border-top-color: rgb(218, 211, 211);
+  border-bottom: white;
+}
+
+.box-1 {
+  padding-top: 15px;
+}
+
+.card-body{
+    padding: none;
+}
+.p{
+    text-align: left;
+}
+
+.card-img {
+  width: 45%;
+  border-radius: 75px;
+}
+
+.list-group-item {
+    border-color: white;
+}

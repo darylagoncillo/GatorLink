@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Footer from "./Footer.js";
 import "./HeroContainer.css";
 import eventIcon from '../../images/EventIcon.png';
 import groupIcon from '../../images/GroupIcon.png';
@@ -77,10 +78,22 @@ function HeroContainer(props) {
                   </Card.Body>
                 </Card>
               </div>
+
+              <p>sdfsdf
+                sdfsdfsfdsfddddddddddddddddddddddddddddd
+                dsfsdf
+              </p>
             </Row>
+  
           </Container>
         </div>
+
+        <div className="banner-3">
+          <Footer/>
+        </div>
       </div>
+
+
     </>
   );
 }
