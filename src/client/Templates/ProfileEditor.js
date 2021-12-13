@@ -20,6 +20,11 @@ import EventSidebar from "../Components/EventSidebar";
 import data from "../../../event-data.json";
 import EPSidebar from "../Components/EPSidebar";
 
+import { ImProfile } from 'react-icons/im';
+import { BsListUl } from 'react-icons/bs';
+import { GoDeviceCamera } from 'react-icons/go';
+
+
 export default class ProfileEditor extends Component {
   constructor(props) {
     super(props);
@@ -47,16 +52,19 @@ export default class ProfileEditor extends Component {
                       Edit {this.state.selectedCategory} Profile
                       <ListGroup defaultActiveKey="#link1">
                         <ListGroup.Item action href="/EditProfile">
+                          <ImProfile />
                           General
                         </ListGroup.Item>
                       </ListGroup>
                       <ListGroup defaultActiveKey="#link2">
                         <ListGroup.Item action href="/EditProfile">
+                          <BsListUl />
                           Interests
                         </ListGroup.Item>
                       </ListGroup>
                       <ListGroup defaultActiveKey="#link2">
                         <ListGroup.Item action href="/EditProfile">
+                          <GoDeviceCamera />
                           Extracurricular
                         </ListGroup.Item>
                       </ListGroup>
