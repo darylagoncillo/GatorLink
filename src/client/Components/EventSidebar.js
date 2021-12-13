@@ -12,10 +12,9 @@ import {
   NavDropdown,
 } from "react-bootstrap";
 import React, { Component, useState } from "react";
-import data from "../../../event-data.json";
-import CardItem from "./EventCard";
-
 import "./Cards.css";
+
+import { FaBasketballBall } from 'react-icons/fa';
 
 function RenderCategories(categories, selectCategory) {
   return categories.map((item) => (
@@ -36,13 +35,17 @@ function EventSidebar(props) {
     <>
       <div className="event-sidebar">
         <ListGroup defaultActiveKey="#link1">
-          <ListGroup.Item action href="#">
+          <ListGroup.Item action href="/Events">
             Home
           </ListGroup.Item>
-          <ListGroup.Item action href="#">
+        </ListGroup>
+        <ListGroup defaultActiveKey="#link2">
+          <ListGroup.Item action href="/Events">
             Birthdays
           </ListGroup.Item>
-          <ListGroup.Item action href="#">
+        </ListGroup>
+        <ListGroup defaultActiveKey="#link2">
+          <ListGroup.Item action href="/Events">
             Notifications
           </ListGroup.Item>
         </ListGroup>

@@ -18,6 +18,7 @@ import Navigation from "../Components/Navigation";
 import EventSidebar from "../Components/EventSidebar";
 import data from "../../../event-data.json";
 
+
 import CardItem from "../Components/EventCard";
 
 export default class Events extends Component {
