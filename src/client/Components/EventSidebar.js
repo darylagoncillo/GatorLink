@@ -16,11 +16,20 @@ import "./Cards.css";
 import "./components.css";
 
 import { FaBasketballBall } from "react-icons/fa";
+import { GrBeacon } from "react-icons/gr";
+import { FaMusic } from "react-icons/fa";
+import { GrPaint } from "react-icons/gr";
+import { BsController } from "react-icons/bs";
+import { SiBytedance } from "react-icons/si";
+
 
 const icons = {
   Sports: <FaBasketballBall />,
-  Networking: "",
-  Music: "",
+  Networking: <GrBeacon />,
+  Music: <FaMusic />,
+  Art: <GrPaint />,
+  Gaming: <BsController />,
+  Dance: <SiBytedance />
 };
 
 function RenderCategories(categories, selectCategory) {
