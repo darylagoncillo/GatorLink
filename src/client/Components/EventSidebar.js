@@ -15,7 +15,13 @@ import React, { Component, useState } from "react";
 import "./Cards.css";
 import "./components.css";
 
-import { FaBasketballBall } from 'react-icons/fa';
+import { FaBasketballBall } from "react-icons/fa";
+
+const icons = {
+  Sports: <FaBasketballBall />,
+  Networking: "",
+  Music: "",
+};
 
 function RenderCategories(categories, selectCategory) {
   return categories.map((item) => (
@@ -26,7 +32,7 @@ function RenderCategories(categories, selectCategory) {
         selectCategory(item);
       }}
     >
-      {item}
+      {icons[item]} {item}
     </ListGroup.Item>
   ));
 }

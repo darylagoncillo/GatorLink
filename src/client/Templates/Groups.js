@@ -13,14 +13,13 @@ import {
 import React, { Component } from "react";
 
 import Modal from "react-modal";
-import { BsArrowLeft, BsThreeDotsVertical } from "react-icons/bs";
+
 import Navigation from "../Components/Navigation";
 
-import EventSidebar from "../Components/EventSidebar";
 import data from "../../../group-data.json";
 
 import CardItem from "../Components/GroupCard";
-import GroupSidebar from "../Components/EventSidebar";
+import GroupSidebar from "../Components/GroupSidebar";
 
 export default class Group extends Component {
   constructor(props) {
@@ -99,10 +98,12 @@ export default class Group extends Component {
         <Container fluid className="page-content">
           <Row>
             <Col md="3" sm="12">
-              {/* <GroupSidebar
-                groups={this.state.groups}
-                selectCategory={this.selectCategory}
-              /> */}
+              <div className="sidebar">
+                <GroupSidebar
+                  groups={this.state.groups}
+                  selectCategory={this.selectCategory}
+                />
+              </div>
             </Col>
 
             <Col>
