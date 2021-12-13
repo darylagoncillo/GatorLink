@@ -10,6 +10,8 @@ import {
   Card,
   NavDropdown,
   Pagination,
+  Tab,
+  Tabs,
 } from "react-bootstrap";
 import React, { Component } from "react";
 
@@ -75,22 +77,37 @@ export default class Group extends Component {
         <Navigation />
 
         <Container fluid className="page-content">
-          <Row>
-            <Col md="12" sm="12">
-              <Col>
-                <Button
-                  variant="warning"
-                  onClick={() => {
-                    this.props.history.push("/Groups");
-                  }}
+          <Row className="justify-content-md-center">
+            <Col md="8" sm="12">
+              <Button
+                variant="warning"
+                onClick={() => {
+                  this.props.history.push("/Groups");
+                }}
+              >
+                <div style={{ display: "flex", alignItems: "center" }}>
+                  <RiArrowGoBackLine />
+                  Back to Groups
+                </div>
+              </Button>
+
+              <div className="content">
+                <Tabs
+                  defaultActiveKey="profile"
+                  id="uncontrolled-tab-example"
+                  className="mb-3"
                 >
-                  <div style={{ display: "flex", alignItems: "center" }}>
-                    <RiArrowGoBackLine />
-                    Back to Groups
-                  </div>
-                </Button>
-              </Col>
-              <div className="content" />
+                  <Tab eventKey="home" title="Home">
+                    here
+                  </Tab>
+                  <Tab eventKey="profile" title="Profile">
+                    here
+                  </Tab>
+                  <Tab eventKey="contact" title="Contact" disabled>
+                    here
+                  </Tab>
+                </Tabs>
+              </div>
             </Col>
           </Row>
         </Container>
