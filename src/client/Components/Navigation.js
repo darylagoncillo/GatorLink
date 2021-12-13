@@ -10,6 +10,13 @@ import {
 } from "react-bootstrap";
 import { withRouter } from "react-router";
 import "./components.css";
+import Select from "react-select";
+
+const options = [
+  { value: "chocolate", label: "Chocolate" },
+  { value: "strawberry", label: "Strawberry" },
+  { value: "vanilla", label: "Vanilla" },
+];
 
 class Navigation extends Component {
   constructor(props) {
@@ -28,7 +35,6 @@ class Navigation extends Component {
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav
                 className="me-auto my-2 my-lg-0"
-                style={{ maxHeight: "100px" }}
                 navbarScroll
                 activeKey={location.pathname}
               >
@@ -37,30 +43,21 @@ class Navigation extends Component {
                 <Nav.Link href="/Groups">Groups</Nav.Link>
               </Nav>
               <Nav className="ml-auto">
-                <Form className="d-flex ">
-                  <FormControl
-                    type="search"
-                    placeholder="Search"
-                    className="me-2"
-                    aria-label="Search"
-                  />
-                  <Button variant="outline-success">Search</Button>
-                  <NavDropdown title="Profile" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="/EditProfile">
-                      Edit Profile
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">
-                      Another action
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">
-                      Something
-                    </NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.4">
-                      Separated link
-                    </NavDropdown.Item>
-                  </NavDropdown>
-                </Form>
+                <div style={{ width: "400px" }}>
+                  <Select options={options} />
+                </div>
+              </Nav>
+              <Nav className="ml-auto">
+                <NavDropdown title="Profile" id="basic-nav-dropdown">
+                  <NavDropdown.Item href="/EditProfile">
+                    Edit Profile
+                  </NavDropdown.Item>
+
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="#action/3.4">
+                    Log Out
+                  </NavDropdown.Item>
+                </NavDropdown>
               </Nav>
             </Navbar.Collapse>
           </Container>

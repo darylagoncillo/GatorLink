@@ -82,6 +82,7 @@ export default class Groups extends Component {
               text={item.group_name}
               label={item.members + " Members"}
               group_id={item.group_id}
+              attending={item.members}
               openModal={this.openModal}
             />
 

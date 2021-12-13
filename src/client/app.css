@@ -3,7 +3,7 @@
   margin-bottom: 20px;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 999px) {
   .page-content {
     width: 100% !important;
   }
@@ -42,7 +42,7 @@
   }
 }
 
-@media only screen and (min-width: 901px) {
+@media only screen and (min-width: 1000px) {
   .page-content {
     width: 80% !important;
   }
