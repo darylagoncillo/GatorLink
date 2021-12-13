@@ -13,6 +13,7 @@ import {
   Tab,
   Tabs,
   Image,
+  InputGroup
 } from "react-bootstrap";
 import React, { Component } from "react";
 import "../Components/Cards.css";
@@ -28,8 +29,6 @@ import { ImProfile } from "react-icons/im";
 import { GoDeviceCamera } from "react-icons/go";
 import { AiFillBell } from "react-icons/ai";
 import Navigation from "../Components/Navigation";
-import EventSidebar from "../Components/EventSidebar";
-import data from "../../../event-data.json";
 import EPSidebar from "../Components/EPSidebar";
 import profilePicture from "../../images/profile-img.jpg";
 
@@ -82,36 +81,56 @@ export default class ProfileEditor extends Component {
                         <Tab.Pane eventKey="first">
                           <Navbar.Brand href="/EditProfile">
                             Edit {this.state.selectedCategory} Profile
-                            <ListGroup defaultActiveKey="#link1">
-                              <ListGroup.Item action href="/EditProfile">
-                                <ImProfile />
-                                General
-                              </ListGroup.Item>
-                            </ListGroup>
-                            <ListGroup defaultActiveKey="#link2">
-                              <ListGroup.Item action href="/EditProfile">
-                                <BsListUl />
-                                Interests
-                              </ListGroup.Item>
-                            </ListGroup>
-                            <ListGroup defaultActiveKey="#link2">
-                              <ListGroup.Item action href="/EditProfile">
-                                <GoDeviceCamera />
-                                Extracurricular
-                              </ListGroup.Item>
-                            </ListGroup>
                           </Navbar.Brand>
                         </Tab.Pane>
                         <Tab.Pane eventKey="second">hello</Tab.Pane>
                         <Tab.Pane eventKey="third">hello again</Tab.Pane>
                       </Tab.Content>
                     </Container>
-                    <Container>
-                      <Col xs={10} md={5}>
-                        <Image src={profilePicture} fluid roundedCircle />
-                      </Col>
-                    </Container>
                   </Navbar>
+                  <Col xs={6} md={4}>
+                    <Image src={profilePicture} fluid roundedCircle />
+                  </Col>
+                  <Form>
+                    <Row className="align-items-center">
+                      <Col xs="auto">
+                        <Form.Label htmlFor="inlineFormInput" visuallyHidden>
+                          First Name
+                        </Form.Label>
+                        <Form.Control
+                          className="mb-2"
+                          id="inlineFormInput"
+                          placeholder="Jane Doe"
+                        />
+                      </Col>
+                      <Col xs="auto">
+                        <Form.Label htmlFor="inlineFormInput" visuallyHidden>
+                          Last Name
+                        </Form.Label>
+                        <Form.Control
+                          className="mb-2"
+                          id="inlineFormInput"
+                          placeholder="Jane Doe"
+                        />
+                      </Col>
+                      <Col xs="auto">
+                        <Form.Label htmlFor="inlineFormInputGroup" visuallyHidden>
+                          Username
+                        </Form.Label>
+                        <InputGroup className="mb-2">
+                          <InputGroup.Text>@</InputGroup.Text>
+                          <FormControl id="inlineFormInputGroup" placeholder="Username" />
+                        </InputGroup>
+                      </Col>
+                    </Row>
+                    <Col>
+                      <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                        <Form.Label>About Me</Form.Label>
+                        <Form.Control as="textarea" rows={3} />
+                      </Form.Group>
+                      <button type="button" class="btn btn-primary float-right">Save</button>
+                    </Col>
+                  </Form>
                 </div>
               </Col>
             </Row>
