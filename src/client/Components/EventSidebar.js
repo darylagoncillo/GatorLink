@@ -16,6 +16,7 @@ import data from "../../../event-data.json";
 import CardItem from "./EventCard";
 
 import "./Cards.css";
+import "./components.css";
 
 function RenderCategories(categories, selectCategory) {
   return categories.map((item) => (
@@ -34,7 +35,7 @@ function RenderCategories(categories, selectCategory) {
 function EventSidebar(props) {
   return (
     <>
-      <div className="event-sidebar">
+      <div className="">
         <ListGroup defaultActiveKey="#link1">
           <ListGroup.Item action href="#">
             Home
@@ -46,13 +47,15 @@ function EventSidebar(props) {
             Notifications
           </ListGroup.Item>
         </ListGroup>
+        <div className="event-sidebar">
+          <h6>Your Upcoming Events</h6>
+          <p>THU, OCT 28 AT 12PM PST BASKETBALL INTRAMURAL PLAYOFFS</p>
+          <h5>Categories</h5>
+        </div>
+        <ListGroup as="ul">
+          {RenderCategories(props.categories, props.selectCategory)}
+        </ListGroup>
       </div>
-      <h6>Your Upcoming Events</h6>
-      <p>THU, OCT 28 AT 12PM PST BASKETBALL INTRAMURAL PLAYOFFS</p>
-      <h5>Categories</h5>
-      <ListGroup as="ul">
-        {RenderCategories(props.categories, props.selectCategory)}
-      </ListGroup>
     </>
   );
 }

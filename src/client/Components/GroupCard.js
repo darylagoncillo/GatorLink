@@ -5,7 +5,7 @@ function CardItem(props) {
   return (
     <>
       <li
-        onClick={() => props.openModal(props.event_id)}
+        onClick={() => props.history.push("/Group/1")}
         className="cards__item"
       >
         <Link className="cards__item__link" to={props.path}>
@@ -18,8 +18,10 @@ function CardItem(props) {
           </figure>
           <div className="cards__item__info">
             <h5 className="cards__item__text">{props.text}</h5>
-            <br />
-            <h5 className="cards__item__text">{props.text}</h5>
+
+            <h5 className="cards__item__text__2">
+              {props.attending} <img width="16px" src="Icons/user.jpg" />
+            </h5>
           </div>
         </Link>
       </li>
