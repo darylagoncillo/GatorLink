@@ -7,6 +7,10 @@ import Events from "./Templates/Events";
 import Groups from "./Templates/Groups";
 import ProfileEditor from "./Templates/ProfileEditor";
 import Event from "./Templates/Event";
+import Search from "./Templates/Search";
+import Login from "./Templates/Login";
+import Registration from "./Templates/Registration";
+import Questionnaire from "./Templates/Questionnaire";
 
 export default class Routing extends Component {
   constructor(props) {
@@ -26,6 +30,10 @@ export default class Routing extends Component {
         <Route component={Groups} path="/Groups" />
         <Route component={ProfileEditor} path="/EditProfile" />
         <Route component={Event} path="/Event" />
+        <Route component={Search} path="/Search" />
+        <Route component={Login} path="/Login" />
+        <Route component={Registration} path="/Registration" />
+        <Route component={Questionnaire} path="/Questionnaire" />
       </BrowserRouter>
     );
   }

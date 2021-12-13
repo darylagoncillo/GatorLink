@@ -16,7 +16,10 @@ import data2 from "../../../group-data.json";
 
 const events = [];
 data.Events.map((item) => {
-  events.push({ label: item.event_name, value: item.event_name });
+  events.push({
+    label: item.event_name + " - " + item.date,
+    value: item.event_name,
+  });
 });
 const groups = [];
 data2.Groups.map((item) => {

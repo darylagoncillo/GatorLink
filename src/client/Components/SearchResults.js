@@ -14,8 +14,10 @@ import {
   NavDropdown,
 } from "react-bootstrap";
 import profilePicture from "../../images/profile-img.jpg";
+import eventData from "../../../event-data.json";
+import groupData from "../../../group-data.json";
 
-function SearchResults(props) {
+function Profile(props) {
   return (
     <div className="body">
       <Container fluid className="page-content">
@@ -260,4 +262,4 @@ function SearchResults(props) {
   );
 }
 
-export default SearchResults;
+export default Profile;

@@ -92,17 +92,6 @@ export default class Events extends Component {
               openModal={this.openModal}
               attending={item.attending}
             />
-
-            <Modal
-              className="event-modal"
-              shouldCloseOnOverlayClick
-              onRequestClose={this.closeModal}
-              isOpen={this.state.eventModal === item.event_id}
-            >
-              <h4>
-                <BsArrowLeft onClick={this.closeModal} />
-              </h4>
-            </Modal>
           </Col>
         );
       }
