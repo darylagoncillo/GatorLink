@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Footer from "./Footer.js";
 import "./HeroContainer.css";
-import eventIcon from '../../images/EventIcon.png';
-import groupIcon from '../../images/GroupIcon.png';
-import forumIcon from '../../images/ForumIcon.png';
+import eventIcon from "../../images/EventIcon.png";
+import groupIcon from "../../images/GroupIcon.png";
+import forumIcon from "../../images/ForumIcon.png";
 import {
   Button,
   Container,
@@ -19,12 +19,17 @@ import {
 } from "react-bootstrap";
 
 function HeroContainer(props) {
+
+  // const handleRoute = () =>{ 
+  //   this.props.history.push("/Groups");
+  // }
+
   return (
     <>
       <div className="hero-container">
         <div className="banner-1">
           <div className="text-wrapper">
-            <h1>Turning Ideas into events </h1>
+            <h1>An online community for students alike</h1>
             <p>
               Connect with thousands of fellow SFSU students online at a touch
               of a button
@@ -33,17 +38,21 @@ function HeroContainer(props) {
         </div>
         <div className="banner-2">
           <Container fluid>
-            <Row md={3} className="row">
+            <Row md={3} className="row-1">
               <div class="col-sm-6">
                 <Card className="text-center">
                   <Card.Body>
-                  <Card.Img className='card-img' variant="top" src={eventIcon}></Card.Img>
-                    <p>Events</p>
+                    <Card.Img
+                      className="card-img"
+                      variant="top"
+                      src={eventIcon}
+                    ></Card.Img>
+                    <p className="card-titles">Events</p>
                     <Card.Text>
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem accusantium doloremque laudantium, totam rem
-                      aperiam, eaque ipsa quae ab illo inventore veritatis et
-                      quasi architecto.
+                      Hundreds of events are posted on the daily by SFSU students. These
+                      posting provide a way for students to connect both online
+                      and offline. The posting's information such as location,
+                      date, and time are available on the post's listing.
                     </Card.Text>
                   </Card.Body>
                 </Card>
@@ -52,13 +61,18 @@ function HeroContainer(props) {
               <div class="col-sm-6">
                 <Card className="text-center">
                   <Card.Body>
-                  <Card.Img className='card-img' variant="top" src={groupIcon}></Card.Img>
-                    <p>Groups</p>
+                    <Card.Img
+                      className="card-img"
+                      variant="top"
+                      src={groupIcon}
+                    ></Card.Img>
+                    <p className="card-titles">Groups</p>
                     <Card.Text>
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem accusantium doloremque laudantium, totam rem
-                      aperiam, eaque ipsa quae ab illo inventore veritatis et
-                      quasi architecto.
+                      Thousands of SFSU students are able to create and invite
+                      others to their group. This feature allows students to
+                      create a smaller community where fellow members can
+                      connect with one another through similar interests or
+                      different interests.
                     </Card.Text>
                   </Card.Body>
                 </Card>
@@ -67,33 +81,58 @@ function HeroContainer(props) {
               <div class="col-sm-6">
                 <Card className="text-center">
                   <Card.Body>
-                  <Card.Img className='card-img' variant="top" src={forumIcon}></Card.Img>
-                    <p>Forums</p>
+                    <Card.Img
+                      className="card-img"
+                      variant="top"
+                      src={forumIcon}
+                    ></Card.Img>
+                    <p className="card-titles">Forums</p>
                     <Card.Text>
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem accusantium doloremque laudantium, totam rem
-                      aperiam, eaque ipsa quae ab illo inventore veritatis et
-                      quasi architecto.
+                      Through the use of forums, group members are allowed to
+                      communicate with one another about any topic of interest.
+                      Members may access these forum threads at any time as well
+                      as creating new threads regarding different topics.
                     </Card.Text>
                   </Card.Body>
                 </Card>
               </div>
-
-              <p>sdfsdf
-                sdfsdfsfdsfddddddddddddddddddddddddddddd
-                dsfsdf
-              </p>
             </Row>
-  
+
+            <Row md={2} className="row-2">
+              <Col className="square-1">
+                <h5>Online and Offline Events</h5>
+                <p className="p-2">
+                  Looking to attend events online or offline? Check out our
+                  events page full of virtual meetups or in-person events!
+                </p>
+                <a href="/Events">
+                  <Button className="button-1"> Browse </Button>
+                </a>
+              </Col>
+
+              <Col className="square-2"></Col>
+            </Row>
+            <Row md={2} className="row-2">
+              <Col className="square-3"></Col>
+
+              <Col className="square-4">
+              <h5>Find and Meet New Friends</h5>
+                <p className="p-2">
+                  Explore the site and make new connections. 
+                  Discover and meet thousands of members in multiple groups.
+                </p>
+                <a href="/Groups">
+                  <Button className="button-2"> Discover </Button>
+                </a>
+              </Col>
+            </Row>
+
+            <Row md={1} className="row-3">
+              <Footer />
+            </Row>
           </Container>
         </div>
-
-        <div className="banner-3">
-          <Footer/>
-        </div>
       </div>
-
-
     </>
   );
 }

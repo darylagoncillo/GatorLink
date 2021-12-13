@@ -17,11 +17,13 @@ import {
 function Footer(props) {
   return (
     <>
-      <div className="footer-containter">
-        <h1 style={{ color: "green", textAlign: "center" }}>
-          FOOTER GOES HERE for now.
-        </h1>
-      </div>
+      <Container className="footer-container">
+        <Row className="footer-row" md={3}>
+          <Col className="footer-col-1" sm="6">
+            <h6 class="column-1">CSC 642 - Team 3</h6>
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 }

@@ -1,32 +1,40 @@
-.profile-container{
-    margin-top: 25px;
-
+.profile-container {
+  margin-top: 25px;
 }
 
-.container-2{
-    margin-top: 100px;
+.container-2 {
+  margin-top: 100px;
 }
 
-
-.row{
-    margin-top: 25px;
+.edit-icon {
+  height: 25px;
+  width: 25px;
+  margin-top: -2px;
+  margin-right: 5px;
+  object-fit: contain;
+  float: right;
 }
 
-.eventButton{
-    margin-left: 74%;
+.left-icon {
+  height: 25px;
+  width: 25px;
+  object-fit: contain;
+  float: left;
 }
 
-.content{
-    float: left;
-    height: 100%;
-    border: 1px solid black;
-    border-color: black;
-    border-width: 0px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
+.content {
+  margin-top: -25px;
 }
 
-.text-center {
+.mega-row{
+    margin-top: 35px;
+}
+
+.eventButton {
+  margin-left: 74%;
+}
+
+.text-center-1 {
   box-shadow: none;
   border-top-color: rgb(218, 211, 211);
   border-bottom: white;
@@ -36,18 +44,22 @@
   padding-top: 15px;
 }
 
-.card-body{
-    padding: none;
+.card-body {
+  padding: none;
 }
-.p{
-    text-align: left;
+.p {
+  text-align: left;
 }
 
-.card-img {
-  width: 45%;
-  border-radius: 75px;
+.profile-img {
+  border-radius: 110px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  
 }
 
 .list-group-item {
-    border-color: white;
+  border-color: white;
 }

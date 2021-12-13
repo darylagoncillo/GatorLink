@@ -20,7 +20,7 @@ export default class Home extends Component {
     return (
       <div className="body">
         <Navigation />
-        <Profile/>
+        <Banners/>
       </div>
     );
   }

@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Profile.css";
+import editIcon from "../../images/EditIcon2.png";
+import eventsIcon from "../../images/ProfileEventsIcon.png";
 import {
   Button,
   Container,
@@ -19,17 +21,19 @@ function SearchResults(props) {
   return (
     <div className="body">
       <Container fluid className="page-content">
-        <div className="row">
+        <Row className="mega-row">
           <Col md="3" sm="12" xs="12">
             <div className="sidebar">
               <div className="event-sidebar" />
               <div className="box-1">
-                <h5>Profile</h5>
+                <h5>
+                  Profile <img className="edit-icon" src={editIcon}></img>
+                </h5>
                 <div className="list-group">
-                  <Card className="text-center">
+                  <Card className="text-center-1">
                     <Card.Body>
                       <Card.Img
-                        className="card-img"
+                        className="profile-img"
                         variant="top"
                         src={profilePicture}
                       />
@@ -44,7 +48,7 @@ function SearchResults(props) {
                   </Card>
                 </div>
                 <div className="box-1">
-                  <h5>Shortcuts</h5>
+                  <h5>Social Media Handles</h5>
                 </div>
 
                 <div className="list-group">
@@ -54,14 +58,14 @@ function SearchResults(props) {
                       data-rb-event-key="/Events"
                       className="list-group-item list-group-item-action"
                     >
-                      Events
+                      Twitter
                     </a>
                     <a
                       href="/Groups"
                       data-rb-event-key="/Groups"
                       className="list-group-item list-group-item-action"
                     >
-                      Groups
+                      Instagram
                     </a>
 
                     <a
@@ -69,47 +73,26 @@ function SearchResults(props) {
                       data-rb-event-key="/Events"
                       className="list-group-item list-group-item-action"
                     >
-                      Friends
+                      Snapchat
                     </a>
                   </Card>
                 </div>
-                <div className="box-1">
-                  <h5>Social Media Handles</h5>
-                </div>
-                <div className="list-group">
-                  <a
-                    href="/Events"
-                    data-rb-event-key="/Events"
-                    className="list-group-item list-group-item-action"
-                  >
-                    Twitter
-                  </a>
-                </div>
-                <div className="list-group">
-                  <a
-                    href="/Events"
-                    data-rb-event-key="/Events"
-                    className="list-group-item list-group-item-action"
-                  >
-                    Instagram
-                  </a>
-                </div>
+   
               </div>
             </div>
           </Col>
-          <Col md="9" sm="12" xs="12">
-            <div className="content">
-              <Navbar bg="light" expand="lg">
-                <Container>
-                  <Navbar.Brand href="/">Events</Navbar.Brand>
-                  <Button className="eventButton">More Events</Button>
-                  <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                  <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ml-auto" />
-                  </Navbar.Collapse>
-                </Container>
-              </Navbar>
-              <div className="row">
+          <Col md="9" sm="12" xs="12" >
+            <Navbar bg="light" expand="lg">
+                  <Container>
+                    <Navbar.Brand href="/">Groups</Navbar.Brand>
+                    <Button className="eventButton">Find Groups</Button>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                      <Nav className="ml-auto" />
+                    </Navbar.Collapse>
+                  </Container>
+                </Navbar>
+              <Row  className="groups-row">
                 <div className="col-sm-4">
                   <Card className="profile-card">
                     <Card.Body>
@@ -151,7 +134,7 @@ function SearchResults(props) {
                     </Card.Body>
                   </Card>
                 </div>
-              </div>
+              </Row>
 
               <div className="row">
                 <div className="col-sm-4">
@@ -252,9 +235,9 @@ function SearchResults(props) {
                   </div>
                 </div>
               </div>
-            </div>
+     
           </Col>
-        </div>
+        </Row>
       </Container>
     </div>
   );
