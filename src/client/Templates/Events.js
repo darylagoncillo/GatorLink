@@ -152,7 +152,6 @@ export default class Events extends Component {
                     </Navbar.Collapse>
                   </Container>
                 </Navbar>
-                <Button variant="secondary">Go Back</Button>{" "}
                 <Button variant="warning" onClick={this.toggleCreateModal}>
                   Create an Event
                 </Button>
