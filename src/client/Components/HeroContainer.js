@@ -139,13 +139,16 @@ function HeroContainer(props) {
                   </a>
                 </div>
               </Col>
+
             </Row>
 
-            <Row md={1} className="row-3">
-              {/* <Footer /> */}
-            </Row>
+  
+
           </Container>
+    
+
         </div>
+
       </div>
     </>
   );

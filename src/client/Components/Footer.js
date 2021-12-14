@@ -17,50 +17,61 @@ import {
 function Footer(props) {
   return (
     <>
-    <div className="main-footer">
-      <Container className="footer-container">
-        <Row className="footer-row" md={3}>
-          <Col className="footer-col-1" md="4">
-            <h6 class="column-1">Team 3</h6>
-            <h5>
-              We are team 3 and we've made an app called GatorLink. The purpose of the app is to design a website that would
-              enable SFSU students to connect with one another through an online community.
-            </h5>
-          </Col>
+      <div className="main-footer">
+        <div className="footer-container">
+          <Row md={3} className="footer-row"> 
+            {/* Column1 */}
+            <Col>
+              <h4>Team 3</h4>
+              <ui className="list-unstyled">
+                <li>Our team strives to create a safe</li>
+                <li>online community for students</li>
+                <li>to thrive in.</li>
+              </ui>
+            </Col>
+            {/* Column2 */}
+            <Col>
+              <h4>Explore Our Website!</h4>
+              <ui className="list-unstyled">
+                <li>Group Events</li>
+                <li>View Groups</li>
+              </ui>
+            </Col>
+            {/* Column3 */}
+            <Col>
+              <h4>Frequently Asked Questions</h4>
+              <ui className="list-unstyled">
+                <li>What's the purpose of this app?</li>
+                <li>What is there to do on here?</li>
+                <li>How to do view and create events?</li>
+              </ui>
+            </Col>
+            <div className="icon-link">
+              Icons made by{" "}
+              <a
+                href="https://www.flaticon.com/authors/fliqqer"
+                title="Fliqqer"
+              >
+                Fliqqer
+              </a>{" "}
+              from{" "}
+              <a href="https://www.flaticon.com/" title="Flaticon">
+                www.flaticon.com
+              </a>
+            </div>
+          </Row>
 
-          <Col className="footer-col-2" md="4">
-          <h6 class="column-1">COL 2</h6>
-            <ul className="list-unstyled">
-              <li>test 1</li>
-              <li>test 2</li>
-              <li>test 3</li>
-            </ul>
-      
 
-          </Col>
-
-          <Col className="footer-col-2" md="4">
-          <h6 class="column-1">COL 3</h6>
-            <ul className="list-unstyled">
-              <li>test 1</li>
-              <li>test 2</li>
-              <li>test 3</li>
-            </ul>
-      
-
-          </Col>
-
-          
-        </Row>
-
-        <Row>
-          <Col sm="2">
-            &copy;{new Date().getFullYear()} sldkfjlskdfj
-
-          </Col>
-        </Row>
-      </Container>
+          <hr />
+          <Row className="copyright-row">
+            <p className="col-sm">
+              &copy;{new Date().getFullYear()} CSC | All rights reserved | Terms
+              Of Service | Privacy
+            </p>
+          </Row>
+        </div>
       </div>
+   
     </>
   );
 }

@@ -104,11 +104,10 @@ export default class Events extends Component {
         <Navigation />
         <br />
         <Container fluid className="page-content">
-          <Row className="mobile-row">
-            <Col md="3" sm="12" xs="12" className="sidebar">
-              <div className="sidebar-contents">
+          <Row>
+            <Col md="3" sm="12" xs="12">
+              <div className="sidebar">
                 <EventSidebar
-                  selectedCategory={this.state.selectedCategory}
                   categories={this.state.categories}
                   selectCategory={this.selectCategory}
                 />
@@ -138,11 +137,7 @@ export default class Events extends Component {
                     </Navbar.Collapse>
                   </Container>
                 </Navbar>
-                <Button
-                  className="create-event"
-                  variant="warning"
-                  onClick={this.toggleCreateModal}
-                >
+                <Button className="create-event" variant="warning" onClick={this.toggleCreateModal}>
                   Create an Event
                 </Button>
                 <br />
