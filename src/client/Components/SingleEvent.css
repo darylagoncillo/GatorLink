@@ -4,8 +4,14 @@
     margin-left: 1px;
 }
 
-.attendance-button {
+.notgoing-button {
+    display:      block;
+    margin-left:  460px;
+    margin-right: 0;
+}
+
+.going-button {
     display:      block;
     margin-left:  auto;
-    margin-right: 0;
+    margin-right: 20px;
 }

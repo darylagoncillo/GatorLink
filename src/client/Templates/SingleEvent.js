@@ -123,12 +123,16 @@ export default class Event extends Component {
                       <ListGroup.Item>30 Not Going</ListGroup.Item>
                     </ListGroup>
                   </Card>
-                  <br />
                 </Col>
-                <Col>
-                <Button className="attendance-button" variant="warning">Not Interested</Button>{' '}
-                <Button className="attendance-button" variant="warning">Going</Button>{' '}
-                </Col>
+                <Row>
+                  <Col>
+                    <Button className="notgoing-button" variant="warning">Not Interested</Button>{' '}
+                  </Col>
+                  <Col>
+                    <Button className="going-button" variant="warning">Going</Button>{' '}
+                  </Col>
+                </Row>
+                <br />
               </div>
             </Col>
           </Row>
