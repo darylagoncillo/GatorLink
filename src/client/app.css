@@ -3,14 +3,6 @@
   margin-bottom: 20px;
 }
 
-.login {
-  background-color: #c59cd9;
-  margin-bottom: 20px;
-  margin-top: 300px;
-  margin-right: 700px;
-  margin-left: 700px;
-}
-
 .list-group-item.active {
   background-color: #8a2be2 !important;
 }
@@ -132,6 +124,7 @@ a {
     margin-left: auto;
     margin-right: auto;
   }
+<<<<<<< HEAD
   .create-date {
     width: 50%;
   }
@@ -140,6 +133,103 @@ a {
     padding-top: 10px;
     padding-left: 20px;
   }
+=======
+
+
+
+
+  /*
+    CSS underneath here contains css styling for login, register, all 4 questionnaires and the buttons/tags within them for Edreece
+    as a heads up. Let me know if you need anything/clarification 
+  */
+
+
+  .login {
+    margin-bottom: 20px;
+    margin-top: 100px;
+    margin-right: 50px;
+    margin-left: 50px;
+    border: 1px solid black;
+    border-color: black;
+    border-width: 0px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  .SFSULoginH1 {
+    margin-left: 35px;
+  }
+
+  .LoginButton{
+     margin-top: 15px;
+     margin-bottom: 15px;
+   }
+
+   .signUp {
+     margin-left: 30px;
+   }
+
+  /* Login.js good for mobile 
+     Regis starts below
+  */
+
+  .Registration {
+    background-color: white;
+    margin-top: 15px;
+    margin-right: 6px;
+    margin-left: 5px;
+  }
+
+  .AccountActivation{
+    margin-left: 20px;
+  }
+
+  .ActivateAccount{
+    margin-left: 20px;
+  }
+
+  .SFSULoginB {
+    margin-top: 80px;
+    margin-right: 30px;
+    width: 350px;
+    height: 50px;
+    font-weight: 900;
+  }
+
+  .SFSUNEXT {
+    width: 350px;
+    margin-top: 180px;
+    margin-bottom: 20px
+  }
+  
+  .SFSUAccount {
+    width: 350px;
+  }
+  
+  .TOSCheck {
+    margin-top: 50px;
+    margin-left: 45;
+  }
+  
+  /* 
+  Register works on mobile now, 
+  below are the questionnaires.
+  */
+
+  .QuestionNEXT{
+    margin-bottom: 20px;
+  }
+  
+  .QuestionH2{
+    margin-left: 25px;
+  }
+
+  .QuestionH5{
+    margin-left: 25px;
+  }
+
+  /* Mobile for Login/Register/Questionnaires are finished */
+>>>>>>> 89d4381d0092e594463feb4990286245d727ade9
 }
 
 @media only screen and (min-width: 1000px) {
@@ -225,7 +315,9 @@ a {
     border-width: 0px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
+
   }
+<<<<<<< HEAD
   .create-date {
     width: 25%;
   }
@@ -235,3 +327,119 @@ a {
     border-radius: 10px 10px 0px 0px;
   }
 }
+=======
+
+
+  /*
+    CSS underneath here contains css styling for login, register, all 4 questionnaires and the buttons/tags within them for Edreece
+    as a heads up. Let me know if you need anything/clarification 
+  */
+
+  .login {
+    margin-bottom: 20px;
+    margin-top: 100px;
+    margin-right: 50px;
+    margin-left: 50px;
+    border: 1px solid black;
+    border-color: black;
+    border-width: 0px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  .SFSULoginH1 {
+    margin-left: 800px;
+  }
+
+  .LoginButton{
+     margin-top: 15px;
+     margin-bottom: 15px;
+   }
+
+   .NewGatorLink{
+     margin-left: 450px;
+   }
+
+   .signUp {
+     margin-left: 10px;
+     margin-bottom: 5px;
+   }
+
+   /* Register.js below Windows*/
+
+   .Registration {
+    background-color: white;
+    margin-top: 150px;
+    margin-right: 700px;
+    margin-left: 700px;
+    border: 1px solid black;
+    border-color: black;
+    border-width: 0px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  .AccountActivation{
+    margin-left: 50px;
+  }
+
+  .ActivateAccount{
+    margin-left: 25px;
+    margin-right: 75px;
+  }
+
+  .SFSULoginB {
+    margin-top: 80px;
+    width: 450px;
+    height: 50px;
+    font-weight: 900;
+  }
+
+  .TOSCheck {
+    margin-top: 50px;
+    margin-left: 45;
+    font-weight: 700;
+  }
+  
+  .SFSUNEXT {
+    width: 450px;
+    margin-top: 180px;
+    margin-bottom: 20px;
+  }
+  
+  .SFSUAccount {
+    width: 450px;
+    margin-bottom: 15px;
+  }
+  
+  /* Register finished, on to questionnaire */
+  
+  .Questionnaire{
+    margin-top: 50px;
+    border: 1px solid black;
+    border-color: black;
+    border-width: 0px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  .QuestionH2{
+    margin-left: 750px;
+  }
+
+  .QuestionH5{
+    margin-left: 685px;
+  }
+
+  .QuestionNEXT{
+    margin-left: 125px;
+    margin-bottom: 40px;
+  }
+
+  .QuestionSKIP{
+    margin-left: 250px;
+  }
+  /* Desktop for Login/Register/Questionnaires are finished */
+
+}
+>>>>>>> 89d4381d0092e594463feb4990286245d727ade9
