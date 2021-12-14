@@ -26,7 +26,7 @@ export default class Questionnaire1 extends Component {
 
   render() {
     return (
-      <div className="Questionnaire1">
+      <div className="Questionnaire">
         <h2 className="QuestionH2">Personal Information</h2>
         <br />
         <h5 className="QuestionH5">All fields below are optional and can be skipped</h5>

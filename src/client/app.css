@@ -3,8 +3,6 @@
   margin-bottom: 20px;
 }
 
-
-
 .list-group-item.active {
   background-color: #8a2be2 !important;
 }
@@ -102,6 +100,11 @@ a {
     margin-top: 100px;
     margin-right: 50px;
     margin-left: 50px;
+    border: 1px solid black;
+    border-color: black;
+    border-width: 0px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
   }
 
   .SFSULoginH1 {
@@ -271,6 +274,11 @@ a {
     margin-top: 100px;
     margin-right: 50px;
     margin-left: 50px;
+    border: 1px solid black;
+    border-color: black;
+    border-width: 0px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
   }
 
   .SFSULoginH1 {
@@ -288,6 +296,7 @@ a {
 
    .signUp {
      margin-left: 10px;
+     margin-bottom: 5px;
    }
 
    /* Register.js below Windows*/
@@ -297,6 +306,11 @@ a {
     margin-top: 150px;
     margin-right: 700px;
     margin-left: 700px;
+    border: 1px solid black;
+    border-color: black;
+    border-width: 0px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
   }
 
   .AccountActivation{
@@ -329,10 +343,20 @@ a {
   
   .SFSUAccount {
     width: 450px;
+    margin-bottom: 15px;
   }
   
   /* Register finished, on to questionnaire */
   
+  .Questionnaire{
+    margin-top: 50px;
+    border: 1px solid black;
+    border-color: black;
+    border-width: 0px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
+  }
+
   .QuestionH2{
     margin-left: 750px;
   }
@@ -343,6 +367,7 @@ a {
 
   .QuestionNEXT{
     margin-left: 125px;
+    margin-bottom: 40px;
   }
 
   .QuestionSKIP{
