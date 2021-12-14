@@ -11,17 +11,16 @@ import {
   NavDropdown,
   Tab,
   Tabs,
-  ListGroup
+  ListGroup,
 } from "react-bootstrap";
 import React, { Component } from "react";
 import "../Components/Cards.css";
 import Modal from "react-modal";
 import { BsArrowLeft, BsThreeDotsVertical } from "react-icons/bs";
+import { RiArrowGoBackLine } from "react-icons/ri";
 import Navigation from "../Components/Navigation";
 import EventSidebar from "../Components/EventSidebar";
 import data from "../../../event-data.json";
-
-import { RiArrowGoBackLine } from "react-icons/ri";
 
 import CardItem from "../Components/EventCard";
 
@@ -86,7 +85,7 @@ export default class Event extends Component {
         <Navigation />
 
         <Container fluid className="page-content">
-          <Row className="justify-content-md-center">
+          <Row className="justify-content-md-center ">
             <Col md="8" sm="12">
               <Button
                 variant="warning"
@@ -102,23 +101,25 @@ export default class Event extends Component {
 
               <div className="content">
                 <Col xs={5} md={5}>
-                  <Card style={{ width: '18rem' }}>
-                    <Card.Header></Card.Header>
+                  <Card style={{ width: "18rem" }}>
+                    <Card.Header />
                     <Card.Img variant="top" src="/EventPictures/img-1.jpg" />
                     <Card.Body>
                       <Card.Title>Intramural Basketball</Card.Title>
-                      <Card.Subtitle className="mb-2 text-muted">Thursday, October 28</Card.Subtitle>
+                      <Card.Subtitle className="mb-2 text-muted">
+                        Thursday, October 28
+                      </Card.Subtitle>
                       <Card.Text>
-                        Playoffs have begun! Support your peers this week
-                        at the Mashouf Wellness Center at 12PM for the first round of the
-                        Basketball Intramural Playoffs.
+                        Playoffs have begun! Support your peers this week at the
+                        Mashouf Wellness Center at 12PM for the first round of
+                        the Basketball Intramural Playoffs.
                       </Card.Text>
                     </Card.Body>
                   </Card>
                   <row>
-                    <p></p>
+                    <p />
                   </row>
-                  <Card className="text-center" style={{ width: '18rem' }}>
+                  <Card className="text-center" style={{ width: "18rem" }}>
                     <Card.Header>Mutuals</Card.Header>
                     <ListGroup variant="flush">
                       <ListGroup.Item>32 Going</ListGroup.Item>
@@ -129,8 +130,12 @@ export default class Event extends Component {
                 </Col>
 
                 <Col>
-                  <button type="button" class="btn btn-primary float-right">Going</button>
-                  <button type="button" class="btn btn-primary float-right">Not Interested</button>
+                  <button type="button" className="btn btn-primary float-right">
+                    Going
+                  </button>
+                  <button type="button" className="btn btn-primary float-right">
+                    Not Interested
+                  </button>
                 </Col>
               </div>
             </Col>

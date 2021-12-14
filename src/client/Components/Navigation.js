@@ -50,7 +50,7 @@ class Navigation extends Component {
   }
 
   search() {
-    this.props.history.push("/Search");
+    this.props.history.push(`/Search?query=${this.state.searchValue}`);
   }
 
   onChange = (selectedOption) => {

@@ -53,16 +53,6 @@
       "group_name": "CS Club",
       "img_url": "GroupPictures/csclub.png",
       "members": "12"
-    },
-    {
-      "group_id": "10",
-      "group_name": "SFSU Cinema Club",
-      "img_url": "GroupPictures/cinemaclub.png",
-      "description": "A space to talk about films or chat with others about related topics.",
-      "creator": "Jose Castanon",
-      "members": "1",
-      "category": "Film",
-      "contact": "sfsucinema"
     }
   ]
 }

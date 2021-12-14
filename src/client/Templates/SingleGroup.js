@@ -24,6 +24,7 @@ import data from "../../../group-data.json";
 
 import CardItem from "../Components/EventCard";
 import GroupSidebar from "../Components/GroupSidebar";
+import { retrieveCookie } from "../Components/Cookies";
 
 export default class Group extends Component {
   constructor(props) {
@@ -144,10 +145,18 @@ export default class Group extends Component {
                       </Col>
                     </Row>
                   </Tab>
-                  <Tab eventKey="forum" title="Forum" disabled>
+                  <Tab
+                    eventKey="forum"
+                    title="Forum"
+                    disabled={!retrieveCookie()}
+                  >
                     here
                   </Tab>
-                  <Tab eventKey="members" title="Members" disabled>
+                  <Tab
+                    eventKey="members"
+                    title="Members"
+                    disabled={!retrieveCookie()}
+                  >
                     here
                   </Tab>
                 </Tabs>
