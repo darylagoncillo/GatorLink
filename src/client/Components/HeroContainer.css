@@ -101,20 +101,20 @@
 .button-1 {
   /* background-color: rgb(255, 208, 0); */
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background-color: rgb(61, 60, 60);
-  color: white;
+  background-color: rgb(61, 60, 60) !important;
+  color: white !important;
   font-size: 25px;
-  border: none;
+  border: black !important;
   height: 15%;
   width: 35%;
 }
 
 .button-2 {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background-color: #e4c4c5;
-  color: black;
+  background-color: #e4c4c5 !important;
+  color: black !important;
   font-size: 25px;
-  border: none;
+  border: black !important;
   height: 15%;
   width: 35%;
 }
@@ -135,13 +135,10 @@
   margin:0 auto; /* this will center  it */
   margin-top: 10px;
   position:relative;
-  font-style:normal;
-  font-weight:normal;
   font-size:14px;
-  outline:none;
+  background-color: #3a3939 !important;
   color:#fff;
-  border:none;
-  text-decoration:none;
+  border:black !important;
   text-align:center;
   cursor:pointer;
   -webkit-border-radius:2px;

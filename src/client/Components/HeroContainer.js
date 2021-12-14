@@ -35,7 +35,7 @@ function HeroContainer(props) {
             </p>
           </div>
           <a href="/">
-            <Button className="button-get-started"> Browse </Button>
+            <Button className="button-get-started"> Get Started </Button>
           </a>
         </div>
         <div className="banner-2">
