@@ -50,8 +50,11 @@ a {
 @media only screen and (max-width: 999px) {
   .nav-link.active {
     padding-left: 12px;
-    width: 20%;
+
     border-radius: 5px;
+    background-color: #8a2be2 !important;
+  }
+  .dropdown-item.active {
     background-color: #8a2be2 !important;
   }
   .desktop-only {
@@ -108,6 +111,9 @@ a {
 @media only screen and (min-width: 1000px) {
   .nav-link.active {
     border-radius: 5px;
+    background-color: #8a2be2 !important;
+  }
+  .dropdown-item.active {
     background-color: #8a2be2 !important;
   }
   .mobile-only {
