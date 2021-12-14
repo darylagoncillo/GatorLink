@@ -20,8 +20,11 @@ import "../Components/ProfileEditor.css";
 import Modal from "react-modal";
 import { BsFillPersonBadgeFill, BsFillShieldFill } from "react-icons/bs";
 import { AiFillBell } from "react-icons/ai";
+import { ToastContainer, toast } from "react-toastify";
 import Navigation from "../Components/Navigation";
 import profilePicture from "../../images/profile-img.jpg";
+
+import "react-toastify/dist/ReactToastify.css";
 
 export default class ProfileEditor extends Component {
   constructor(props) {
@@ -88,7 +91,7 @@ export default class ProfileEditor extends Component {
                                 <Form.Control
                                   className="mb-2"
                                   id="inlineFormInput"
-                                  placeholder="Jane Doe"
+                                  placeholder="Jane"
                                 />
                               </Col>
                               <Col xs="auto">
@@ -101,7 +104,7 @@ export default class ProfileEditor extends Component {
                                 <Form.Control
                                   className="mb-2"
                                   id="inlineFormInput"
-                                  placeholder="Jane Doe"
+                                  placeholder="Doe"
                                 />
                               </Col>
                               <Col xs="auto">
@@ -115,7 +118,7 @@ export default class ProfileEditor extends Component {
                                   <InputGroup.Text>@</InputGroup.Text>
                                   <FormControl
                                     id="inlineFormInputGroup"
-                                    placeholder="Username"
+                                    placeholder="jdoe3"
                                   />
                                 </InputGroup>
                               </Col>
@@ -125,11 +128,14 @@ export default class ProfileEditor extends Component {
                               controlId="exampleForm.ControlTextarea1"
                             >
                               <Form.Label>About Me</Form.Label>
-                              <Form.Control as="textarea" rows={3} />
+                              <Form.Control as="textarea" rows={3}>
+                                SFSU Student with a passion for web development.
+                              </Form.Control>
                             </Form.Group>
                             <button
                               type="button"
                               className="btn btn-primary float-right"
+                              onClick={() => toast("Changes Saved!")}
                             >
                               Save
                             </button>
@@ -230,6 +236,13 @@ export default class ProfileEditor extends Component {
                                 id="msms"
                                 label="SMS"
                               />
+                              <button
+                                type="button"
+                                className="btn btn-primary float-right"
+                                onClick={() => toast("Changes Saved!")}
+                              >
+                                Save
+                              </button>
                             </Form>
                             <br />
                           </Col>
@@ -292,6 +305,13 @@ export default class ProfileEditor extends Component {
                                 id="messageFoF"
                                 label="Mutual Friends"
                               />
+                              <button
+                                type="button"
+                                className="btn btn-primary float-right"
+                                onClick={() => toast("Changes Saved!")}
+                              >
+                                Save
+                              </button>
                             </Form>
                             <br />
                           </Col>
@@ -304,6 +324,7 @@ export default class ProfileEditor extends Component {
             </Row>
           </Tab.Container>
         </Container>
+        <ToastContainer position="bottom-right" autoClose={2000} />
       </div>
     );
   }
