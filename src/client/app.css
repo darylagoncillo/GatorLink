@@ -11,6 +11,14 @@
   margin-left: 700px;
 }
 
+.list-group-item.active {
+  background-color: #8a2be2 !important;
+}
+
+a {
+  color: black;
+}
+
 .SFSULoginB {
   margin-top: 80px;
   width: 450px;

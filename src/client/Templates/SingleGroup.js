@@ -18,8 +18,8 @@ import React, { Component } from "react";
 import Modal from "react-modal";
 import { BsArrowLeft, BsThreeDotsVertical } from "react-icons/bs";
 import { RiArrowGoBackLine } from "react-icons/ri";
+import { AiFillPushpin } from "react-icons/ai";
 import Navigation from "../Components/Navigation";
-
 import data from "../../../group-data.json";
 
 import CardItem from "../Components/EventCard";
@@ -150,7 +150,43 @@ export default class Group extends Component {
                     title="Forum"
                     disabled={!retrieveCookie()}
                   >
-                    here
+                    <Tab.Container
+                      id="left-tabs-example"
+                      defaultActiveKey="first"
+                    >
+                      <Row>
+                        <Col sm={3}>
+                          <Nav variant="pills" className="flex-column">
+                            <Nav.Item>
+                              <Nav.Link eventKey="first">
+                                <AiFillPushpin /> Introductions
+                              </Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                              <Nav.Link eventKey="second">
+                                Silent Films
+                              </Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                              <Nav.Link eventKey="third">
+                                Movies you love
+                              </Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                              <Nav.Link eventKey="fourth">Comedies</Nav.Link>
+                            </Nav.Item>
+                          </Nav>
+                        </Col>
+                        <Col sm={9}>
+                          <Tab.Content>
+                            <Tab.Pane eventKey="first">here</Tab.Pane>
+                            <Tab.Pane eventKey="second">again</Tab.Pane>
+                            <Tab.Pane eventKey="thid">here</Tab.Pane>
+                            <Tab.Pane eventKey="fourth">again</Tab.Pane>
+                          </Tab.Content>
+                        </Col>
+                      </Row>
+                    </Tab.Container>
                   </Tab>
                   <Tab
                     eventKey="members"

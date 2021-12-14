@@ -108,6 +108,7 @@ export default class Events extends Component {
             <Col md="3" sm="12" xs="12" className="sidebar">
               <div className="sidebar-contents">
                 <EventSidebar
+                  selectedCategory={this.state.selectedCategory}
                   categories={this.state.categories}
                   selectCategory={this.selectCategory}
                 />

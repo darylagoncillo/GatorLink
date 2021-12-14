@@ -11,18 +11,16 @@ import {
   ListGroup,
   NavDropdown,
   Tab,
-  Tabs
+  Tabs,
 } from "react-bootstrap";
 import React, { Component, useState } from "react";
 import "./components.css";
 
-import { FaBasketballBall } from "react-icons/fa";
-import { GrBeacon } from "react-icons/gr";
-import { FaMusic } from "react-icons/fa";
-import { GrPaint } from "react-icons/gr";
+import { FaBasketballBall, FaMusic } from "react-icons/fa";
+import { GrBeacon, GrPaint } from "react-icons/gr";
+
 import { BsController } from "react-icons/bs";
 import { SiBytedance } from "react-icons/si";
-
 
 const icons = {
   Sports: <FaBasketballBall />,
@@ -30,14 +28,15 @@ const icons = {
   Music: <FaMusic />,
   Art: <GrPaint />,
   Gaming: <BsController />,
-  Dance: <SiBytedance />
+  Dance: <SiBytedance />,
 };
 
-function RenderCategories(categories, selectCategory) {
+function RenderCategories(categories, selectCategory, selectedCategory) {
   return categories.map((item) => (
     <ListGroup.Item
       action
       as="li"
+      active={selectedCategory === item}
       onClick={() => {
         selectCategory(item);
       }}
@@ -50,15 +49,44 @@ function RenderCategories(categories, selectCategory) {
 function EventSidebar(props) {
   return (
     <>
+<<<<<<< HEAD
       <div className="event-side-border">
         <div className="eventSidebar">
           <br />
           <h6 className="your-upcoming-events">Your Upcoming Events</h6>
           <p className="upcoming-title">THU, OCT 28 AT 12PM PST BASKETBALL INTRAMURAL PLAYOFFS</p>
+=======
+      <div className="sidebar">
+        <ListGroup defaultActiveKey="#link1">
+          <ListGroup.Item action href="/Events">
+            Home
+          </ListGroup.Item>
+        </ListGroup>
+        <ListGroup defaultActiveKey="#link2">
+          <ListGroup.Item action href="/Events">
+            Birthdays
+          </ListGroup.Item>
+        </ListGroup>
+        <ListGroup defaultActiveKey="#link2">
+          <ListGroup.Item action href="/Events">
+            Notifications
+          </ListGroup.Item>
+        </ListGroup>
+
+        <div className="eventSidebar">
+          <h6 className="event-sidebar">Your Upcoming Events</h6>
+          <p className="upcoming-title">
+            THU, OCT 28 AT 12PM PST BASKETBALL INTRAMURAL PLAYOFFS
+          </p>
+>>>>>>> 88fdc58b9db456dd11d3ba3e7927492a13606ddc
           <h5 className="categories">Categories</h5>
         </div>
         <ListGroup as="ul">
-          {RenderCategories(props.categories, props.selectCategory)}
+          {RenderCategories(
+            props.categories,
+            props.selectCategory,
+            props.selectedCategory
+          )}
         </ListGroup>
       </div>
     </>
