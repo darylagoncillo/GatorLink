@@ -152,7 +152,7 @@ export default class Events extends Component {
                     <BsArrowLeft onClick={this.toggleCreateModal} />
                   </h4>
                   <Col>
-                    <Navbar variant="light" className="create-nav" bg="light">
+                    <Navbar variant="light" className="create-nav" bg="warning">
                       <Container>
                         <Navbar.Brand className="brand">Create Event</Navbar.Brand>
                       </Container>

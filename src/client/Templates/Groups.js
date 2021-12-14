@@ -21,6 +21,7 @@ import data from "../../../group-data.json";
 
 import CardItem from "../Components/GroupCard";
 import GroupSidebar from "../Components/GroupSidebar";
+import { BsArrowLeft, BsThreeDotsVertical } from "react-icons/bs";
 
 export default class Group extends Component {
   constructor(props) {
@@ -164,9 +165,33 @@ export default class Group extends Component {
                   onRequestClose={this.toggleCreateModal}
                   isOpen={this.state.newGroupModal}
                 >
-                  {/* <h4>
+                  <h4>
                     <BsArrowLeft onClick={this.toggleCreateModal} />
-                  </h4> */}
+                  </h4>
+                  <Col>
+                    <Navbar variant="light" className="create-nav" bg="warning">
+                      <Container>
+                        <Navbar.Brand className="brand">Create Group</Navbar.Brand>
+                      </Container>
+                    </Navbar>
+                    <br />
+                  </Col>
+                  <Col>
+                    <Form>
+                      <Form.Group className="create-title" controlId="formBasicEmail">
+                        <Form.Label>Title</Form.Label>
+                        <Form.Control type="text" />
+                      </Form.Group>
+
+                      <Form.Group className="create-details" controlId="exampleForm.ControlTextarea1">
+                        <Form.Label>Details</Form.Label>
+                        <Form.Control as="textarea" rows={3} />
+                      </Form.Group>
+
+                      <Button className="button123" variant="warning"
+                        href="/Groups">Create</Button>{' '}
+                    </Form>
+                  </Col>
                 </Modal>
               </div>
             </Col>
