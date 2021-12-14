@@ -3,13 +3,29 @@
   background: #fff;
 }
 
-.create-nav {
-  background-color: #CF9FFF;
-  
+.brand {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
 }
 
-.brand {
-  font-family: "Lucida Console", "Courier New", monospace;
+.create-title {
+  width: 75%;
+}
+
+.create-date {
+  width: 25%
+}
+
+.create-details {
+  width: 80%;
+}
+
+.create-time {
+  width: 50%;
+}
+
+.button123 {
+  float: right;
 }
 
 .create-event {
