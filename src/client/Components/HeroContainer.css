@@ -7,6 +7,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
 }
 
 .hero-container {
@@ -17,7 +18,6 @@
 /* .banner-2 {
   height: 30vh;
   width: 100%;
-  margin-top: -40px;
   display: flex;
   align-items: center;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0, 2);
@@ -130,17 +130,24 @@
 }
 
 .button-get-started{
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background-color: rgb(61, 60, 60);
-  color: white;
-  font-size: 25px;
-  border: none;
-  height: 60px;
-  width: 275px;
-  justify-content: center;
-  align-items: center;
-  margin-left: 1150px;
+  display:block; /* change this from inline-block */
+  width:200px; /* setting the width */
+  margin:0 auto; /* this will center  it */
   margin-top: 10px;
+  position:relative;
+  font-style:normal;
+  font-weight:normal;
+  font-size:14px;
+  outline:none;
+  color:#fff;
+  border:none;
+  text-decoration:none;
+  text-align:center;
+  cursor:pointer;
+  -webkit-border-radius:2px;
+  -moz-border-radius:2px;
+  border-radius:2px;
+
 }
 
 .button-get-started:hover{
@@ -177,9 +184,9 @@
 }
 
 .card-img {
-  width: 35%;
-  height: 100%;
-  object-fit: cover;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
 }
 
 .card-titles {
