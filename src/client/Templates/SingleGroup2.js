@@ -255,7 +255,7 @@ export default class Group2 extends Component {
                   <Tab
                     eventKey="forum"
                     title="Forum"
-                    disabled={!retrieveCookie()}
+                    disabled={!this.state.joined}
                   >
                     <Tab.Container
                       id="left-tabs-example"
@@ -368,7 +368,7 @@ export default class Group2 extends Component {
                   <Tab
                     eventKey="members"
                     title="Members"
-                    disabled={!retrieveCookie()}
+                    disabled={!this.state.joined}
                   >
                     <Row>{this.renderUsers()}</Row>
                   </Tab>

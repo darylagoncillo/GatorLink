@@ -16,43 +16,33 @@ import {
 import React, { Component } from "react";
 
 import Modal from "react-modal";
-import { BsArrowLeft, BsThreeDotsVertical } from "react-icons/bs";
+import {
+  BsArrowLeft,
+  BsFacebook,
+  BsInstagram,
+  BsThreeDotsVertical,
+  BsTwitter,
+} from "react-icons/bs";
 import { RiArrowGoBackLine } from "react-icons/ri";
-import { AiFillPushpin } from "react-icons/ai";
+import { AiFillPushpin, AiOutlineMail } from "react-icons/ai";
 import { ChatBox } from "react-chatbox-component";
+import { ToastContainer, toast } from "react-toastify";
 import Navigation from "../Components/Navigation";
 import data from "../../../group-data.json";
 import data2 from "../../../name-data.json";
 import CardItem from "../Components/UserCard";
 import "react-chatbox-component/dist/style.css";
 import { retrieveCookie } from "../Components/Cookies";
+import "react-toastify/dist/ReactToastify.css";
 
 const messages = [
   {
-    text: "Hello there",
-    id: "1",
-    sender: {
-      name: "Ironman",
-      uid: "user1",
-      avatar: "https://data.cometchat.com/assets/images/avatars/ironman.png",
-    },
-  },
-  {
-    text: "Hi Mr. Stark",
+    text: "Welcome to the Introductions Channel!",
     id: "2",
     sender: {
-      name: "Spiderman",
+      name: "",
       uid: "user2",
-      avatar: "https://data.cometchat.com/assets/images/avatars/spiderman.png",
-    },
-  },
-  {
-    text: "Hello Spiderman, how are you today?",
-    id: "3",
-    sender: {
-      name: "Ironman",
-      uid: "user1",
-      avatar: "https://data.cometchat.com/assets/images/avatars/ironman.png",
+      avatar: "http://localhost:3000/Icons/user.jpg",
     },
   },
 ];
@@ -61,13 +51,14 @@ const user = {
   uid: "user1",
 };
 
-export default class Group extends Component {
+export default class Group2 extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       groups: data.Groups,
       names: data2,
+      joined: true,
       newGroupModal: false,
       selectedCategory: null,
     };
@@ -76,12 +67,34 @@ export default class Group extends Component {
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
     this.renderUsers = this.renderUsers.bind(this);
+    this.joinGroup = this.joinGroup.bind(this);
   }
 
   toggleCreateModal() {
     this.setState({
       newGroupModal: !this.state.newGroupModal,
     });
+  }
+
+  joinGroup() {
+    this.setState({
+      joined: !this.state.joined,
+    });
+    toast("Joined Group!");
+  }
+
+  getVariant() {
+    if (this.state.joined === true) {
+      return "success";
+    }
+    return "warning";
+  }
+
+  getText() {
+    if (this.state.joined === true) {
+      return "Joined Group";
+    }
+    return "Join Group";
   }
 
   closeModal() {
@@ -115,14 +128,14 @@ export default class Group extends Component {
       if (
         (this.state.selectedCategory === null ||
           this.state.selectedCategory === item.category) &&
-        count < 10
+        count < 1
       ) {
         count++;
         return (
           <Col md="3">
             <CardItem
               src="http://localhost:3000/Icons/user.jpg"
-              text={item.name}
+              text="Jose Castanon"
             />
           </Col>
         );
@@ -138,20 +151,35 @@ export default class Group extends Component {
         <Container fluid className="page-content">
           <Row className="justify-content-md-center">
             <Col md="8" sm="12">
-              <Button
-                variant="warning"
-                className="back-to-events"
-                onClick={() => {
-                  this.props.history.push("/Groups");
-                }}
-              >
-                <div style={{ display: "flex", alignItems: "center" }}>
-                  <RiArrowGoBackLine />
-                  Back to Groups
-                </div>
-              </Button>
-              <br className="mobile-only" />
-              <br className="mobile-only" />
+              <Row>
+                <Col md="10">
+                  <Button
+                    className="back-to-events"
+                    variant="warning"
+                    onClick={() => {
+                      this.props.history.push("/Groups");
+                    }}
+                  >
+                    <div style={{ display: "flex", alignItems: "center" }}>
+                      <RiArrowGoBackLine />
+                      Back to Groups
+                    </div>
+                  </Button>
+                </Col>
+                <Col md="2">
+                  <Button
+                    className="back-to-events"
+                    variant={this.getVariant()}
+                    onClick={() => {
+                      this.joinGroup();
+                    }}
+                  >
+                    <div style={{ display: "flex", alignItems: "center" }}>
+                      {this.getText()}
+                    </div>
+                  </Button>
+                </Col>
+              </Row>
               <div className="content">
                 <Tabs
                   defaultActiveKey="info"
@@ -164,7 +192,7 @@ export default class Group extends Component {
                         <Card style={{ width: "100%" }}>
                           <Card.Img
                             variant="top"
-                            src="http://127.0.0.1:3000/GroupPictures/cinemaclub.PNG"
+                            src="http://127.0.0.1:3000/GroupPictures/cinemaclub.png"
                           />
                           <Card.Body>
                             <Card.Title>SFSU Cinema Club</Card.Title>
@@ -178,20 +206,19 @@ export default class Group extends Component {
                         <Card style={{ width: "100%" }}>
                           <Card.Body>
                             <Card.Title>About Us</Card.Title>
-                            <p>
-                              A space to talk about films or chat with others
-                              about related topics.
-                            </p>
+                            <p>A space to discuss films, talk about events.</p>
                           </Card.Body>
                         </Card>
                         <br />
                         <Card style={{ width: "100%" }}>
                           <Card.Body>
                             <Card.Title>Contact Information</Card.Title>
-                            <p>
-                              A space to talk about films or chat with others
-                              about related topics.
-                            </p>
+                            <Button
+                              style={{ width: "100%" }}
+                              variant="outline-primary"
+                            >
+                              <AiOutlineMail /> sfsucinema
+                            </Button>
                           </Card.Body>
                         </Card>
                       </Col>
@@ -208,7 +235,7 @@ export default class Group extends Component {
                   <Tab
                     eventKey="forum"
                     title="Forum"
-                    disabled={!retrieveCookie()}
+                    disabled={!this.state.joined}
                   >
                     <Tab.Container
                       id="left-tabs-example"
@@ -218,46 +245,18 @@ export default class Group extends Component {
                         <Col sm={3}>
                           <Nav variant="pills" className="flex-column chat-nav">
                             <Nav.Item>
-                              <Nav.Link eventKey="first">
-                                <AiFillPushpin /> Introductions
-                              </Nav.Link>
+                              <Nav.Link eventKey="first">New</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
                               <Nav.Link eventKey="second">
-                                Silent Films
+                                <AiFillPushpin /> Introductions
                               </Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                              <Nav.Link eventKey="third">
-                                Movies you love
-                              </Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                              <Nav.Link eventKey="fourth">Comedies</Nav.Link>
                             </Nav.Item>
                           </Nav>
                         </Col>
                         <Col sm={9}>
-                          <Tab.Content>
-                            <Tab.Pane eventKey="first">
-                              <ChatBox
-                                messages={messages}
-                                user={user}
-                                onSubmit={(message) => {
-                                  console.log(message);
-                                  messages.push({
-                                    text: message,
-                                    id: "4",
-                                    sender: {
-                                      name: "Ironman",
-                                      uid: "user1",
-                                      avatar:
-                                        "https://data.cometchat.com/assets/images/avatars/ironman.png",
-                                    },
-                                  });
-                                }}
-                              />
-                            </Tab.Pane>
+                          <Tab.Content className="chat-box">
+                            <Tab.Pane eventKey="first" />
                             <Tab.Pane eventKey="second">
                               <ChatBox
                                 messages={messages}
@@ -271,45 +270,7 @@ export default class Group extends Component {
                                       name: "Ironman",
                                       uid: "user1",
                                       avatar:
-                                        "https://data.cometchat.com/assets/images/avatars/ironman.png",
-                                    },
-                                  });
-                                }}
-                              />
-                            </Tab.Pane>
-                            <Tab.Pane eventKey="thid">
-                              <ChatBox
-                                messages={messages}
-                                user={user}
-                                onSubmit={(message) => {
-                                  console.log(message);
-                                  messages.push({
-                                    text: message,
-                                    id: "4",
-                                    sender: {
-                                      name: "Ironman",
-                                      uid: "user1",
-                                      avatar:
-                                        "https://data.cometchat.com/assets/images/avatars/ironman.png",
-                                    },
-                                  });
-                                }}
-                              />
-                            </Tab.Pane>
-                            <Tab.Pane eventKey="fourth">
-                              <ChatBox
-                                messages={messages}
-                                user={user}
-                                onSubmit={(message) => {
-                                  console.log(message);
-                                  messages.push({
-                                    text: message,
-                                    id: "4",
-                                    sender: {
-                                      name: "Ironman",
-                                      uid: "user1",
-                                      avatar:
-                                        "https://data.cometchat.com/assets/images/avatars/ironman.png",
+                                        "http://localhost:3000/Icons/user.jpg",
                                     },
                                   });
                                 }}
@@ -323,7 +284,7 @@ export default class Group extends Component {
                   <Tab
                     eventKey="members"
                     title="Members"
-                    disabled={!retrieveCookie()}
+                    disabled={!this.state.joined}
                   >
                     <Row>{this.renderUsers()}</Row>
                   </Tab>
@@ -332,6 +293,7 @@ export default class Group extends Component {
             </Col>
           </Row>
         </Container>
+        <ToastContainer position="bottom-right" autoClose={2000} />
       </div>
     );
   }

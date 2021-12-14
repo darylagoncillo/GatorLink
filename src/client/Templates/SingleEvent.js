@@ -20,6 +20,7 @@ import { GrAccessibility } from "react-icons/gr";
 import { ToastContainer, toast } from "react-toastify";
 import Navigation from "../Components/Navigation";
 import data from "../../../event-data.json";
+
 import "react-toastify/dist/ReactToastify.css";
 import { retrieveCookie } from "../Components/Cookies";
 
