@@ -33,3 +33,16 @@
   margin-bottom: 5px;
   font-weight: 500;
 }
+
+.upcoming-title {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+.categories {
+  margin-left: 15px;
+  margin-top: 1px;
+  margin-bottom: 10px;
+}

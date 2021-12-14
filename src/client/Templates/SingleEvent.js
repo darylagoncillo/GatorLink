@@ -14,14 +14,10 @@ import {
   ListGroup,
 } from "react-bootstrap";
 import React, { Component } from "react";
-import "../Components/Cards.css";
-import Modal from "react-modal";
-import { BsArrowLeft, BsThreeDotsVertical } from "react-icons/bs";
+import "../Components/SingleEvent.css";
 import { RiArrowGoBackLine } from "react-icons/ri";
 import Navigation from "../Components/Navigation";
 import data from "../../../event-data.json";
-
-import CardItem from "../Components/EventCard";
 
 export default class Event extends Component {
   constructor(props) {
@@ -87,7 +83,7 @@ export default class Event extends Component {
           <Row className="justify-content-md-center ">
             <Col md="8" sm="12">
               <Button
-                name="back-to-events"
+                className="back-to-events"
                 variant="warning"
                 onClick={() => {
                   this.props.history.push("/Events");

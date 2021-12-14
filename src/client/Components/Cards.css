@@ -3,28 +3,11 @@
   background: #fff;
 }
 
-/* h1 {
-  text-align: center;
-}
-
-h5 {
-  margin-left: 15px;
-  margin-top: 1px;
-  margin-bottom: 10px;
-}
-
-p {
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  font-weight: 400;
-}
-
-button {
+.create-event {
   margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 20px;
-} */
+  margin-bottom: 15px;
+  margin-left: 18px;
+}
 
 .cards__container {
   display: flex;

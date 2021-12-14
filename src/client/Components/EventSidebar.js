@@ -71,8 +71,8 @@ function EventSidebar(props) {
         
         <div className="eventSidebar">
         <h6 className= "event-sidebar">Your Upcoming Events</h6>
-          <p>THU, OCT 28 AT 12PM PST BASKETBALL INTRAMURAL PLAYOFFS</p>
-          <h5>Categories</h5>
+          <p className="upcoming-title">THU, OCT 28 AT 12PM PST BASKETBALL INTRAMURAL PLAYOFFS</p>
+          <h5 className="categories">Categories</h5>
         </div>
         <ListGroup as="ul">
           {RenderCategories(props.categories, props.selectCategory)}
