@@ -115,7 +115,7 @@ export default class Event extends Component {
                   <row>
                     <p />
                   </row>
-                  <Card className="single-mutuals" style={{ width: '18rem' }}>
+                  <Card className="single-mutuals" style={{ width: "18rem" }}>
                     <Card.Header>Mutuals</Card.Header>
                     <ListGroup variant="flush">
                       <ListGroup.Item>32 Going</ListGroup.Item>
@@ -124,12 +124,10 @@ export default class Event extends Component {
                     </ListGroup>
                   </Card>
                 </Col>
-                <Row>
-                  <Col>
-                    <Button className="notgoing-button" variant="warning">Not Interested</Button>{' '}
-                  </Col>
-                  <Col>
-                    <Button className="going-button" variant="warning">Going</Button>{' '}
+                <Row className="justify-content-md-end">
+                  <Col md="4" className="rsvp">
+                    <Button variant="warning">Not Interested</Button>{" "}
+                    <Button variant="warning">Going</Button>
                   </Col>
                 </Row>
                 <br />
