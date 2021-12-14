@@ -216,7 +216,7 @@ export default class ProfileEditor extends Component {
                             </Form>
                             <br></br>
                           </Col>
-                          
+
                         </Tab.Pane>
 
                         <Tab.Pane eventKey="third">
