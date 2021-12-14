@@ -50,7 +50,7 @@ export default class Group extends Component {
   toggleCreateModal() {
     if (retrieveCookie()) {
       this.setState({
-        newEventModal: !this.state.newEventModal,
+        newGroupModal: !this.state.newGroupModal,
       });
     } else {
       alert("You must be logged in to create an group!");
