@@ -101,6 +101,21 @@ a {
     border-radius: 10px;
     box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
   }
+
+  .create-group-modal {
+    position: absolute;
+    top: 15vh;
+    left: 7vw;
+    right: 7vw;
+    bottom: 15vh;
+    background-color: White;
+    border: 1px solid black;
+    border-color: black;
+    border-width: 0px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
+  }
+
   .mobile-row {
     width: 100vw !important;
     margin-left: auto;
@@ -166,6 +181,20 @@ a {
     left: 25vw;
     right: 25vw;
     bottom: 20vh;
+    background-color: White;
+    border: 1px solid black;
+    border-color: black;
+    border-width: 0px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  .create-group-modal {
+    position: absolute;
+    top: 20vh;
+    left: 25vw;
+    right: 25vw;
+    bottom: 5vh;
     background-color: White;
     border: 1px solid black;
     border-color: black;
