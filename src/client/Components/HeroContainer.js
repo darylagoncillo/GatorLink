@@ -33,6 +33,11 @@ function HeroContainer(props) {
               Connect with thousands of fellow SFSU students online at a touch
               of a button
             </p>
+            <a href="/">
+              <Button className="button-get-started"> Browse </Button>
+            </a>
+
+   
           </div>
         </div>
         <div className="banner-2">
@@ -140,11 +145,11 @@ function HeroContainer(props) {
                 </div>
               </Col>
             </Row>
-            <Row> <Footer /></Row>
-           
+            <Row>
+              {" "}
+              <Footer />
+            </Row>
           </Container>
-      
-  
         </div>
       </div>
     </>

@@ -108,12 +108,10 @@ export default class Profile extends Component {
                               variant="top"
                               src={profilePicture}
                             />
-                            <p>Name</p>
+                            <p>Daniel Tarn</p>
                             <Card.Text>
-                              Sed ut perspiciatis unde omnis iste natus error
-                              sit voluptatem accusantium doloremque laudantium,
-                              totam rem aperiam, eaque ipsa quae ab illo
-                              inventore veritatis et quasi architecto.
+                              Hey there! I am new to GatorLink and would love to make
+                              more friends on here.
                             </Card.Text>
                           </Card.Body>
                         </Card>
