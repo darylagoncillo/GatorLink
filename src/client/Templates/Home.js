@@ -5,7 +5,6 @@ import Navigation from "../Components/Navigation";
 import Banners from "../Components/HeroContainer";
 import Profile from "../Components/Profile";
 
-
 export default class Home extends Component {
   constructor(props) {
     super(props);
@@ -20,7 +19,7 @@ export default class Home extends Component {
     return (
       <div className="body">
         <Navigation />
-        <Banners/>
+        <Banners/>     
       </div>
     );
   }

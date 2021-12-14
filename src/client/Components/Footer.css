@@ -7,9 +7,36 @@
   min-height: 30vh;
 }
 
-.footer-col-1 > h6{
-    text-align: left;
-    padding: 4%;
-    text-transform: uppercase;
-    border-bottom: 1px solid black;
+.footer-col-1 > h6 {
+  text-align: center;
+  padding: 4%;
+  text-transform: uppercase;
+  border-bottom: 1px solid black;
+  font-size: 25px;
+}
+.footer-col-1 > h6 {
+  text-align: center;
+  padding: 4%;
+  text-transform: uppercase;
+  border-bottom: 1px solid black;
+  font-size: 25px;
+}
+
+.footer-col-1 > h5 {
+  text-align: center;
+  padding: 1%;
+  font-size: 20px;
+}
+
+.footer-col-2 > h6 {
+  text-align: center;
+  padding: 4%;
+  text-transform: uppercase;
+  border-bottom: 1px solid black;
+  font-size: 25px;
+}
+
+
+.footer-row{
+  padding: 5px;
 }
