@@ -56,7 +56,7 @@ class Navigation extends Component {
   onChange = (selectedOption) => {
     this.setState({ searchValue: selectedOption });
     console.log("Option selected:", selectedOption);
-    this.props.history.push("/Group2");
+    this.props.history.push("/Group");
   };
 
   change = (event) => {

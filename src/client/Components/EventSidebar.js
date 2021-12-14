@@ -11,6 +11,7 @@ import {
   ListGroup,
   NavDropdown,
   Tab,
+  Carousel,
   Tabs,
 } from "react-bootstrap";
 import React, { Component, useState } from "react";
@@ -53,9 +54,34 @@ function EventSidebar(props) {
         <div className="eventSidebar">
           <br />
           <h6 className="your-upcoming-events">Your Upcoming Events</h6>
-          <p className="upcoming-title">
-            THU, OCT 28 AT 12PM PST BASKETBALL INTRAMURAL PLAYOFFS
-          </p>
+          <p className="upcoming-title" />
+          <Carousel>
+            <Carousel.Item variant="dark">
+              <img
+                className="d-block w-100"
+                src="EventPictures/img-1.jpg"
+                alt="First slide"
+                style={{ height: "210px" }}
+              />
+              <Carousel.Caption>
+                <h3>Basketball Intramural Playoffs</h3>
+                <p> THU, OCT 28 AT 12PM PST </p>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item variant="dark">
+              <img
+                className="d-block w-100 "
+                src="EventPictures/img-2.jpg"
+                alt="First slide"
+                style={{ height: "210px" }}
+              />
+              <Carousel.Caption>
+                <h3>Job Networking</h3>
+                <p> THU, November 4-6 AT 12PM PST </p>
+              </Carousel.Caption>
+            </Carousel.Item>
+          </Carousel>
+          <br></br>
           <h5 className="categories">Categories</h5>
         </div>
         <ListGroup as="ul">
