@@ -3,6 +3,15 @@
   margin-bottom: 20px;
 }
 
+.login {
+  background-color: #C59CD9;
+  margin-bottom: 20px;
+  margin-top: 300px;
+  margin-right: 700px;
+  margin-left: 700px;
+}
+
+
 @media only screen and (max-width: 999px) {
   .page-content {
     width: 100% !important;
