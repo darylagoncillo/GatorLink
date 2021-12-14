@@ -49,6 +49,7 @@ export default class Routing extends Component {
         <Route component={Questionnaire2} path="/Questionnaire2" />
         <Route component={Questionnaire3} path="/Questionnaire3" />
         <Route component={Questionnaire4} path="/Questionnaire4" />
+        <Footer />
       </BrowserRouter>
     );
   }

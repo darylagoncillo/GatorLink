@@ -41,14 +41,14 @@ function HeroContainer(props) {
         <div className="banner-2">
           <Container fluid>
             <Row md={3} className="row-1">
-              <div class="col-sm-4">
+              <div className="col-sm-4">
                 <Card className="text-center">
                   <Card.Body>
                     <Card.Img
                       className="card-img"
                       variant="top"
                       src={eventIcon}
-                    ></Card.Img>
+                    />
                     <p className="card-titles">Events</p>
                     <Card.Text>
                       Hundreds of events are posted on the daily by SFSU
@@ -61,14 +61,14 @@ function HeroContainer(props) {
                 </Card>
               </div>
 
-              <div class="col-sm-4">
+              <div className="col-sm-4">
                 <Card className="text-center">
                   <Card.Body>
                     <Card.Img
                       className="card-img"
                       variant="top"
                       src={groupIcon}
-                    ></Card.Img>
+                    />
                     <p className="card-titles">Groups</p>
                     <Card.Text>
                       Thousands of SFSU students are able to create and invite
@@ -81,14 +81,14 @@ function HeroContainer(props) {
                 </Card>
               </div>
 
-              <div class="col-sm-4">
+              <div className="col-sm-4">
                 <Card className="text-center">
                   <Card.Body>
                     <Card.Img
                       className="card-img"
                       variant="top"
                       src={forumIcon}
-                    ></Card.Img>
+                    />
                     <p className="card-titles">Forums</p>
                     <Card.Text>
                       Through the use of forums, group members are allowed to
@@ -115,20 +115,10 @@ function HeroContainer(props) {
                 </div>
               </Col>
 
-              <Col
-                className="square-2"
-                sm={12}
-                md={6}
-                // className="d-md-block d-sm-none"
-              ></Col>
+              <Col className="square-2" sm={12} md={6} />
             </Row>
             <Row md={2} className="row-2">
-              <Col
-                className="square-3"
-                sm={12}
-                md={6}
-                // className="d-md-block d-xs-none"
-              ></Col>
+              <Col className="square-3" sm={12} md={6} />
 
               <Col className="square-4">
                 <h5>Find and Meet New Friends</h5>
@@ -143,10 +133,7 @@ function HeroContainer(props) {
                 </div>
               </Col>
             </Row>
-            <Row>
-              {" "}
-              <Footer />
-            </Row>
+            <Row> </Row>
           </Container>
         </div>
       </div>
