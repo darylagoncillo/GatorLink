@@ -3,18 +3,13 @@
   background: #fff;
 }
 
-<<<<<<< HEAD
-.create-nav-event {
-  color: #8a2be2;
-  background-color: #8a2be2;
-=======
 .create-nav {
   background-color: #cf9fff;
 }
+
 .brand {
   color: rgb(255, 255, 255);
   font-weight: bold;
->>>>>>> e99d1bb67ca293891f6dde10e18d59032cdddbe9
 }
 
 .create-title {
