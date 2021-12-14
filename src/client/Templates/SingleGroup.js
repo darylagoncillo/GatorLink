@@ -80,7 +80,7 @@ export default class Group extends Component {
       if (
         (this.state.selectedCategory === null ||
           this.state.selectedCategory === item.category) &&
-        count < 12
+        count < 10
       ) {
         count++;
         return (

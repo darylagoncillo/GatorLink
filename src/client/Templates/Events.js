@@ -104,10 +104,11 @@ export default class Events extends Component {
         <Navigation />
         <br />
         <Container fluid className="page-content">
-          <Row>
-            <Col md="3" sm="12" xs="12">
-              <div className="sidebar">
+          <Row className="mobile-row">
+            <Col md="3" sm="12" xs="12" className="sidebar">
+              <div className="sidebar-contents">
                 <EventSidebar
+                  selectedCategory={this.state.selectedCategory}
                   categories={this.state.categories}
                   selectCategory={this.selectCategory}
                 />
@@ -137,7 +138,11 @@ export default class Events extends Component {
                     </Navbar.Collapse>
                   </Container>
                 </Navbar>
-                <Button className="create-event" variant="warning" onClick={this.toggleCreateModal}>
+                <Button
+                  className="create-event"
+                  variant="warning"
+                  onClick={this.toggleCreateModal}
+                >
                   Create an Event
                 </Button>
                 <br />
@@ -154,44 +159,63 @@ export default class Events extends Component {
                   <Col>
                     <Navbar variant="light" className="create-nav" bg="warning">
                       <Container>
-                        <Navbar.Brand className="brand">Create Event</Navbar.Brand>
+                        <Navbar.Brand className="brand">
+                          Create Event
+                        </Navbar.Brand>
                       </Container>
                     </Navbar>
                     <br />
                   </Col>
                   <Col>
                     <Form>
-                      <Form.Group className="create-title" controlId="formBasicEmail">
+                      <Form.Group
+                        className="create-title"
+                        controlId="formBasicEmail"
+                      >
                         <Form.Label>Title</Form.Label>
                         <Form.Control type="text" />
                       </Form.Group>
-
-                      <Form.Group className="create-date" controlId="formBasicPassword">
+                      <Form.Group
+                        className="create-date"
+                        controlId="formBasicPassword"
+                      >
                         <Form.Label>Date</Form.Label>
                         <Form.Control type="date" />
                       </Form.Group>
-
-                      <Form.Group className="create-details" controlId="exampleForm.ControlTextarea1">
+                      <Form.Group
+                        className="create-details"
+                        controlId="exampleForm.ControlTextarea1"
+                      >
                         <Form.Label>Details</Form.Label>
                         <Form.Control as="textarea" rows={3} />
                       </Form.Group>
-
                       <Row>
                         <Col md>
-                          <Form.Group className="create-time" controlId="formBasicPassword">
+                          <Form.Group
+                            className="create-time"
+                            controlId="formBasicPassword"
+                          >
                             <Form.Label>Time Start</Form.Label>
                             <Form.Control type="time" />
                           </Form.Group>
                         </Col>
                         <Col md>
-                          <Form.Group className="create-time" controlId="formBasicPassword">
+                          <Form.Group
+                            className="create-time"
+                            controlId="formBasicPassword"
+                          >
                             <Form.Label>Time End</Form.Label>
                             <Form.Control type="time" />
                           </Form.Group>
                         </Col>
                       </Row>
-                      <Button className="button123" variant="warning"
-                      href="/Events">Create</Button>{' '}
+                      <Button
+                        className="button123"
+                        variant="warning"
+                        href="/Events"
+                      >
+                        Create Event
+                      </Button>
                     </Form>
                   </Col>
                 </Modal>

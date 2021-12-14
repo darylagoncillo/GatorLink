@@ -14,7 +14,7 @@ function CardItem(props) {
             data-category={props.label}
           >
             <img
-              className="cards__item__img"
+              className="cards__item__img2"
               alt="Travel Image"
               src={props.src}
             />
