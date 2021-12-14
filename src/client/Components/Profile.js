@@ -155,9 +155,7 @@ export default class Profile extends Component {
                   <div className="content">
                     <Navbar bg="light" expand="lg">
                       <Container>
-                        <Navbar.Brand href="/">
-                          Discover {this.state.selectedCategory} Events
-                        </Navbar.Brand>
+                        <Navbar.Brand href="/">My Events</Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
                         <Button
@@ -175,9 +173,7 @@ export default class Profile extends Component {
                   <div className="content">
                     <Navbar bg="light" expand="lg">
                       <Container>
-                        <Navbar.Brand href="/">
-                          Discover {this.state.selectedCategory} Events
-                        </Navbar.Brand>
+                        <Navbar.Brand href="/">My Groups</Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
                         <Button
