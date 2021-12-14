@@ -27,9 +27,10 @@ export default class Questionnaire1 extends Component {
   render() {
     return (
       <div className="Questionnaire1">
-        <h1>Personal Information</h1>
+        <h2 className="QuestionH2">Personal Information</h2>
         <br />
-        <h4>All fields below are optional and can be skipped</h4>
+        <h5 className="QuestionH5">All fields below are optional and can be skipped</h5>
+        <br />
         <Form >
             <Container >
               <Form.Group size="lg" controlId="FirstName">
@@ -61,12 +62,12 @@ export default class Questionnaire1 extends Component {
               <Row>
                 <Col md={4}>
                   <Link to="/Questionnaire2">
-                  <Button variant="warning" block size="lg" type="submit">Next</Button>
+                  <Button variant="warning" block size="lg" type="submit" className="QuestionNEXT">Next</Button>
                   </Link>
                 </Col>
                 <Col md={4}>
                   <Link to="/">
-                  <Button variant="secondary" block size="lg" type="submit">Skip</Button>
+                  <Button variant="secondary" block size="lg" type="submit" className="QuestionSKIP">Skip</Button>
                   </Link>
                 </Col>
               </Row>

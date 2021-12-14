@@ -29,8 +29,8 @@ export default class Login extends Component {
 
   render() {
     return (
-      <div className="loginstyling">
         <div className="login">
+          <h1 className="SFSULoginH1">SFSU Login</h1>
           <Form >
             <Container >
               <Form.Group size="lg" controlId="username">
@@ -54,23 +54,22 @@ export default class Login extends Component {
           
               <Row>
                 <Col md={4}>
-                  <Button variant="warning" block size="lg" type="submit">Login with SSO</Button>
+                  <Button variant="warning" block size="lg" type="submit" className="SSOLoginB">Login with SSO</Button>
                 </Col>
                 <Col md={{ span:4, offset: 3}}>
-                  <Button variant="warning" block size="lg" type="submit">Login</Button>
+                  <Button variant="warning" block size="lg" type="submit" className="LoginButton">Login</Button>
                 </Col>
               </Row>
 
               <Link to="/Registration">
-                <p>
+                <p className="NewGatorLink">
                   New to GatorLink?
-                  <Button variant="secondary" size = "sm" type="submit">Sign Up</Button>
+                  <Button variant="secondary" size = "sm" type="submit" className="signUp">Sign Up</Button>
                 </p> 
               </Link>
             </Container>
           </Form>
         </div>
-      </div>
     );
   }
 }

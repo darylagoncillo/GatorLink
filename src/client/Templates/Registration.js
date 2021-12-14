@@ -17,9 +17,9 @@ export default class Questionnaire extends Component {
   render() {
     return (
       <div className="Registration">
-        <h1 >Account Activation</h1>
+        <h1 className="AccountActivation">Account Activation</h1>
         <br />
-        <h4>Activate your account by using your SFSU credentials</h4>
+        <h4 className="ActivateAccount">Activate your account by using your SFSU credentials</h4>
         <Container>
           <Button 
           className="SFSULoginB"

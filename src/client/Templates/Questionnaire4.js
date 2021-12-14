@@ -24,21 +24,21 @@ export default class Questionnaire4 extends Component {
   render() {
     return (
       <div className="Questionnaire4">
-        <h1>Account Successfully Activated!</h1>
+        <h2 className="QuestionH2">Account Successfully Activated!</h2>
         <br />
-        <h4>Please click continue below to be redirected to your account.</h4>
+        <h5 className="QuestionH5">Please click continue below to be redirected to your account.</h5>
         <br />
         <Form >
             <Container >          
               <Row>
                 <Col md={4}>
                 <Link to="/">
-                  <Button variant="warning" block size="lg" type="submit">Default for now, change to profile editor when finished.</Button>
+                  <Button variant="warning" block size="lg" type="submit" className="QuestionNEXT">Default for now, change to profile editor when finished.</Button>
                   </Link>
                 </Col>
                 <Col md={4}>
                 <Link to="/">
-                  <Button variant="secondary" block size="lg" type="submit">Back to Home</Button>
+                  <Button variant="secondary" block size="lg" type="submit" className="QuestionSKIP">Back to Home</Button>
                   </Link>
                 </Col>
               </Row>
