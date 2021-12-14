@@ -4,6 +4,8 @@
     margin-left: 1px;
 }
 
-.event-confirm {
-    margin-left: 20px;
+.attendance-button {
+    display:      block;
+    margin-left:  auto;
+    margin-right: 0;
 }

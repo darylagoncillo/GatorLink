@@ -126,12 +126,8 @@ export default class Event extends Component {
                   <br />
                 </Col>
                 <Col>
-                  <button type="button" className="btn btn-primary float-right">
-                    Going
-                  </button>
-                  <button type="button" className="btn btn-primary float-right">
-                    Not Interested
-                  </button>
+                <Button className="attendance-button" variant="warning">Not Interested</Button>{' '}
+                <Button className="attendance-button" variant="warning">Going</Button>{' '}
                 </Col>
               </div>
             </Col>
