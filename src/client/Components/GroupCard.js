@@ -19,9 +19,7 @@ function CardItem(props) {
           <div className="cards__item__info">
             <h5 className="cards__item__text">{props.text}</h5>
 
-            <h5 className="cards__item__text__2">
-              {props.attending} <img width="16px" src="Icons/user.jpg" />
-            </h5>
+            <br />
           </div>
         </Link>
       </li>

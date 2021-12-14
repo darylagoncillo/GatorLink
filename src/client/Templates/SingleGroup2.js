@@ -16,7 +16,13 @@ import {
 import React, { Component } from "react";
 
 import Modal from "react-modal";
-import { BsArrowLeft, BsThreeDotsVertical } from "react-icons/bs";
+import {
+  BsArrowLeft,
+  BsFacebook,
+  BsInstagram,
+  BsThreeDotsVertical,
+  BsTwitter,
+} from "react-icons/bs";
 import { RiArrowGoBackLine } from "react-icons/ri";
 import { AiFillPushpin } from "react-icons/ai";
 import { ChatBox } from "react-chatbox-component";
@@ -29,30 +35,13 @@ import { retrieveCookie } from "../Components/Cookies";
 
 const messages = [
   {
-    text: "Hello there",
-    id: "1",
-    sender: {
-      name: "Ironman",
-      uid: "user1",
-      avatar: "https://data.cometchat.com/assets/images/avatars/ironman.png",
-    },
-  },
-  {
-    text: "Hi Mr. Stark",
+    text: "Hello, I sure do love soccer!",
     id: "2",
     sender: {
-      name: "Spiderman",
+      name: "Some Guy",
       uid: "user2",
-      avatar: "https://data.cometchat.com/assets/images/avatars/spiderman.png",
-    },
-  },
-  {
-    text: "Hello Spiderman, how are you today?",
-    id: "3",
-    sender: {
-      name: "Ironman",
-      uid: "user1",
-      avatar: "https://data.cometchat.com/assets/images/avatars/ironman.png",
+      avatar:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4XzvZk4YY-o4L1vGGIusy1Csy-QWF2N4zTg&usqp=CAU",
     },
   },
 ];
@@ -139,6 +128,7 @@ export default class Group2 extends Component {
           <Row className="justify-content-md-center">
             <Col md="8" sm="12">
               <Button
+                className="back-to-events"
                 variant="warning"
                 onClick={() => {
                   this.props.history.push("/Groups");
@@ -162,13 +152,13 @@ export default class Group2 extends Component {
                         <Card style={{ width: "100%" }}>
                           <Card.Img
                             variant="top"
-                            src="http://127.0.0.1:3000/GroupPictures/cinemaclub.PNG"
+                            src="http://127.0.0.1:3000/EventPictures/img-1.jpg"
                           />
                           <Card.Body>
-                            <Card.Title>SFSU Cinema Club</Card.Title>
-                            <p>Created : 12/14/21</p>
-                            <p>Created by : Jose Castanon</p>
-                            <p>Members : 1</p>
+                            <Card.Title>SFSU Athletics</Card.Title>
+                            <p>Created : 09/14/21</p>
+                            <p>Created by : Jack May</p>
+                            <p>Members : 230</p>
                           </Card.Body>
                         </Card>
                       </Col>
@@ -177,8 +167,8 @@ export default class Group2 extends Component {
                           <Card.Body>
                             <Card.Title>About Us</Card.Title>
                             <p>
-                              A space to talk about films or chat with others
-                              about related topics.
+                              Post about open sports events, chat about sports,
+                              and meet new people at SFSU Athletics.
                             </p>
                           </Card.Body>
                         </Card>
@@ -186,10 +176,28 @@ export default class Group2 extends Component {
                         <Card style={{ width: "100%" }}>
                           <Card.Body>
                             <Card.Title>Contact Information</Card.Title>
-                            <p>
-                              A space to talk about films or chat with others
-                              about related topics.
-                            </p>
+                            <Button
+                              style={{ width: "100%" }}
+                              variant="outline-primary"
+                            >
+                              <BsInstagram /> @SFSUAthletics
+                            </Button>
+                            <br />
+                            <br />
+                            <Button
+                              style={{ width: "100%" }}
+                              variant="outline-primary"
+                            >
+                              <BsTwitter /> @SFSUAthletics
+                            </Button>
+                            <br />
+                            <br />
+                            <Button
+                              style={{ width: "100%" }}
+                              variant="outline-primary"
+                            >
+                              <BsFacebook /> SFSU Athletics
+                            </Button>
                           </Card.Body>
                         </Card>
                       </Col>
@@ -221,22 +229,20 @@ export default class Group2 extends Component {
                               </Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                              <Nav.Link eventKey="second">
-                                Silent Films
-                              </Nav.Link>
+                              <Nav.Link eventKey="second">Soccer</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                              <Nav.Link eventKey="third">
-                                Movies you love
-                              </Nav.Link>
+                              <Nav.Link eventKey="third">Campus Games</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                              <Nav.Link eventKey="fourth">Comedies</Nav.Link>
+                              <Nav.Link eventKey="fourth">
+                                General Chat
+                              </Nav.Link>
                             </Nav.Item>
                           </Nav>
                         </Col>
                         <Col sm={9}>
-                          <Tab.Content>
+                          <Tab.Content className="chat-box">
                             <Tab.Pane eventKey="first">
                               <ChatBox
                                 messages={messages}
@@ -250,7 +256,7 @@ export default class Group2 extends Component {
                                       name: "Ironman",
                                       uid: "user1",
                                       avatar:
-                                        "https://data.cometchat.com/assets/images/avatars/ironman.png",
+                                        "https://3.files.edl.io/3bff/18/09/18/164818-c9d46fef-72ed-42da-86be-948e6797dcc7.jpg",
                                     },
                                   });
                                 }}

@@ -11,6 +11,10 @@ a {
   color: black;
 }
 
+.chat-box {
+  margin-bottom: 5px !important;
+}
+
 .Registration {
   background-color: white;
   margin-top: 150px;
@@ -86,11 +90,11 @@ a {
 
   .create-group-modal {
     position: absolute;
-    top: 15vh;
+    top: 3vh;
     left: 7vw;
     right: 7vw;
-    bottom: 15vh;
-    background-color: White;
+    bottom: 1vh;
+    background-color: wheat;
     border: 1px solid black;
     border-color: black;
     border-width: 0px;
@@ -263,8 +267,8 @@ a {
   .create-modal {
     position: absolute;
     top: 20vh;
-    left: 25vw;
-    right: 25vw;
+    left: 28vw;
+    right: 28vw;
     bottom: 20vh;
 
     background-color: wheat;
@@ -277,11 +281,12 @@ a {
 
   .create-group-modal {
     position: absolute;
-    top: 20vh;
-    left: 25vw;
-    right: 25vw;
-    bottom: 5vh;
-    background-color: White;
+    top: 12vh;
+    left: 28vw;
+    right: 28vw;
+    bottom: 14vh;
+
+    background-color: wheat;
     border: 1px solid black;
     border-color: black;
     border-width: 0px;
@@ -383,6 +388,8 @@ a {
 
   .Questionnaire {
     margin-top: 50px;
+    margin-right: 20%;
+    margin-left: 20%;
     border: 1px solid black;
     border-color: black;
     border-width: 0px;
@@ -391,11 +398,17 @@ a {
   }
 
   .QuestionH2 {
-    margin-left: 750px;
+    padding-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
 
   .QuestionH5 {
-    margin-left: 685px;
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
 
   .QuestionNEXT {
@@ -407,4 +420,8 @@ a {
     margin-left: 250px;
   }
   /* Desktop for Login/Register/Questionnaires are finished */
+}
+
+.form-control {
+  border: 1px solid gray !important;
 }

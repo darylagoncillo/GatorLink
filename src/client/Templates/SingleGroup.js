@@ -140,6 +140,7 @@ export default class Group extends Component {
             <Col md="8" sm="12">
               <Button
                 variant="warning"
+                className="back-to-events"
                 onClick={() => {
                   this.props.history.push("/Groups");
                 }}

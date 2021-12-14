@@ -177,87 +177,85 @@ export default class Group extends Component {
                   onRequestClose={this.toggleCreateModal}
                   isOpen={this.state.newGroupModal}
                 >
-                  <h4>
+                  <h4 className="mobile-only exit-modal">
                     <BsArrowLeft onClick={this.toggleCreateModal} />
                   </h4>
-                  <Col>
-                    <Navbar variant="light" className="create-nav" bg="warning">
-                      <Container>
-                        <Navbar.Brand className="brand">
-                          Create Group
-                        </Navbar.Brand>
-                      </Container>
-                    </Navbar>
-                    <br />
-                  </Col>
-                  <Col>
-                    <Form>
-                      <Form.Group
-                        className="create-title"
-                        controlId="formBasicEmail"
-                      >
-                        <Form.Label>Group Name</Form.Label>
-                        <Form.Control type="text" />
-                      </Form.Group>
-                      <Form.Group
-                        className="create-group-email"
-                        controlId="formBasicEmail"
-                      >
-                        <Form.Label>Email address</Form.Label>
-                        <Form.Control
-                          type="email"
-                          placeholder="Enter Group Email"
-                        />
-                      </Form.Group>
-                      <Form.Label htmlFor="inlineFormInputGroup" visuallyHidden>
-                        Social Media
-                      </Form.Label>
-                      <InputGroup className="group-social-media">
-                        <InputGroup.Text>@</InputGroup.Text>
-                        <FormControl
-                          id="inlineFormInputGroup"
-                          placeholder="Twitter"
-                        />
-                      </InputGroup>
-                      <InputGroup className="group-social-media">
-                        <InputGroup.Text>@</InputGroup.Text>
-                        <FormControl
-                          id="inlineFormInputGroup"
-                          placeholder="Facebook"
-                        />
-                      </InputGroup>
-                      <InputGroup className="group-social-media">
-                        <InputGroup.Text>@</InputGroup.Text>
-                        <FormControl
-                          id="inlineFormInputGroup"
-                          placeholder="Instagram"
-                        />
-                      </InputGroup>
-                      <Form.Group
-                        className="create-details"
-                        controlId="exampleForm.ControlTextarea1"
-                      >
-                        <Form.Label>Details</Form.Label>
-                        <Form.Control as="textarea" rows={3} />
-                      </Form.Group>
-                      <Row>
-                        <Col md>
-                          <Form.Group controlId="formFile" className="mb-3">
-                            <Form.Label>Group Header Photo</Form.Label>
-                            <Form.Control type="file" />
-                          </Form.Group>
-                        </Col>
-                        <Col md></Col>
-                      </Row>
-                      <Button
-                        className="button123"
-                        variant="warning"
-                        href="/Groups"
-                      >
-                        Create
-                      </Button>{" "}
-                    </Form>
-                  </Col>
+
+                  <Navbar variant="light" className="create-nav" bg="warning">
+                    <Container>
+                      <Navbar.Brand className="brand ">
+                        Create Group
+                      </Navbar.Brand>
+                    </Container>
+                  </Navbar>
+                  <br />
+
+                  <Form className="event-form mb-3">
+                    <Form.Group
+                      className="create-title"
+                      controlId="formBasicEmail"
+                    >
+                      <Form.Label>Group Name</Form.Label>
+                      <Form.Control type="text" />
+                    </Form.Group>
+                    <Form.Group
+                      className="create-group-email"
+                      controlId="formBasicEmail"
+                    >
+                      <Form.Label>Email address</Form.Label>
+                      <Form.Control
+                        type="email"
+                        placeholder="Enter Group Email"
+                      />
+                    </Form.Group>
+                    <Form.Label htmlFor="inlineFormInputGroup" visuallyHidden>
+                      Social Media
+                    </Form.Label>
+                    <InputGroup className="group-social-media">
+                      <InputGroup.Text>@</InputGroup.Text>
+                      <FormControl
+                        id="inlineFormInputGroup"
+                        placeholder="Twitter"
+                      />
+                    </InputGroup>
+                    <InputGroup className="group-social-media">
+                      <InputGroup.Text>@</InputGroup.Text>
+                      <FormControl
+                        id="inlineFormInputGroup"
+                        placeholder="Facebook"
+                      />
+                    </InputGroup>
+                    <InputGroup className="group-social-media">
+                      <InputGroup.Text>@</InputGroup.Text>
+                      <FormControl
+                        id="inlineFormInputGroup"
+                        placeholder="Instagram"
+                      />
+                    </InputGroup>
+                    <Form.Group
+                      className="create-details"
+                      controlId="exampleForm.ControlTextarea1"
+                    >
+                      <Form.Label>Details</Form.Label>
+                      <Form.Control as="textarea" rows={3} />
+                    </Form.Group>
+                    <Row>
+                      <Col md>
+                        <Form.Group controlId="formFile" className="mb-3">
+                          <Form.Label>Group Header Photo</Form.Label>
+                          <Form.Control type="file" />
+                        </Form.Group>
+                      </Col>
+                      <Col md></Col>
+                    </Row>
+                    <Button
+                      className="button123"
+                      variant="warning"
+                      href="/Groups"
+                    >
+                      Create
+                    </Button>{" "}
+                  </Form>
                 </Modal>
               </div>
             </Col>
