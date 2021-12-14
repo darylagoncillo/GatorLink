@@ -1,24 +1,17 @@
-.back-to-events {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 1px;
-}
-
 .notgoing-button {
-    display:      block;
-    margin-left:  460px;
-    margin-right: 0;
+  display: block;
+  margin-left: 460px;
+  margin-right: 0;
 }
 
 .going-button {
-    display:      block;
-    margin-left:  auto;
-    margin-right: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: 20px;
 }
 
 .hehe {
-    margin-top:   15px;
-    margin-left:  20px;
-    margin-right: 20px;
-    
+  margin-top: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
 }

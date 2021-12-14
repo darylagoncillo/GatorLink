@@ -150,7 +150,8 @@ export default class Group extends Component {
                   Back to Groups
                 </div>
               </Button>
-
+              <br className="mobile-only" />
+              <br className="mobile-only" />
               <div className="content">
                 <Tabs
                   defaultActiveKey="info"

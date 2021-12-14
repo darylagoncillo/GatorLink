@@ -21,6 +21,7 @@ import { ToastContainer, toast } from "react-toastify";
 import Navigation from "../Components/Navigation";
 import data from "../../../event-data.json";
 import "react-toastify/dist/ReactToastify.css";
+import { retrieveCookie } from "../Components/Cookies";
 
 export default class Event extends Component {
   constructor(props) {
@@ -57,13 +58,45 @@ export default class Event extends Component {
   interested() {
     this.setState({
       interested: true,
+      going: false,
     });
     toast("Selection Saved!");
+  }
+
+  renderButtons() {
+    let variant1 = "warning";
+    let variant2 = "warning";
+    if (this.state.going === true) {
+      variant1 = "success";
+    }
+    if (this.state.interested === true) {
+      variant2 = "success";
+    }
+    if (retrieveCookie()) {
+      return (
+        <div>
+          <Button variant={variant2} onClick={() => this.interested()}>
+            I'm interested...
+          </Button>
+          {"  "}
+          <Button variant={variant1} onClick={() => this.going()}>
+            I'm going!
+          </Button>
+        </div>
+      );
+    }
+
+    return (
+      <div>
+        <Button variant="warning">You must log in to RSVP</Button>
+      </div>
+    );
   }
 
   going() {
     this.setState({
       going: true,
+      interested: false,
     });
     toast("Selection Saved!");
   }
@@ -205,12 +238,7 @@ export default class Event extends Component {
                 </Col>
                 <Row className="justify-content-md-end">
                   <Col md="4" className="rsvp">
-                    <Button variant="warning" onClick={() => this.interested()}>
-                      I'm interested...
-                    </Button>{" "}
-                    <Button variant="warning" onClick={() => this.going()}>
-                      I'm going!
-                    </Button>
+                    {this.renderButtons()}
                   </Col>
                 </Row>
                 <br />

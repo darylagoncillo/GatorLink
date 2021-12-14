@@ -26,12 +26,14 @@ import {
 import { RiArrowGoBackLine } from "react-icons/ri";
 import { AiFillPushpin } from "react-icons/ai";
 import { ChatBox } from "react-chatbox-component";
+import { ToastContainer, toast } from "react-toastify";
 import Navigation from "../Components/Navigation";
 import data from "../../../group-data.json";
 import data2 from "../../../name-data.json";
 import CardItem from "../Components/UserCard";
 import "react-chatbox-component/dist/style.css";
 import { retrieveCookie } from "../Components/Cookies";
+import "react-toastify/dist/ReactToastify.css";
 
 const messages = [
   {
@@ -57,6 +59,7 @@ export default class Group2 extends Component {
     this.state = {
       groups: data.Groups,
       names: data2,
+      joined: false,
       newGroupModal: false,
       selectedCategory: null,
     };
@@ -65,12 +68,34 @@ export default class Group2 extends Component {
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
     this.renderUsers = this.renderUsers.bind(this);
+    this.joinGroup = this.joinGroup.bind(this);
   }
 
   toggleCreateModal() {
     this.setState({
       newGroupModal: !this.state.newGroupModal,
     });
+  }
+
+  joinGroup() {
+    this.setState({
+      joined: !this.state.joined,
+    });
+    toast("Joined Group!");
+  }
+
+  getVariant() {
+    if (this.state.joined === true) {
+      return "success";
+    }
+    return "warning";
+  }
+
+  getText() {
+    if (this.state.joined === true) {
+      return "Joined Group";
+    }
+    return "Join Group";
   }
 
   closeModal() {
@@ -127,19 +152,35 @@ export default class Group2 extends Component {
         <Container fluid className="page-content">
           <Row className="justify-content-md-center">
             <Col md="8" sm="12">
-              <Button
-                className="back-to-events"
-                variant="warning"
-                onClick={() => {
-                  this.props.history.push("/Groups");
-                }}
-              >
-                <div style={{ display: "flex", alignItems: "center" }}>
-                  <RiArrowGoBackLine />
-                  Back to Groups
-                </div>
-              </Button>
-
+              <Row>
+                <Col md="10">
+                  <Button
+                    className="back-to-events"
+                    variant="warning"
+                    onClick={() => {
+                      this.props.history.push("/Groups");
+                    }}
+                  >
+                    <div style={{ display: "flex", alignItems: "center" }}>
+                      <RiArrowGoBackLine />
+                      Back to Groups
+                    </div>
+                  </Button>
+                </Col>
+                <Col md="2">
+                  <Button
+                    className="back-to-events"
+                    variant={this.getVariant()}
+                    onClick={() => {
+                      this.joinGroup();
+                    }}
+                  >
+                    <div style={{ display: "flex", alignItems: "center" }}>
+                      {this.getText()}
+                    </div>
+                  </Button>
+                </Col>
+              </Row>
               <div className="content">
                 <Tabs
                   defaultActiveKey="info"
@@ -336,6 +377,7 @@ export default class Group2 extends Component {
             </Col>
           </Row>
         </Container>
+        <ToastContainer position="bottom-right" autoClose={2000} />
       </div>
     );
   }
