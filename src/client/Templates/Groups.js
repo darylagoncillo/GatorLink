@@ -110,7 +110,7 @@ export default class Group extends Component {
         <Container fluid className="page-content">
           <Row className="mobile-row">
             <Col md="3" sm="12" xs="12" className="sidebar">
-              <div>
+              <div className="sidebar-contents">
                 <GroupSidebar
                   groups={this.state.groups}
                   selectCategory={this.selectCategory}
