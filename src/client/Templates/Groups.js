@@ -18,7 +18,7 @@ import React, { Component } from "react";
 import Modal from "react-modal";
 
 import Navigation from "../Components/Navigation";
-
+import { retrieveCookie } from "../Components/Cookies";
 import data from "../../../group-data.json";
 
 import CardItem from "../Components/GroupCard";
@@ -48,9 +48,13 @@ export default class Group extends Component {
   }
 
   toggleCreateModal() {
-    this.setState({
-      newGroupModal: !this.state.newGroupModal,
-    });
+    if (retrieveCookie()) {
+      this.setState({
+        newEventModal: !this.state.newEventModal,
+      });
+    } else {
+      alert("You must be logged in to create an group!");
+    }
   }
 
   closeModal() {
@@ -251,7 +255,7 @@ export default class Group extends Component {
                     <Button
                       className="button123"
                       variant="warning"
-                      href="/Groups"
+                      href="/Group"
                     >
                       Create
                     </Button>{" "}

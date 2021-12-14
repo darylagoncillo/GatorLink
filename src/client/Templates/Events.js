@@ -51,7 +51,7 @@ export default class Events extends Component {
         newEventModal: !this.state.newEventModal,
       });
     } else {
-      alert("You must be logged in to create a group!");
+      alert("You must be logged in to create an event!");
     }
   }
 

@@ -33,17 +33,15 @@ function HeroContainer(props) {
               Connect with thousands of fellow SFSU students online at a touch
               of a button
             </p>
-            <a href="/">
-              <Button className="button-get-started"> Browse </Button>
-            </a>
-
-   
           </div>
+          <a href="/">
+            <Button className="button-get-started"> Get Started </Button>
+          </a>
         </div>
         <div className="banner-2">
           <Container fluid>
             <Row md={3} className="row-1">
-              <div class="col-sm-6">
+              <div class="col-sm-4">
                 <Card className="text-center">
                   <Card.Body>
                     <Card.Img
@@ -63,7 +61,7 @@ function HeroContainer(props) {
                 </Card>
               </div>
 
-              <div class="col-sm-6">
+              <div class="col-sm-4">
                 <Card className="text-center">
                   <Card.Body>
                     <Card.Img
@@ -83,7 +81,7 @@ function HeroContainer(props) {
                 </Card>
               </div>
 
-              <div class="col-sm-6">
+              <div class="col-sm-4">
                 <Card className="text-center">
                   <Card.Body>
                     <Card.Img
