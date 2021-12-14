@@ -10,7 +10,10 @@ import Event from "./Templates/SingleEvent";
 import Search from "./Templates/Search";
 import Login from "./Templates/Login";
 import Registration from "./Templates/Registration";
-import Questionnaire from "./Templates/Questionnaire1";
+import Questionnaire1 from "./Templates/Questionnaire1";
+import Questionnaire2 from "./Templates/Questionnaire2";
+import Questionnaire3 from "./Templates/Questionnaire3";
+import Questionnaire4 from "./Templates/Questionnaire4";
 import Group from "./Templates/SingleGroup";
 
 export default class Routing extends Component {
@@ -35,7 +38,10 @@ export default class Routing extends Component {
         <Route component={Search} path="/Search" />
         <Route component={Login} path="/Login" />
         <Route component={Registration} path="/Registration" />
-        <Route component={Questionnaire} path="/Questionnaire" />
+        <Route component={Questionnaire1} path="/Questionnaire1" />
+        <Route component={Questionnaire2} path="/Questionnaire2" />
+        <Route component={Questionnaire3} path="/Questionnaire3" />
+        <Route component={Questionnaire4} path="/Questionnaire4" />
       </BrowserRouter>
     );
   }

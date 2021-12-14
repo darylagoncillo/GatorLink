@@ -5,7 +5,7 @@ import Navigation from "../Components/Navigation";
 import Banners from "../Components/HeroContainer";
 import Profile from "../Components/Profile";
 
-export default class Registration extends Component {
+export default class Questionnaire1 extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -18,10 +18,8 @@ export default class Registration extends Component {
     //    username = event.target.username,
     //    password = event.target.password
     // })
-
   }
 
-  
   render() {
     return (
       <div className="body">
@@ -30,6 +28,3 @@ export default class Registration extends Component {
     );
   }
 }
-
-
-
