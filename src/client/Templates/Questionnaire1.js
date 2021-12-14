@@ -5,7 +5,7 @@ import Navigation from "../Components/Navigation";
 import Banners from "../Components/HeroContainer";
 import Profile from "../Components/Profile";
 
-export default class Home extends Component {
+export default class Questionnaire1 extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -13,13 +13,17 @@ export default class Home extends Component {
       time: "6:48 pm",
       show: true,
     };
+
+    // onSubmit(event => {
+    //    username = event.target.username,
+    //    password = event.target.password
+    // })
   }
 
   render() {
     return (
       <div className="body">
-        <Navigation />
-        <Banners/>     
+        <p>hello</p>
       </div>
     );
   }

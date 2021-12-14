@@ -19,8 +19,7 @@ import {
 } from "react-bootstrap";
 
 function HeroContainer(props) {
-
-  // const handleRoute = () =>{ 
+  // const handleRoute = () =>{
   //   this.props.history.push("/Groups");
   // }
 
@@ -49,10 +48,11 @@ function HeroContainer(props) {
                     ></Card.Img>
                     <p className="card-titles">Events</p>
                     <Card.Text>
-                      Hundreds of events are posted on the daily by SFSU students. These
-                      posting provide a way for students to connect both online
-                      and offline. The posting's information such as location,
-                      date, and time are available on the post's listing.
+                      Hundreds of events are posted on the daily by SFSU
+                      students. These posting provide a way for students to
+                      connect both online and offline. The posting's information
+                      such as location, date, and time are available on the
+                      post's listing.
                     </Card.Text>
                   </Card.Body>
                 </Card>
@@ -105,30 +105,44 @@ function HeroContainer(props) {
                   Looking to attend events online or offline? Check out our
                   events page full of virtual meetups or in-person events!
                 </p>
-                <a href="/Events">
-                  <Button className="button-1"> Browse </Button>
-                </a>
+                <div className="button-location">
+                  <a href="/Events">
+                    <Button className="button-1"> Browse </Button>
+                  </a>
+                </div>
               </Col>
 
-              <Col className="square-2"></Col>
+              <Col
+                className="square-2"
+                sm={12}
+                lg={6}
+                className="d-md-block d-sm-none"
+              ></Col>
             </Row>
             <Row md={2} className="row-2">
-              <Col className="square-3"></Col>
+              <Col
+                className="square-3"
+                sm={12}
+                lg={6}
+                className="d-md-block d-sm-none"
+              ></Col>
 
               <Col className="square-4">
-              <h5>Find and Meet New Friends</h5>
+                <h5>Find and Meet New Friends</h5>
                 <p className="p-2">
-                  Explore the site and make new connections. 
-                  Discover and meet thousands of members in multiple groups.
+                  Explore the site and make new connections. Discover and meet
+                  thousands of members in multiple groups.
                 </p>
-                <a href="/Groups">
-                  <Button className="button-2"> Discover </Button>
-                </a>
+                <div className="button-location">
+                  <a href="/Groups">
+                    <Button className="button-2"> Discover </Button>
+                  </a>
+                </div>
               </Col>
             </Row>
 
             <Row md={1} className="row-3">
-              <Footer />
+              {/* <Footer /> */}
             </Row>
           </Container>
         </div>

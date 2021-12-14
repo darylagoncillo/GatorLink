@@ -1,4 +1,4 @@
-import { Button, Container, Row, Col } from "react-bootstrap";
+import { Button, Container, Row, Col, Form,  } from "react-bootstrap";
 import React, { Component } from "react";
 
 import Navigation from "../Components/Navigation";
@@ -9,16 +9,50 @@ export default class Questionnaire extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      message: "hello",
-      time: "6:48 pm",
-      show: true,
+      
     };
   }
 
   render() {
     return (
-      <div className="body">
-        <p>hello</p>
+      <div className="Registration">
+        <h1 >Account Activation</h1>
+        <br />
+        <h4>Activate your account by using your SFSU credentials</h4>
+        <Container>
+          <Button 
+          className="SFSULoginB"
+          variant="warning" 
+          size="lg" 
+          type="submit"
+          >
+          SFSU Login
+          </Button>
+
+          <Form.Group className="TOSCheck" controlId="formBasicCheckbox">
+            <Form.Check type="checkbox" label="I accept GatorLink's Terms of Service and Privacy Policy" />
+          </Form.Group>
+          
+          <Button
+          className="SFSUNEXT"
+          variant="warning"
+          size="lg"
+          type="submit"
+          >
+            Next
+          </Button>
+
+          <Button
+          className="SFSUAccount"
+          variant="secondary"
+          size="lg"
+          type="submit"
+          >
+            Already have an account? Log In
+          </Button>
+        </Container>
+
+        
       </div>
     );
   }
