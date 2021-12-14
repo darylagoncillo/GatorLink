@@ -186,12 +186,10 @@
     margin-top: -55px;
   }
 
-  .square-4{
-    margin-top: 150px;
-  }
+
 }
 
-@media screen and (max-width: 1024px),
+/* @media screen and (max-width: 1024px),
 screen and (max-height: 1100px ) {
   .text-wrapper > h1 {
     font-size: 70px;
@@ -212,7 +210,7 @@ screen and (max-height: 1100px ) {
   .square-4{
     margin-top: 150px;
   }
-}
+} */
 
 @media screen and (max-width: 768px) {
   .text-wrapper > h1 {

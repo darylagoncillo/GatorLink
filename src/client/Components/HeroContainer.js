@@ -139,16 +139,13 @@ function HeroContainer(props) {
                   </a>
                 </div>
               </Col>
-
             </Row>
-
-  
-
+            <Row> <Footer /></Row>
+           
           </Container>
-    
-
+      
+  
         </div>
-
       </div>
     </>
   );

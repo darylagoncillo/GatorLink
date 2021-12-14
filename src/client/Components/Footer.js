@@ -14,64 +14,68 @@ import {
   NavDropdown,
 } from "react-bootstrap";
 
+import Home from "../Templates/Home";
+import Events from "../Templates/Events";
+import Groups from "../Templates/Groups";
+
 function Footer(props) {
   return (
     <>
-      <div className="main-footer">
-        <div className="footer-container">
-          <Row md={3} className="footer-row"> 
-            {/* Column1 */}
-            <Col>
-              <h4>Team 3</h4>
-              <ui className="list-unstyled">
-                <li>Our team strives to create a safe</li>
-                <li>online community for students</li>
-                <li>to thrive in.</li>
-              </ui>
-            </Col>
-            {/* Column2 */}
-            <Col>
-              <h4>Explore Our Website!</h4>
-              <ui className="list-unstyled">
-                <li>Group Events</li>
-                <li>View Groups</li>
-              </ui>
-            </Col>
-            {/* Column3 */}
-            <Col>
-              <h4>Frequently Asked Questions</h4>
-              <ui className="list-unstyled">
-                <li>What's the purpose of this app?</li>
-                <li>What is there to do on here?</li>
-                <li>How to do view and create events?</li>
-              </ui>
-            </Col>
-            <div className="icon-link">
-              Icons made by{" "}
-              <a
-                href="https://www.flaticon.com/authors/fliqqer"
-                title="Fliqqer"
-              >
-                Fliqqer
-              </a>{" "}
-              from{" "}
-              <a href="https://www.flaticon.com/" title="Flaticon">
-                www.flaticon.com
-              </a>
-            </div>
-          </Row>
+      <footer class="footer-distributed">
+        <div class="footer-left">
+          <h3>
+            CSC 656<span> Team 3</span>
+          </h3>
 
+          <p class="footer-links">
+            <a href="/Events">Events</a> | <a href="/Groups">Groups</a>
+          </p>
 
-          <hr />
-          <Row className="copyright-row">
-            <p className="col-sm">
-              &copy;{new Date().getFullYear()} CSC | All rights reserved | Terms
-              Of Service | Privacy
-            </p>
-          </Row>
+          <p class="footer-team-name">
+            © 2021 CSC 656 Team 3 | All rights reserved | Terms of Service{" "}
+          </p>
         </div>
-      </div>
-   
+
+        <div class="footer-center">
+          <div>
+            <i class="fa fa-map-marker"></i>
+            <p>Contact Us</p>
+          </div>
+
+          <div>
+            <i class="email-content"></i>
+            <p>
+              <a href="mailto:support@eduonix.com">jcastan6@mail.sfsu.edu</a>
+            </p>
+          </div>
+          <div>
+            <i class="email-content"></i>
+            <p>
+              <a href="mailto:support@eduonix.com">dagoncillo@mail.sfsu.edu</a>
+            </p>
+          </div>
+          <div>
+            <i class="email-content"></i>
+            <p>
+              <a href="mailto:support@eduonix.com">eafridi@mail.sfsu.edu</a>
+            </p>
+          </div>
+          <div>
+            <i class="email-content"></i>
+            <p>
+              <a href="mailto:support@eduonix.com">sdang4@mail.sfsu.edu</a>
+            </p>
+          </div>
+        </div>
+        <div class="footer-right">
+          <p class="footer-about-section">
+            <span>About the team</span>
+            We are Team 3 in CSC 656-02. We've created an app geared towards
+            SFSU students. Our app will serve as a safe online commmunity for
+            any SFSU student to use.{" "}
+          </p>
+        </div>
+      </footer>
     </>
   );
 }

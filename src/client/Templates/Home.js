@@ -30,7 +30,6 @@ export default class Home extends Component {
       <div className="body">
         <Navigation />
         {this.home()}
-        <Footer />
       </div>
     );
   }
