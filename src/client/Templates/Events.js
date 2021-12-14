@@ -156,6 +156,7 @@ export default class Events extends Component {
                   <h4>
                     <BsArrowLeft onClick={this.toggleCreateModal} />
                   </h4>
+                  
                 </Modal>
               </div>
             </Col>
