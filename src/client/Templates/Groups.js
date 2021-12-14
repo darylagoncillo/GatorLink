@@ -109,18 +109,19 @@ export default class Group extends Component {
         <br />
         <Container fluid className="page-content">
           <Row className="mobile-row">
-            <Col md="3" sm="12" xs="12">
-              <div className="sidebar">
+            <Col md="3" sm="12" xs="12" className="sidebar">
+              <div className="sidebar-contents">
                 <GroupSidebar
                   groups={this.state.groups}
                   selectCategory={this.selectCategory}
                 />
               </div>
+              <hr className="mobile-only"></hr>
             </Col>
 
             <Col md="9" sm="12" xs="12">
               <div className="content">
-                <Navbar bg="light" expand="lg">
+                <Navbar bg="light" expand="lg" className="desktop-only">
                   <Container>
                     <Navbar.Brand href="/">Discover Groups</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -146,10 +147,16 @@ export default class Group extends Component {
                     </Navbar.Collapse>
                   </Container>
                 </Navbar>
-                <Button variant="warning" onClick={this.toggleCreateModal}>
-                  Create a Group
-                </Button>
-                <Pagination>{items}</Pagination>
+                <Row className="button-row">
+                  <Col md="9" sm="5" xs="6">
+                    <Button variant="warning" onClick={this.toggleCreateModal}>
+                      Create a Group
+                    </Button>
+                  </Col>
+                  <Col md="3" sm="6" xs="6">
+                    <Pagination>{items}</Pagination>
+                  </Col>
+                </Row>
                 <Row>{this.renderGroups()}</Row>
                 <Modal
                   className="create-modal"

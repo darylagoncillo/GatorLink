@@ -3,7 +3,7 @@
   background: #fff;
 }
 
-h1 {
+/* h1 {
   text-align: center;
 }
 
@@ -24,7 +24,7 @@ button {
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 20px;
-}
+} */
 
 .cards__container {
   display: flex;

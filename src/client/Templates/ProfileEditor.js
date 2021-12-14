@@ -34,9 +34,9 @@ export default class ProfileEditor extends Component {
       <div className="profileEditorBody">
         <Navigation />
         <br />
-        <Container fluid className="page-content">
+        <Container fluid className="page-content ">
           <Tab.Container id="left-tabs-example" defaultActiveKey="first">
-            <Row>
+            <Row className="mobile-row">
               <Col md="3" sm="12" xs="12">
                 <div className="sidebar">
                   <div className="profile-sidebar">

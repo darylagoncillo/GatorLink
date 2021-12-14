@@ -11,14 +11,25 @@ import {
   NavDropdown,
   Tab,
   Tabs,
-  ListGroup
+  ListGroup,
 } from "react-bootstrap";
 import React, { Component } from "react";
+<<<<<<< HEAD
 import "../Components/SingleEvent.css";
+=======
+import "../Components/Cards.css";
+import Modal from "react-modal";
+import { BsArrowLeft, BsThreeDotsVertical } from "react-icons/bs";
+import { RiArrowGoBackLine } from "react-icons/ri";
+>>>>>>> f932a68c8c89c5925b38fed7402d4367046ca25e
 import Navigation from "../Components/Navigation";
 import data from "../../../event-data.json";
 
+<<<<<<< HEAD
 import { RiArrowGoBackLine } from "react-icons/ri";
+=======
+import CardItem from "../Components/EventCard";
+>>>>>>> f932a68c8c89c5925b38fed7402d4367046ca25e
 
 export default class Event extends Component {
   constructor(props) {
@@ -81,7 +92,7 @@ export default class Event extends Component {
         <Navigation />
 
         <Container fluid className="page-content">
-          <Row className="justify-content-md-center">
+          <Row className="justify-content-md-center ">
             <Col md="8" sm="12">
               <Button
                 name="back-to-events"
@@ -98,21 +109,23 @@ export default class Event extends Component {
 
               <div className="content">
                 <Col xs={5} md={5}>
-                  <Card style={{ width: '18rem' }}>
-                    <Card.Header></Card.Header>
+                  <Card style={{ width: "18rem" }}>
+                    <Card.Header />
                     <Card.Img variant="top" src="/EventPictures/img-1.jpg" />
                     <Card.Body>
                       <Card.Title>Intramural Basketball</Card.Title>
-                      <Card.Subtitle className="mb-2 text-muted">Thursday, October 28</Card.Subtitle>
+                      <Card.Subtitle className="mb-2 text-muted">
+                        Thursday, October 28
+                      </Card.Subtitle>
                       <Card.Text>
-                        Playoffs have begun! Support your peers this week
-                        at the Mashouf Wellness Center at 12PM for the first round of the
-                        Basketball Intramural Playoffs.
+                        Playoffs have begun! Support your peers this week at the
+                        Mashouf Wellness Center at 12PM for the first round of
+                        the Basketball Intramural Playoffs.
                       </Card.Text>
                     </Card.Body>
                   </Card>
                   <row>
-                    <p></p>
+                    <p />
                   </row>
                   <Card className="single-mutuals" style={{ width: '18rem' }}>
                     <Card.Header>Mutuals</Card.Header>
@@ -125,8 +138,12 @@ export default class Event extends Component {
                   <br />
                 </Col>
                 <Col>
-                  <Button className="event-confirm" variant="warning">Warning</Button>{' '}
-                  <Button className="event-confirm" variant="warning">Warning</Button>{' '}
+                  <button type="button" className="btn btn-primary float-right">
+                    Going
+                  </button>
+                  <button type="button" className="btn btn-primary float-right">
+                    Not Interested
+                  </button>
                 </Col>
               </div>
             </Col>
