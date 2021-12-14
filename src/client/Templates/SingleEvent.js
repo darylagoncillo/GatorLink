@@ -16,10 +16,9 @@ import {
 import React, { Component } from "react";
 import "../Components/SingleEvent.css";
 import { RiArrowGoBackLine } from "react-icons/ri";
+import { GrAccessibility } from "react-icons/gr";
 import Navigation from "../Components/Navigation";
 import data from "../../../event-data.json";
-import { GrAccessibility } from "react-icons/gr";
-
 
 export default class Event extends Component {
   constructor(props) {
@@ -98,40 +97,58 @@ export default class Event extends Component {
               </Button>
 
               <div className="content">
-                <Col md="6">
-                  <Card style={{ width: "18rem" }}>
-                    <Card.Header />
-                    <Card.Img variant="top" src="/EventPictures/img-1.jpg" />
-                    <Card.Body>
-                      <Card.Title>Intramural Basketball</Card.Title>
-                      <Card.Subtitle className="mb-2 text-muted">
-                        Thursday, October 28
-                      </Card.Subtitle>
-                      <Card.Text>
-                        Playoffs have begun! Support your peers this week at the
-                        Mashouf Wellness Center at 12PM for the first round of
-                        the Basketball Intramural Playoffs.
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                  <row>
-                    <p />
-                  </row>
-                </Col>
-                <Col md="6">
-                  <Card className="single-mutuals" style={{ width: "18rem" }}>
-                    <Card.Header><GrAccessibility /> Mutuals</Card.Header>
-                    <ListGroup variant="flush">
-                      <ListGroup.Item>32 Going</ListGroup.Item>
-                      <ListGroup.Item>23 Interested</ListGroup.Item>
-                      <ListGroup.Item>30 Not Going</ListGroup.Item>
-                    </ListGroup>
-                  </Card>
-                </Col>
+                <Row>
+                  <Col md="6">
+                    <Card style={{ width: "18rem" }}>
+                      <Card.Header />
+                      <Card.Img variant="top" src="/EventPictures/img-1.jpg" />
+                      <Card.Body>
+                        <Card.Title>Intramural Basketball</Card.Title>
+                        <Card.Subtitle className="mb-2 text-muted">
+                          Thursday, October 28
+                        </Card.Subtitle>
+                        <Card.Text>
+                          Playoffs have begun! Support your peers this week at
+                          the Mashouf Wellness Center at 12PM for the first
+                          round of the Basketball Intramural Playoffs.
+                        </Card.Text>
+                      </Card.Body>
+                    </Card>
+                    <row>
+                      <p />
+                    </row>
+                    <Card className="single-mutuals" style={{ width: "18rem" }}>
+                      <Card.Header>
+                        <GrAccessibility /> Mutuals
+                      </Card.Header>
+                      <ListGroup variant="flush">
+                        <ListGroup.Item>32 Going</ListGroup.Item>
+                        <ListGroup.Item>23 Interested</ListGroup.Item>
+                        <ListGroup.Item>30 Not Going</ListGroup.Item>
+                      </ListGroup>
+                    </Card>
+                  </Col>
+                  <Col md="6">
+                    <Card className="single-mutuals" style={{ width: "18rem" }}>
+                      <Card.Header>
+                        <GrAccessibility /> Mutuals
+                      </Card.Header>
+                      <ListGroup variant="flush">
+                        <ListGroup.Item>32 Going</ListGroup.Item>
+                        <ListGroup.Item>23 Interested</ListGroup.Item>
+                        <ListGroup.Item>30 Not Going</ListGroup.Item>
+                      </ListGroup>
+                    </Card>
+                  </Col>
+                </Row>
                 <Row className="justify-content-md-end">
                   <Col md="4" className="rsvp">
-                    <Button variant="warning" href="/Events">Not Interested</Button>{" "}
-                    <Button variant="warning" href="/Events">Going</Button>
+                    <Button variant="warning" href="/Events">
+                      Not Interested
+                    </Button>{" "}
+                    <Button variant="warning" href="/Events">
+                      Going
+                    </Button>
                   </Col>
                 </Row>
                 <br />
