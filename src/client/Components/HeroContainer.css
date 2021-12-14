@@ -11,7 +11,7 @@
 
 .hero-container {
   position: relative;
-  min-height: 205vh;
+  min-height: 150vh;
 }
 
 /* .banner-2 {
@@ -141,6 +141,10 @@
 
 .row-2 {
   height: 500px;
+}
+
+.row-3 {
+  margin-top: 10px;
 }
 
 .p-2 {

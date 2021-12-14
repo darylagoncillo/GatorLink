@@ -1,40 +1,27 @@
 .footer-container {
   bottom: 0;
   width: 100%;
+  padding-top: 3em;
+  position: relative;
   height: 2.5rem;
-  background-color: gray;
-  min-height: 30vh;
+  background-color: #ffc1078a;
+  min-height: 25vh;
 }
 
-.footer-col-1 > h6 {
-  text-align: center;
-  padding: 4%;
-  text-transform: uppercase;
-  border-bottom: 1px solid black;
-  font-size: 25px;
-}
-.footer-col-1 > h6 {
-  text-align: center;
-  padding: 4%;
-  text-transform: uppercase;
-  border-bottom: 1px solid black;
-  font-size: 25px;
+.main-footer{
+  margin-top: 15px;
 }
 
-.footer-col-1 > h5 {
-  text-align: center;
-  padding: 1%;
-  font-size: 20px;
+
+.icon-link{
+  margin-top: 35px;
+  font-size: 12px;
 }
 
-.footer-col-2 > h6 {
-  text-align: center;
-  padding: 4%;
-  text-transform: uppercase;
-  border-bottom: 1px solid black;
-  font-size: 25px;
+.footer-row{
+  margin-left: 2%;
 }
 
-.footer-row {
-  padding: 5px;
+.copyright-row{
+  margin-left: 2%;
 }
