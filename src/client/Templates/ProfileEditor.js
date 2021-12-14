@@ -13,7 +13,7 @@ import {
   Tab,
   Tabs,
   Image,
-  InputGroup
+  InputGroup,
 } from "react-bootstrap";
 import React, { Component } from "react";
 import "../Components/Cards.css";
@@ -78,11 +78,7 @@ export default class ProfileEditor extends Component {
                   <Navbar bg="light" expand="lg">
                     <Container>
                       <Tab.Content>
-                        <Tab.Pane eventKey="first">
-                          <Navbar.Brand href="/EditProfile">
-                            Edit {this.state.selectedCategory} Profile
-                          </Navbar.Brand>
-                        </Tab.Pane>
+                        <Tab.Pane eventKey="first">Here!</Tab.Pane>
                         <Tab.Pane eventKey="second">Notifications</Tab.Pane>
                         <Tab.Pane eventKey="third">Privacy</Tab.Pane>
                       </Tab.Content>
@@ -114,21 +110,35 @@ export default class ProfileEditor extends Component {
                         />
                       </Col>
                       <Col xs="auto">
-                        <Form.Label htmlFor="inlineFormInputGroup" visuallyHidden>
+                        <Form.Label
+                          htmlFor="inlineFormInputGroup"
+                          visuallyHidden
+                        >
                           Username
                         </Form.Label>
                         <InputGroup className="mb-2">
                           <InputGroup.Text>@</InputGroup.Text>
-                          <FormControl id="inlineFormInputGroup" placeholder="Username" />
+                          <FormControl
+                            id="inlineFormInputGroup"
+                            placeholder="Username"
+                          />
                         </InputGroup>
                       </Col>
                     </Row>
                     <Col>
-                      <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                      <Form.Group
+                        className="mb-3"
+                        controlId="exampleForm.ControlTextarea1"
+                      >
                         <Form.Label>About Me</Form.Label>
                         <Form.Control as="textarea" rows={3} />
                       </Form.Group>
-                      <button type="button" class="btn btn-primary float-right">Save</button>
+                      <button
+                        type="button"
+                        className="btn btn-primary float-right"
+                      >
+                        Save
+                      </button>
                     </Col>
                   </Form>
                 </div>

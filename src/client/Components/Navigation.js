@@ -69,7 +69,7 @@ class Navigation extends Component {
     const { location } = this.props;
     return (
       <div>
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="light" expand="lg" className="navbar">
           <Container>
             <Navbar.Brand href="/">GatorLink</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
