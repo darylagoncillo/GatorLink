@@ -1,8 +1,6 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./Profile.css";
-import editIcon from "../../images/EditIcon2.png";
-import eventsIcon from "../../images/ProfileEventsIcon.png";
 import {
   Button,
   Container,
@@ -15,242 +13,189 @@ import {
   Card,
   NavDropdown,
 } from "react-bootstrap";
+import editIcon from "../../images/EditIcon2.png";
+import eventsIcon from "../../images/ProfileEventsIcon.png";
 import profilePicture from "../../images/profile-img.jpg";
 import Footer from "./Footer";
+import data from "../../../event-data.json";
+import data2 from "../../../group-data.json";
+import CardItem from "../Components/EventCard";
 
-function SearchResults(props) {
-  return (
-    <div className="body">
-      <div className="content-wrap">
-        <Container fluid className="page-content">
-          <Row className="mega-row">
-            <Col md="3" sm="12" xs="12">
-              <div className="sidebar">
-                <div className="event-sidebar" />
-                <div className="box-1">
-                  <h5>
-                    Profile
-                    <a href="/EditProfile">
-                      <img className="edit-icon" src={editIcon}></img>
-                    </a>
-                  </h5>
-                  <div className="list-group">
-                    <Card className="text-center-1">
-                      <Card.Body>
-                        <Card.Img
-                          className="profile-img"
-                          variant="top"
-                          src={profilePicture}
-                        />
-                        <p>Name</p>
-                        <Card.Text>
-                          Sed ut perspiciatis unde omnis iste natus error sit
-                          voluptatem accusantium doloremque laudantium, totam
-                          rem aperiam, eaque ipsa quae ab illo inventore
-                          veritatis et quasi architecto.
-                        </Card.Text>
-                      </Card.Body>
-                    </Card>
-                  </div>
+export default class Profile extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      events: data.Events,
+      groups: data2.Groups,
+      selectedCategory: null,
+    };
+    this.renderEvents = this.renderEvents.bind(this);
+    this.renderGroups = this.renderGroups.bind(this);
+  }
+
+  renderEvents() {
+    let count = 0;
+    return this.state.events.map((item) => {
+      if (
+        (this.state.selectedCategory === null ||
+          this.state.selectedCategory === item.category) &&
+        count < 4
+      ) {
+        count++;
+        return (
+          <Col md="4">
+            <CardItem
+              src={item.image_url}
+              text={item.event_name}
+              label={item.date}
+              event_id={item.event_id}
+              history={this.props.history}
+              attending={item.attending}
+            />
+          </Col>
+        );
+      }
+    });
+  }
+
+  renderGroups() {
+    let count = 0;
+    return this.state.groups.map((item) => {
+      if (
+        (this.state.selectedCategory === null ||
+          this.state.selectedCategory === item.category) &&
+        count < 3
+      ) {
+        count++;
+        return (
+          <Col md="4">
+            <CardItem
+              src={item.img_url}
+              history={this.props.history}
+              text={item.group_name}
+              label={item.members + " Members"}
+              group_id={item.group_id}
+              attending={item.members}
+            />
+          </Col>
+        );
+      }
+    });
+  }
+
+  render() {
+    return (
+      <div className="body">
+        <div className="content-wrap">
+          <Container fluid className="page-content">
+            <Row className="mega-row">
+              <Col md="3" sm="12" xs="12">
+                <div className="sidebar">
+                  <div className="event-sidebar" />
                   <div className="box-1">
-                    <h5>Social Media Handles</h5>
-                  </div>
-
-                  <div className="list-group">
-                    <Card className="card-2">
-                      <a
-                        href="/Events"
-                        data-rb-event-key="/Events"
-                        className="list-group-item list-group-item-action"
-                      >
-                        Twitter
+                    <h5>
+                      Profile
+                      <a href="/EditProfile">
+                        <img className="edit-icon" src={editIcon} />
                       </a>
-                      <a
-                        href="/Groups"
-                        data-rb-event-key="/Groups"
-                        className="list-group-item list-group-item-action"
+                    </h5>
+                    <div className="list-group">
+                      <Card className="text-center-1">
+                        <Card.Body>
+                          <Card.Img
+                            className="profile-img"
+                            variant="top"
+                            src={profilePicture}
+                          />
+                          <p>Name</p>
+                          <Card.Text>
+                            Sed ut perspiciatis unde omnis iste natus error sit
+                            voluptatem accusantium doloremque laudantium, totam
+                            rem aperiam, eaque ipsa quae ab illo inventore
+                            veritatis et quasi architecto.
+                          </Card.Text>
+                        </Card.Body>
+                      </Card>
+                    </div>
+                    <div className="box-1">
+                      <h5>Social Media Handles</h5>
+                    </div>
+
+                    <div className="list-group">
+                      <Card className="card-2">
+                        <a
+                          href="/Events"
+                          data-rb-event-key="/Events"
+                          className="list-group-item list-group-item-action"
+                        >
+                          Twitter
+                        </a>
+                        <a
+                          href="/Groups"
+                          data-rb-event-key="/Groups"
+                          className="list-group-item list-group-item-action"
+                        >
+                          Instagram
+                        </a>
+
+                        <a
+                          href="/Events"
+                          data-rb-event-key="/Events"
+                          className="list-group-item list-group-item-action"
+                        >
+                          Snapchat
+                        </a>
+                      </Card>
+                    </div>
+                  </div>
+                </div>
+              </Col>
+              <Col md="9" sm="12" xs="12">
+                <div className="content">
+                  <Navbar bg="light" expand="lg">
+                    <Container>
+                      <Navbar.Brand href="/">
+                        Discover {this.state.selectedCategory} Events
+                      </Navbar.Brand>
+                      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
+                      <Button
+                        onClick={() => this.props.history.push("/Events")}
                       >
-                        Instagram
-                      </a>
+                        More Events
+                      </Button>
+                    </Container>
+                  </Navbar>
 
-                      <a
-                        href="/Events"
-                        data-rb-event-key="/Events"
-                        className="list-group-item list-group-item-action"
+                  <br />
+                  <Row>{this.renderEvents()}</Row>
+                </div>
+                <br></br>
+                <div className="content">
+                  <Navbar bg="light" expand="lg">
+                    <Container>
+                      <Navbar.Brand href="/">
+                        Discover {this.state.selectedCategory} Events
+                      </Navbar.Brand>
+                      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
+                      <Button
+                        onClick={() => this.props.history.push("/Groups")}
                       >
-                        Snapchat
-                      </a>
-                    </Card>
-                  </div>
-                </div>
-              </div>
-            </Col>
-            <Col md="9" sm="12" xs="12">
-              <Navbar bg="light" expand="lg">
-                <Container>
-                  <Navbar.Brand href="/">Events</Navbar.Brand>
-                  <Button
-                    className="eventButton"
-                    onClick={() => props.history.push("/Event/1")}
-                  >
-                    More Events
-                  </Button>
-                  <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                  <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ml-auto" />
-                  </Navbar.Collapse>
-                </Container>
-              </Navbar>
-              <Row className="groups-row">
-                <div className="col-sm-4">
-                  <Card className="profile-card">
-                    <Card.Body>
-                      <p>Events</p>
-                      <Card.Text>
-                        Sed ut perspiciatis unde omnis iste natus error sit
-                        voluptatem accusantium doloremque laudantium, totam rem
-                        aperiam, eaque ipsa quae ab illo inventore veritatis et
-                        quasi architecto.
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
+                        More Groups
+                      </Button>
+                    </Container>
+                  </Navbar>
 
-                <div className="col-sm-4">
-                  <Card className="profile-card">
-                    <Card.Body>
-                      <p>Events</p>
-                      <Card.Text>
-                        Sed ut perspiciatis unde omnis iste natus error sit
-                        voluptatem accusantium doloremque laudantium, totam rem
-                        aperiam, eaque ipsa quae ab illo inventore veritatis et
-                        quasi architecto.
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
+                  <br />
+                  <Row>{this.renderGroups()}</Row>
                 </div>
-
-                <div className="col-sm-4">
-                  <Card className="profile-card">
-                    <Card.Body>
-                      <p>Events</p>
-                      <Card.Text>
-                        Sed ut perspiciatis unde omnis iste natus error sit
-                        voluptatem accusantium doloremque laudantium, totam rem
-                        aperiam, eaque ipsa quae ab illo inventore veritatis et
-                        quasi architecto.
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-              </Row>
-
-              <div className="row">
-                <div className="col-sm-4">
-                  <Card className="profile-card">
-                    <Card.Body>
-                      <p>Events</p>
-                      <Card.Text>
-                        Sed ut perspiciatis unde omnis iste natus error sit
-                        voluptatem accusantium doloremque laudantium, totam rem
-                        aperiam, eaque ipsa quae ab illo inventore veritatis et
-                        quasi architecto.
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-
-                <div className="col-sm-4">
-                  <Card className="profile-card">
-                    <Card.Body>
-                      <p>Events</p>
-                      <Card.Text>
-                        Sed ut perspiciatis unde omnis iste natus error sit
-                        voluptatem accusantium doloremque laudantium, totam rem
-                        aperiam, eaque ipsa quae ab illo inventore veritatis et
-                        quasi architecto.
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-
-                <div className="col-sm-4">
-                  <Card className="profile-card">
-                    <Card.Body>
-                      <p>Events</p>
-                      <Card.Text>
-                        Sed ut perspiciatis unde omnis iste natus error sit
-                        voluptatem accusantium doloremque laudantium, totam rem
-                        aperiam, eaque ipsa quae ab illo inventore veritatis et
-                        quasi architecto.
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-              </div>
-
-              <div className="container-2">
-                <Navbar bg="light" expand="lg">
-                  <Container>
-                    <Navbar.Brand href="/">Groups</Navbar.Brand>
-                    <Button className="eventButton">Find Groups</Button>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
-                      <Nav className="ml-auto" />
-                    </Navbar.Collapse>
-                  </Container>
-                </Navbar>
-                <div className="row">
-                  <div className="col-sm-4">
-                    <Card className="profile-card">
-                      <Card.Body>
-                        <p>Events</p>
-                        <Card.Text>
-                          Sed ut perspiciatis unde omnis iste natus error sit
-                          voluptatem accusantium doloremque laudantium, totam
-                          rem aperiam, eaque ipsa quae ab illo inventore
-                          veritatis et quasi architecto.
-                        </Card.Text>
-                      </Card.Body>
-                    </Card>
-                  </div>
-
-                  <div className="col-sm-4">
-                    <Card className="profile-card">
-                      <Card.Body>
-                        <p>Events</p>
-                        <Card.Text>
-                          Sed ut perspiciatis unde omnis iste natus error sit
-                          voluptatem accusantium doloremque laudantium, totam
-                          rem aperiam, eaque ipsa quae ab illo inventore
-                          veritatis et quasi architecto.
-                        </Card.Text>
-                      </Card.Body>
-                    </Card>
-                  </div>
-
-                  <div className="col-sm-4">
-                    <Card className="profile-card">
-                      <Card.Body>
-                        <p>Events</p>
-                        <Card.Text>
-                          Sed ut perspiciatis unde omnis iste natus error sit
-                          voluptatem accusantium doloremque laudantium, totam
-                          rem aperiam, eaque ipsa quae ab illo inventore
-                          veritatis et quasi architecto.
-                        </Card.Text>
-                      </Card.Body>
-                    </Card>
-                  </div>
-                </div>
-              </div>
-            </Col>
-          </Row>
-        </Container>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
-  );
+    );
+  }
 }
-
-export default SearchResults;

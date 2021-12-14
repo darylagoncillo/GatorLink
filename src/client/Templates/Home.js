@@ -19,7 +19,8 @@ export default class Home extends Component {
     return (
       <div className="body">
         <Navigation />
-        <Banners/>     
+        {/* <Banners/>    */}
+        <Profile history={this.props.history} />
       </div>
     );
   }
