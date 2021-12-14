@@ -13,13 +13,6 @@ h5 {
   margin-bottom: 10px;
 }
 
-h6 {
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 10px;
-  font-weight: 500;
-}
-
 p {
   text-align: center;
   margin-top: 30px;
@@ -150,3 +143,4 @@ button {
     margin-bottom: 2rem;
   }
 }
+

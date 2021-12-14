@@ -31,7 +31,7 @@ export default class ProfileEditor extends Component {
 
   render() {
     return (
-      <div className="body">
+      <div className="profileEditorBody">
         <Navigation />
         <br />
         <Container fluid className="page-content">
@@ -139,7 +139,7 @@ export default class ProfileEditor extends Component {
                         <Tab.Pane eventKey="second">
                           <Navbar.Brand>Notifications</Navbar.Brand>
                           <Col>
-                            <h6>Comments</h6>
+                            <h6 className= "edit-profile">Comments</h6>
                             <Form>
                               <Form.Switch
                                 type="switch"
@@ -157,7 +157,7 @@ export default class ProfileEditor extends Component {
                                 label="SMS"
                               />
                             </Form>
-                            <h6>Reminders</h6>
+                            <h6 className= "edit-profile">Reminders</h6>
                             <Form>
                               <Form.Switch
                                 type="switch"
@@ -175,7 +175,7 @@ export default class ProfileEditor extends Component {
                                 label="SMS"
                               />
                             </Form>
-                            <h6>Update From Friends</h6>
+                            <h6 className= "edit-profile">Update From Friends</h6>
                             <Form>
                               <Form.Switch
                                 type="switch"
@@ -193,7 +193,7 @@ export default class ProfileEditor extends Component {
                                 label="SMS"
                               />
                             </Form>
-                            <h6>Events</h6>
+                            <h6 className= "edit-profile">Events</h6>
                             <Form>
                               <Form.Switch
                                 type="switch"
@@ -211,7 +211,7 @@ export default class ProfileEditor extends Component {
                                 label="SMS"
                               />
                             </Form>
-                            <h6>Marketplace</h6>
+                            <h6 className= "edit-profile">Marketplace</h6>
                             <Form>
                               <Form.Switch
                                 type="switch"
@@ -236,7 +236,7 @@ export default class ProfileEditor extends Component {
                         <Tab.Pane eventKey="third">
                           <Navbar.Brand>Privacy</Navbar.Brand>
                           <Col>
-                            <h6>1. Choose who you want to see your posts</h6>
+                          <h6 className= "edit-profile">1. Choose who you want to see your posts</h6>
                             <Form>
                               <Form.Switch
                                 type="switch"
@@ -254,7 +254,7 @@ export default class ProfileEditor extends Component {
                                 label="Only Me"
                               />
                             </Form>
-                            <h6>2. Who can send you friend requests?</h6>
+                            <h6 className= "edit-profile">2. Who can send you friend requests?</h6>
                             <Form>
                               <Form.Switch
                                 type="switch"
@@ -267,7 +267,7 @@ export default class ProfileEditor extends Component {
                                 label="Mutual Friends"
                               />
                             </Form>
-                            <h6>3. Who can send you messages?</h6>
+                            <h6 className= "edit-profile">3. Who can send you messages?</h6>
                             <Form>
                               <Form.Switch
                                 type="switch"

@@ -66,8 +66,11 @@ function EventSidebar(props) {
             Notifications
           </ListGroup.Item>
         </ListGroup>
+
+
+        
         <div className="eventSidebar">
-          <h6>Your Upcoming Events</h6>
+        <h6 className= "event-sidebar">Your Upcoming Events</h6>
           <p>THU, OCT 28 AT 12PM PST BASKETBALL INTRAMURAL PLAYOFFS</p>
           <h5>Categories</h5>
         </div>

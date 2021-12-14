@@ -14,16 +14,11 @@ import {
   ListGroup
 } from "react-bootstrap";
 import React, { Component } from "react";
-import "../Components/Cards.css";
-import Modal from "react-modal";
-import { BsArrowLeft, BsThreeDotsVertical } from "react-icons/bs";
+import "../Components/SingleEvent.css";
 import Navigation from "../Components/Navigation";
-import EventSidebar from "../Components/EventSidebar";
 import data from "../../../event-data.json";
 
 import { RiArrowGoBackLine } from "react-icons/ri";
-
-import CardItem from "../Components/EventCard";
 
 export default class Event extends Component {
   constructor(props) {
@@ -82,13 +77,14 @@ export default class Event extends Component {
 
   render() {
     return (
-      <div className="body">
+      <div className="singleEventbody">
         <Navigation />
 
         <Container fluid className="page-content">
           <Row className="justify-content-md-center">
             <Col md="8" sm="12">
               <Button
+                name="back-to-events"
                 variant="warning"
                 onClick={() => {
                   this.props.history.push("/Events");
@@ -118,7 +114,7 @@ export default class Event extends Component {
                   <row>
                     <p></p>
                   </row>
-                  <Card className="text-center" style={{ width: '18rem' }}>
+                  <Card className="single-mutuals" style={{ width: '18rem' }}>
                     <Card.Header>Mutuals</Card.Header>
                     <ListGroup variant="flush">
                       <ListGroup.Item>32 Going</ListGroup.Item>
@@ -126,11 +122,11 @@ export default class Event extends Component {
                       <ListGroup.Item>30 Not Going</ListGroup.Item>
                     </ListGroup>
                   </Card>
+                  <br />
                 </Col>
-
                 <Col>
-                  <button type="button" class="btn btn-primary float-right">Going</button>
-                  <button type="button" class="btn btn-primary float-right">Not Interested</button>
+                  <Button className="event-confirm" variant="warning">Warning</Button>{' '}
+                  <Button className="event-confirm" variant="warning">Warning</Button>{' '}
                 </Col>
               </div>
             </Col>
