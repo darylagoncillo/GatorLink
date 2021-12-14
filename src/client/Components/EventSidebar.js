@@ -53,7 +53,9 @@ function EventSidebar(props) {
         <div className="eventSidebar">
           <br />
           <h6 className="your-upcoming-events">Your Upcoming Events</h6>
-          <p className="upcoming-title">THU, OCT 28 AT 12PM PST BASKETBALL INTRAMURAL PLAYOFFS</p>
+          <p className="upcoming-title">
+            THU, OCT 28 AT 12PM PST BASKETBALL INTRAMURAL PLAYOFFS
+          </p>
           <h5 className="categories">Categories</h5>
         </div>
         <ListGroup as="ul">

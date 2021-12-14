@@ -75,7 +75,7 @@ class Navigation extends Component {
   renderTabs() {
     if (this.state.isLoggedIn) {
       return (
-        <Nav className="ml-auto">
+        <Nav className="ml-auto" activeKey={location.pathname}>
           <NavDropdown title="Profile" id="basic-nav-dropdown">
             <NavDropdown.Item href="/EditProfile">
               Edit Profile
@@ -85,7 +85,7 @@ class Navigation extends Component {
             <NavDropdown.Item
               onClick={() => {
                 deleteCookie("test");
-                this.refreshPage();
+                this.props.history.push("/");
               }}
             >
               Log Out

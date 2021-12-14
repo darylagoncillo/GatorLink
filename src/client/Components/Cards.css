@@ -3,6 +3,15 @@
   background: #fff;
 }
 
+.create-nav {
+  background-color: #CF9FFF;
+  
+}
+
+.brand {
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
 .create-event {
   margin-top: 10px;
   margin-bottom: 15px;
