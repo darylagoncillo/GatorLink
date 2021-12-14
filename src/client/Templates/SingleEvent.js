@@ -14,22 +14,14 @@ import {
   ListGroup,
 } from "react-bootstrap";
 import React, { Component } from "react";
-<<<<<<< HEAD
-import "../Components/SingleEvent.css";
-=======
 import "../Components/Cards.css";
 import Modal from "react-modal";
 import { BsArrowLeft, BsThreeDotsVertical } from "react-icons/bs";
 import { RiArrowGoBackLine } from "react-icons/ri";
->>>>>>> f932a68c8c89c5925b38fed7402d4367046ca25e
 import Navigation from "../Components/Navigation";
 import data from "../../../event-data.json";
 
-<<<<<<< HEAD
-import { RiArrowGoBackLine } from "react-icons/ri";
-=======
 import CardItem from "../Components/EventCard";
->>>>>>> f932a68c8c89c5925b38fed7402d4367046ca25e
 
 export default class Event extends Component {
   constructor(props) {
