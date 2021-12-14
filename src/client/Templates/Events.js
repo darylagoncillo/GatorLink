@@ -195,9 +195,8 @@ export default class Events extends Component {
                           </Form.Group>
                         </Col>
                       </Row>
-
-
-                      <Button className="button123" variant="secondary">Create</Button>{' '}
+                      <Button className="button123" variant="secondary"
+                      href="/Events">Create</Button>{' '}
                     </Form>
                   </Col>
                 </Modal>
