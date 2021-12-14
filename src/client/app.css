@@ -11,6 +11,10 @@
   margin-left: 700px;
 }
 
+a {
+  color: black;
+}
+
 .SFSULoginB {
   margin-top: 80px;
   width: 450px;
