@@ -23,6 +23,7 @@ import data from "../../../group-data.json";
 
 import CardItem from "../Components/GroupCard";
 import GroupSidebar from "../Components/GroupSidebar";
+
 import {
   BsArrowLeft,
   BsThreeDotsVertical,

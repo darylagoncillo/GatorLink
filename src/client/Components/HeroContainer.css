@@ -7,7 +7,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
 }
 
 .hero-container {
@@ -120,35 +119,35 @@
 }
 
 .button-1:hover {
-  background-color: black;
-  color: white;
+  background-color: black !important;
+  color: white !important;
 }
 
 .button-2:hover {
-  background-color: black;
-  color: white;
+  background-color: black !important;
+  color: white !important;
 }
 
-.button-get-started{
-  display:block; /* change this from inline-block */
-  width:200px; /* setting the width */
-  margin:0 auto; /* this will center  it */
+.button-get-started {
+  display: block; /* change this from inline-block */
+  width: 200px; /* setting the width */
+  height: 50px;
+  margin: 0 auto; /* this will center  it */
   margin-top: 10px;
-  position:relative;
-  font-size:14px;
+  position: relative;
+  font-size: 14px;
   background-color: #3a3939 !important;
-  color:#fff;
-  border:black !important;
-  text-align:center;
-  cursor:pointer;
-  -webkit-border-radius:2px;
-  -moz-border-radius:2px;
-  border-radius:2px;
-
+  color: #fff;
+  border: black !important;
+  text-align: center;
+  cursor: pointer;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
 }
 
-.button-get-started:hover{
-  background-color: black;
+.button-get-started:hover {
+  background-color: black !important;
   color: white;
 }
 /*----------------------------------------------------------------------------------------*/
@@ -208,8 +207,6 @@
   .banner-2 {
     margin-top: -55px;
   }
-
-
 }
 
 /* @media screen and (max-width: 1024px),
@@ -252,23 +249,23 @@ screen and (max-height: 1100px ) {
     margin-top: 25px;
   }
 
-  .square-1{
+  .square-1 {
     height: 650px;
   }
 
-  .square-1 > h5{
+  .square-1 > h5 {
     font-size: 40px;
   }
 
-  .square-1 > p{
+  .square-1 > p {
     font-size: 25px;
   }
 
-  .button-1{
+  .button-1 {
     width: 150px;
   }
 
-  .button-2{
+  .button-2 {
     width: 150px;
   }
 }
@@ -314,7 +311,7 @@ screen and (max-height: 1100px ) {
     margin-right: none;
   }
 
-  .square-4{
+  .square-4 {
     margin-top: 100px;
   }
 }
@@ -345,7 +342,7 @@ screen and (max-height: 1100px ) {
     padding: 25px;
   }
 
-  .square-4{
+  .square-4 {
     padding: 25px;
   }
 
@@ -376,7 +373,7 @@ screen and (max-height: 1100px ) {
     margin-right: 0px;
   }
 
-  .button-location{
+  .button-location {
     display: flex;
     justify-content: center;
   }
