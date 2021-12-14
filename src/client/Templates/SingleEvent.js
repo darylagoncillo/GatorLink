@@ -97,50 +97,66 @@ export default class Event extends Component {
               </Button>
 
               <div className="content">
-                <Row>
-                  <Col md="6">
-                    <Card style={{ width: "18rem" }}>
-                      <Card.Header />
-                      <Card.Img variant="top" src="/EventPictures/img-1.jpg" />
-                      <Card.Body>
-                        <Card.Title>Intramural Basketball</Card.Title>
-                        <Card.Subtitle className="mb-2 text-muted">
-                          Thursday, October 28
-                        </Card.Subtitle>
-                        <Card.Text>
-                          Playoffs have begun! Support your peers this week at
-                          the Mashouf Wellness Center at 12PM for the first
-                          round of the Basketball Intramural Playoffs.
-                        </Card.Text>
-                      </Card.Body>
-                    </Card>
-                    <row>
-                      <p />
-                    </row>
-                    <Card className="single-mutuals" style={{ width: "18rem" }}>
-                      <Card.Header>
-                        <GrAccessibility /> Mutuals
-                      </Card.Header>
-                      <ListGroup variant="flush">
-                        <ListGroup.Item>32 Going</ListGroup.Item>
-                        <ListGroup.Item>23 Interested</ListGroup.Item>
-                        <ListGroup.Item>30 Not Going</ListGroup.Item>
-                      </ListGroup>
-                    </Card>
-                  </Col>
-                  <Col md="6">
-                    <Card className="single-mutuals" style={{ width: "18rem" }}>
-                      <Card.Header>
-                        <GrAccessibility /> Mutuals
-                      </Card.Header>
-                      <ListGroup variant="flush">
-                        <ListGroup.Item>32 Going</ListGroup.Item>
-                        <ListGroup.Item>23 Interested</ListGroup.Item>
-                        <ListGroup.Item>30 Not Going</ListGroup.Item>
-                      </ListGroup>
-                    </Card>
-                  </Col>
-                </Row>
+                <Col>
+                  <Row>
+                    <Col md="6">
+                      <Card style={{ width: "18rem" }}>
+                        <Card.Header />
+                        <Card.Img variant="top" src="/EventPictures/img-1.jpg" />
+                        <Card.Body>
+                          <Card.Title>Intramural Basketball</Card.Title>
+                          <Card.Subtitle className="mb-2 text-muted">
+                            Thursday, October 28
+                          </Card.Subtitle>
+                          <Card.Text>
+                            Playoffs have begun! Support your peers this week at
+                            the Mashouf Wellness Center at 12PM for the first
+                            round of the Basketball Intramural Playoffs.
+                          </Card.Text>
+                        </Card.Body>
+                      </Card>
+                      <row>
+                        <p />
+                      </row>
+                      <Card className="single-mutuals" style={{ width: "18rem" }}>
+                        <Card.Header>
+                          <GrAccessibility /> Attending
+                        </Card.Header>
+                        <ListGroup variant="flush">
+                          <ListGroup.Item>32 Going</ListGroup.Item>
+                          <ListGroup.Item>23 Interested</ListGroup.Item>
+                          <ListGroup.Item>30 Not Available</ListGroup.Item>
+                        </ListGroup>
+                      </Card>
+                    </Col>
+                    <Col md="6">
+                      <br />
+                      <Card className="single-mutuals" style={{ width: "18rem" }}>
+                        <Card.Header>
+                          More Information
+                        </Card.Header>
+                        <ListGroup variant="flush">
+                          <ListGroup.Item>Host: SFSU Athletics</ListGroup.Item>
+                          <ListGroup.Item>Time: 12:00PM - 5:00PM </ListGroup.Item>
+                          <ListGroup.Item>All attendees must have their SFSU
+                            ID or guest form ready prior to entering.
+                          </ListGroup.Item>
+                        </ListGroup>
+                      </Card>
+                      <br />
+                      <Card className="single-mutuals" style={{ width: "18rem" }}>
+                        <Card.Header>
+                          People You Know
+                        </Card.Header>
+                        <ListGroup variant="flush">
+                          <ListGroup.Item>Sarah Lambert [Attending]</ListGroup.Item>
+                          <ListGroup.Item>Christian Wood [Attending]</ListGroup.Item>
+                          <ListGroup.Item>Michael Porter Jr. [Not Interested]</ListGroup.Item>
+                        </ListGroup>
+                      </Card>
+                    </Col>
+                  </Row>
+                </Col>
                 <Row className="justify-content-md-end">
                   <Col md="4" className="rsvp">
                     <Button variant="warning" href="/Events">
