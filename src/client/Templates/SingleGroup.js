@@ -93,17 +93,17 @@ export default class Group extends Component {
 
               <div className="content">
                 <Tabs
-                  defaultActiveKey="profile"
+                  defaultActiveKey="info"
                   id="uncontrolled-tab-example"
                   className="mb-3"
                 >
-                  <Tab eventKey="home" title="Home">
+                  <Tab eventKey="info" title="Info">
                     here
                   </Tab>
-                  <Tab eventKey="profile" title="Profile">
+                  <Tab eventKey="forum" title="Forum" disabled>
                     here
                   </Tab>
-                  <Tab eventKey="contact" title="Contact" disabled>
+                  <Tab eventKey="members" title="Members" disabled>
                     here
                   </Tab>
                 </Tabs>
