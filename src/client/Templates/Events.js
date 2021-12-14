@@ -19,6 +19,7 @@ import EventSidebar from "../Components/EventSidebar";
 import data from "../../../event-data.json";
 
 import CardItem from "../Components/EventCard";
+import { retrieveCookie } from "../Components/Cookies";
 
 export default class Events extends Component {
   constructor(props) {
@@ -45,9 +46,13 @@ export default class Events extends Component {
   }
 
   toggleCreateModal() {
-    this.setState({
-      newEventModal: !this.state.newEventModal,
-    });
+    if (retrieveCookie()) {
+      this.setState({
+        newEventModal: !this.state.newEventModal,
+      });
+    } else {
+      alert("You must be logged in to create a group!");
+    }
   }
 
   closeModal() {
@@ -117,7 +122,11 @@ export default class Events extends Component {
 
             <Col Col md="9" sm="12" xs="12">
               <div className="content">
-                <Navbar bg="light" expand="lg">
+                <Navbar
+                  bg="light"
+                  expand="lg"
+                  className="selector-nav desktop-only"
+                >
                   <Container>
                     <Navbar.Brand href="/">
                       Discover {this.state.selectedCategory} Events
@@ -153,71 +162,69 @@ export default class Events extends Component {
                   onRequestClose={this.toggleCreateModal}
                   isOpen={this.state.newEventModal}
                 >
-                  <h4>
+                  <h4 className="mobile-only exit-modal">
                     <BsArrowLeft onClick={this.toggleCreateModal} />
                   </h4>
-                  <Col>
-                    <Navbar variant="light" className="create-nav" bg="warning">
-                      <Container>
-                        <Navbar.Brand className="brand">
-                          Create Event
-                        </Navbar.Brand>
-                      </Container>
-                    </Navbar>
-                    <br />
-                  </Col>
-                  <Col>
-                    <Form>
-                      <Form.Group
-                        className="create-title"
-                        controlId="formBasicEmail"
-                      >
-                        <Form.Label>Title</Form.Label>
-                        <Form.Control type="text" />
-                      </Form.Group>
-                      <Form.Group
-                        className="create-date"
-                        controlId="formBasicPassword"
-                      >
-                        <Form.Label>Date</Form.Label>
-                        <Form.Control type="date" />
-                      </Form.Group>
-                      <Form.Group
-                        className="create-details"
-                        controlId="exampleForm.ControlTextarea1"
-                      >
-                        <Form.Label>Details</Form.Label>
-                        <Form.Control as="textarea" rows={3} />
-                      </Form.Group>
-                      <Row>
-                        <Col md>
-                          <Form.Group
-                            className="create-time"
-                            controlId="formBasicPassword"
-                          >
-                            <Form.Label>Time Start</Form.Label>
-                            <Form.Control type="time" />
-                          </Form.Group>
-                        </Col>
-                        <Col md>
-                          <Form.Group
-                            className="create-time"
-                            controlId="formBasicPassword"
-                          >
-                            <Form.Label>Time End</Form.Label>
-                            <Form.Control type="time" />
-                          </Form.Group>
-                        </Col>
-                      </Row>
-                      <Button
-                        className="button123"
-                        variant="warning"
-                        href="/Events"
-                      >
+
+                  <Navbar variant="light" className="create-nav" bg="warning">
+                    <Container>
+                      <Navbar.Brand className="brand">
                         Create Event
-                      </Button>
-                    </Form>
-                  </Col>
+                      </Navbar.Brand>
+                    </Container>
+                  </Navbar>
+                  <br />
+
+                  <Form className="event-form mb-3">
+                    <Form.Group
+                      className="create-title"
+                      controlId="formBasicEmail"
+                    >
+                      <Form.Label>Title</Form.Label>
+                      <Form.Control type="text" />
+                    </Form.Group>
+                    <Form.Group
+                      className="create-date"
+                      controlId="formBasicPassword"
+                    >
+                      <Form.Label>Date</Form.Label>
+                      <Form.Control type="date" />
+                    </Form.Group>
+                    <Form.Group
+                      className="create-details"
+                      controlId="exampleForm.ControlTextarea1"
+                    >
+                      <Form.Label>Details</Form.Label>
+                      <Form.Control as="textarea" rows={3} />
+                    </Form.Group>
+                    <Row>
+                      <Col md>
+                        <Form.Group
+                          className="create-time"
+                          controlId="formBasicPassword"
+                        >
+                          <Form.Label>Time Start</Form.Label>
+                          <Form.Control type="time" />
+                        </Form.Group>
+                      </Col>
+                      <Col md>
+                        <Form.Group
+                          className="create-time"
+                          controlId="formBasicPassword"
+                        >
+                          <Form.Label>Time End</Form.Label>
+                          <Form.Control type="time" />
+                        </Form.Group>
+                      </Col>
+                    </Row>
+                    <Button
+                      className="button123"
+                      variant="warning"
+                      href="/Events"
+                    >
+                      Create Event
+                    </Button>
+                  </Form>
                 </Modal>
               </div>
             </Col>

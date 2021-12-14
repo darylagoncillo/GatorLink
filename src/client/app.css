@@ -40,7 +40,6 @@ a {
   margin-left: 45;
 }
 
-
 .Registration {
   background-color: white;
   margin-top: 150px;
@@ -59,15 +58,19 @@ a {
     background-color: #8a2be2 !important;
   }
   .desktop-only {
-    display: none;
+    display: none !important;
   }
   .button-row {
     padding: 10px;
   }
-  body {
+  .body {
+    padding-left: 10px;
+    padding-right: -10px;
+
     width: 100% !important;
   }
   .content {
+    width: 100% !important;
   }
   .page-content {
     width: 100% !important;
@@ -91,16 +94,23 @@ a {
 
   .create-modal {
     position: absolute;
-    top: 15vh;
-    left: 7vw;
-    right: 7vw;
-    bottom: 15vh;
-    background-color: White;
+    top: 2vh;
+    left: 2vw;
+    right: 2vw;
+    bottom: 6vh;
+
     border: 1px solid black;
     border-color: black;
+    background-color: wheat;
     border-width: 0px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  .event-form {
+    padding-left: 20px;
+
+    padding-right: 20px;
   }
 
   .create-group-modal {
@@ -122,9 +132,21 @@ a {
     margin-left: auto;
     margin-right: auto;
   }
+  .create-date {
+    width: 50%;
+  }
+
+  .exit-modal {
+    padding-top: 10px;
+    padding-left: 20px;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
+  .event-form {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
   .chat-nav {
     padding-right: 5px;
     border: 2px solid black;
@@ -182,7 +204,8 @@ a {
     left: 25vw;
     right: 25vw;
     bottom: 20vh;
-    background-color: White;
+
+    background-color: wheat;
     border: 1px solid black;
     border-color: black;
     border-width: 0px;
@@ -202,5 +225,13 @@ a {
     border-width: 0px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
+  }
+  .create-date {
+    width: 25%;
+  }
+
+  .create-nav {
+    height: 70px;
+    border-radius: 10px 10px 0px 0px;
   }
 }

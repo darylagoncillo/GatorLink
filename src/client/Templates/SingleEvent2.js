@@ -22,7 +22,7 @@ import Navigation from "../Components/Navigation";
 import data from "../../../event-data.json";
 import "react-toastify/dist/ReactToastify.css";
 
-export default class Event extends Component {
+export default class Event2 extends Component {
   constructor(props) {
     super(props);
 
@@ -118,8 +118,8 @@ export default class Event extends Component {
                 <Col>
                   <Row>
                     <Col md="6">
-                      <br />
                       <Card style={{ width: "100%" }}>
+                        <Card.Header />
                         <Card.Img
                           variant="top"
                           src="/EventPictures/img-1.jpg"
@@ -157,22 +157,11 @@ export default class Event extends Component {
                       <br />
                       <Card
                         className="single-mutuals"
-                        style={{ width: "100%" }}
+                        style={{ width: "18rem" }}
                       >
                         <Card.Header>More Information</Card.Header>
                         <ListGroup variant="flush">
-                          <ListGroup.Item>
-                            Host:
-                            {"   "}
-                            <Button
-                              variant="warning"
-                              onClick={() => {
-                                this.props.history.push("/Group2");
-                              }}
-                            >
-                              SFSU Athletics
-                            </Button>
-                          </ListGroup.Item>
+                          <ListGroup.Item>Host: SFSU Athletics</ListGroup.Item>
                           <ListGroup.Item>
                             Time: 12:00PM - 5:00PM{" "}
                           </ListGroup.Item>
@@ -185,7 +174,7 @@ export default class Event extends Component {
                       <br />
                       <Card
                         className="single-mutuals"
-                        style={{ width: "100%" }}
+                        style={{ width: "18rem" }}
                       >
                         <Card.Header>People You Know</Card.Header>
                         <ListGroup variant="flush">

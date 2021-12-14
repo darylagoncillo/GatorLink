@@ -20,10 +20,10 @@ import "../Components/ProfileEditor.css";
 import Modal from "react-modal";
 import { BsFillPersonBadgeFill, BsFillShieldFill } from "react-icons/bs";
 import { AiFillBell } from "react-icons/ai";
+
 import { ToastContainer, toast } from "react-toastify";
 import Navigation from "../Components/Navigation";
 import profilePicture from "../../images/profile-img.jpg";
-
 import "react-toastify/dist/ReactToastify.css";
 
 export default class ProfileEditor extends Component {

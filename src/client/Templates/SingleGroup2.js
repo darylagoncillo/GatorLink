@@ -61,7 +61,7 @@ const user = {
   uid: "user1",
 };
 
-export default class Group extends Component {
+export default class Group2 extends Component {
   constructor(props) {
     super(props);
 

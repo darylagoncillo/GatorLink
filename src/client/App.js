@@ -7,6 +7,7 @@ import Events from "./Templates/Events";
 import Groups from "./Templates/Groups";
 import ProfileEditor from "./Templates/ProfileEditor";
 import Event from "./Templates/SingleEvent";
+import Event2 from "./Templates/SingleEvent2";
 import Search from "./Templates/Search";
 import Login from "./Templates/Login";
 import Registration from "./Templates/Registration";
@@ -15,6 +16,7 @@ import Questionnaire2 from "./Templates/Questionnaire2";
 import Questionnaire3 from "./Templates/Questionnaire3";
 import Questionnaire4 from "./Templates/Questionnaire4";
 import Group from "./Templates/SingleGroup";
+import Group2 from "./Templates/SingleGroup2";
 import Footer from "./Components/Footer";
 
 export default class Routing extends Component {
@@ -32,10 +34,14 @@ export default class Routing extends Component {
         />
 
         <Route component={Events} path="/Events" />
+        <Route component={Event} path="/Event" />
+        <Route component={Event2} path="/Event2" />
+
         <Route component={Groups} path="/Groups" />
         <Route component={Group} path="/Group" />
+        <Route component={Group2} path="/Group2" />
         <Route component={ProfileEditor} path="/EditProfile" />
-        <Route component={Event} path="/Event" />
+
         <Route component={Search} path="/Search" />
         <Route component={Login} path="/Login" />
         <Route component={Registration} path="/Registration" />
