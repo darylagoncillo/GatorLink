@@ -13,8 +13,15 @@ export default class Registration extends Component {
       time: "6:48 pm",
       show: true,
     };
+
+    // onSubmit(event => {
+    //    username = event.target.username,
+    //    password = event.target.password
+    // })
+
   }
 
+  
   render() {
     return (
       <div className="body">
@@ -23,3 +30,6 @@ export default class Registration extends Component {
     );
   }
 }
+
+
+
