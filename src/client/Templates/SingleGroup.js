@@ -21,9 +21,9 @@ import { RiArrowGoBackLine } from "react-icons/ri";
 import { AiFillPushpin } from "react-icons/ai";
 import Navigation from "../Components/Navigation";
 import data from "../../../group-data.json";
+import data2 from "../../../name-data.json";
+import CardItem from "../Components/UserCard";
 
-import CardItem from "../Components/EventCard";
-import GroupSidebar from "../Components/GroupSidebar";
 import { retrieveCookie } from "../Components/Cookies";
 
 export default class Group extends Component {
@@ -32,6 +32,7 @@ export default class Group extends Component {
 
     this.state = {
       groups: data.Groups,
+      names: data2,
       newGroupModal: false,
       selectedCategory: null,
     };
@@ -39,6 +40,7 @@ export default class Group extends Component {
     this.toggleCreateModal = this.toggleCreateModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
+    this.renderUsers = this.renderUsers.bind(this);
   }
 
   toggleCreateModal() {
@@ -69,6 +71,27 @@ export default class Group extends Component {
     }
     this.setState({
       selectedCategory: category,
+    });
+  }
+
+  renderUsers() {
+    let count = 0;
+    return this.state.names.map((item) => {
+      if (
+        (this.state.selectedCategory === null ||
+          this.state.selectedCategory === item.category) &&
+        count < 12
+      ) {
+        count++;
+        return (
+          <Col md="3">
+            <CardItem
+              src="http://localhost:3000/Icons/user.jpg"
+              text={item.name}
+            />
+          </Col>
+        );
+      }
     });
   }
 
@@ -156,7 +179,7 @@ export default class Group extends Component {
                     >
                       <Row>
                         <Col sm={3}>
-                          <Nav variant="pills" className="flex-column">
+                          <Nav variant="pills" className="flex-column chat-nav">
                             <Nav.Item>
                               <Nav.Link eventKey="first">
                                 <AiFillPushpin /> Introductions
@@ -193,7 +216,7 @@ export default class Group extends Component {
                     title="Members"
                     disabled={!retrieveCookie()}
                   >
-                    here
+                    <Row>{this.renderUsers()}</Row>
                   </Tab>
                 </Tabs>
               </div>
