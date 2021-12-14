@@ -13,15 +13,12 @@ import {
   Tab,
   Tabs,
   Image,
-  InputGroup
+  InputGroup,
 } from "react-bootstrap";
 import React, { Component } from "react";
 import "../Components/ProfileEditor.css";
 import Modal from "react-modal";
-import {
-  BsFillPersonBadgeFill,
-  BsFillShieldFill,
-} from "react-icons/bs";
+import { BsFillPersonBadgeFill, BsFillShieldFill } from "react-icons/bs";
 import { AiFillBell } from "react-icons/ai";
 import Navigation from "../Components/Navigation";
 import profilePicture from "../../images/profile-img.jpg";
@@ -82,7 +79,10 @@ export default class ProfileEditor extends Component {
                           <Form>
                             <Row className="align-items-center">
                               <Col xs="auto">
-                                <Form.Label htmlFor="inlineFormInput" visuallyHidden>
+                                <Form.Label
+                                  htmlFor="inlineFormInput"
+                                  visuallyHidden
+                                >
                                   First Name
                                 </Form.Label>
                                 <Form.Control
@@ -92,7 +92,10 @@ export default class ProfileEditor extends Component {
                                 />
                               </Col>
                               <Col xs="auto">
-                                <Form.Label htmlFor="inlineFormInput" visuallyHidden>
+                                <Form.Label
+                                  htmlFor="inlineFormInput"
+                                  visuallyHidden
+                                >
                                   Last Name
                                 </Form.Label>
                                 <Form.Control
@@ -102,27 +105,39 @@ export default class ProfileEditor extends Component {
                                 />
                               </Col>
                               <Col xs="auto">
-                                <Form.Label htmlFor="inlineFormInputGroup" visuallyHidden>
+                                <Form.Label
+                                  htmlFor="inlineFormInputGroup"
+                                  visuallyHidden
+                                >
                                   Username
                                 </Form.Label>
                                 <InputGroup className="mb-2">
                                   <InputGroup.Text>@</InputGroup.Text>
-                                  <FormControl id="inlineFormInputGroup" placeholder="Username" />
+                                  <FormControl
+                                    id="inlineFormInputGroup"
+                                    placeholder="Username"
+                                  />
                                 </InputGroup>
                               </Col>
                             </Row>
-                            <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                            <Form.Group
+                              className="mb-3"
+                              controlId="exampleForm.ControlTextarea1"
+                            >
                               <Form.Label>About Me</Form.Label>
                               <Form.Control as="textarea" rows={3} />
                             </Form.Group>
-                            <button type="button" class="btn btn-primary float-right">Save</button>
+                            <button
+                              type="button"
+                              className="btn btn-primary float-right"
+                            >
+                              Save
+                            </button>
                           </Form>
                         </Tab.Pane>
 
                         <Tab.Pane eventKey="second">
-                          <Navbar.Brand>
-                            Notifications
-                          </Navbar.Brand>
+                          <Navbar.Brand>Notifications</Navbar.Brand>
                           <Col>
                             <h6>Comments</h6>
                             <Form>
@@ -214,15 +229,12 @@ export default class ProfileEditor extends Component {
                                 label="SMS"
                               />
                             </Form>
-                            <br></br>
+                            <br />
                           </Col>
-
                         </Tab.Pane>
 
                         <Tab.Pane eventKey="third">
-                          <Navbar.Brand>
-                            Privacy
-                          </Navbar.Brand>
+                          <Navbar.Brand>Privacy</Navbar.Brand>
                           <Col>
                             <h6>1. Choose who you want to see your posts</h6>
                             <Form>
@@ -273,7 +285,7 @@ export default class ProfileEditor extends Component {
                                 label="Mutual Friends"
                               />
                             </Form>
-                            <br></br>
+                            <br />
                           </Col>
                         </Tab.Pane>
                       </Tab.Content>

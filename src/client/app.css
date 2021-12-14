@@ -4,15 +4,19 @@
 }
 
 .login {
-  background-color: #C59CD9;
+  background-color: #c59cd9;
   margin-bottom: 20px;
   margin-top: 300px;
   margin-right: 700px;
   margin-left: 700px;
 }
 
-
 @media only screen and (max-width: 999px) {
+  body {
+    width: 100% !important;
+  }
+  .content {
+  }
   .page-content {
     width: 100% !important;
   }
@@ -28,7 +32,7 @@
     border-radius: 10px;
   }
   .sidebar {
-    height: auto;
+    height: 100% !important;
     border: 1px solid black;
     border-color: black;
     border-width: 0px;
@@ -49,11 +53,22 @@
     border-radius: 10px;
     box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
   }
+  .mobile-row {
+    width: 100vw !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
   .page-content {
     width: 80% !important;
+  }
+
+  .single-group {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
   }
 
   .content {

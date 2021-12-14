@@ -13,6 +13,7 @@ import "./components.css";
 import Select from "react-select";
 import data from "../../../event-data.json";
 import data2 from "../../../group-data.json";
+import { saveCookie, retrieveCookie, deleteCookie } from "./Cookies";
 
 const events = [];
 data.Events.map((item) => {
@@ -42,8 +43,10 @@ class Navigation extends Component {
     this.state = {
       searchValue: "",
       menuOpen: false,
+      isLoggedIn: retrieveCookie("test"),
     };
     this.search = this.search.bind(this);
+    this.renderTabs = this.renderTabs.bind(this);
   }
 
   search() {
@@ -65,11 +68,52 @@ class Navigation extends Component {
     }
   };
 
+  refreshPage() {
+    window.location.reload(false);
+  }
+
+  renderTabs() {
+    if (this.state.isLoggedIn) {
+      return (
+        <Nav className="ml-auto">
+          <NavDropdown title="Profile" id="basic-nav-dropdown">
+            <NavDropdown.Item href="/EditProfile">
+              Edit Profile
+            </NavDropdown.Item>
+
+            <NavDropdown.Divider />
+            <NavDropdown.Item
+              onClick={() => {
+                deleteCookie("test");
+                this.refreshPage();
+              }}
+            >
+              Log Out
+            </NavDropdown.Item>
+          </NavDropdown>
+        </Nav>
+      );
+    } else {
+      return (
+        <Nav className="ml-auto">
+          <Nav.Link
+            onClick={() => {
+              saveCookie("test");
+              this.refreshPage();
+            }}
+          >
+            Log In
+          </Nav.Link>
+        </Nav>
+      );
+    }
+  }
+
   render() {
     const { location } = this.props;
     return (
       <div>
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="light" expand="lg" className="navbar">
           <Container>
             <Navbar.Brand href="/">GatorLink</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -97,18 +141,7 @@ class Navigation extends Component {
                   </Form>
                 </div>
               </Nav>
-              <Nav className="ml-auto">
-                <NavDropdown title="Profile" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="/EditProfile">
-                    Edit Profile
-                  </NavDropdown.Item>
-
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.4">
-                    Log Out
-                  </NavDropdown.Item>
-                </NavDropdown>
-              </Nav>
+              {this.renderTabs()}
             </Navbar.Collapse>
           </Container>
         </Navbar>
