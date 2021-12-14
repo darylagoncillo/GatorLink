@@ -11,6 +11,13 @@ a {
   color: black;
 }
 
+.Registration {
+  background-color: white;
+  margin-top: 150px;
+  margin-right: 700px;
+  margin-left: 700px;
+}
+
 @media only screen and (max-width: 999px) {
   .nav-link.active {
     padding-left: 12px;
@@ -289,115 +296,115 @@ a {
     height: 70px;
     border-radius: 10px 10px 0px 0px;
   }
-}
 
-/*
+  /*
     CSS underneath here contains css styling for login, register, all 4 questionnaires and the buttons/tags within them for Edreece
     as a heads up. Let me know if you need anything/clarification 
   */
 
-.login {
-  margin-bottom: 20px;
-  margin-top: 100px;
-  margin-right: 50px;
-  margin-left: 50px;
-  border: 1px solid black;
-  border-color: black;
-  border-width: 0px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
+  .login {
+    margin-bottom: 20px;
+    margin-top: 100px;
+    margin-right: 20%;
+    margin-left: 20%;
+    border: 1px solid black;
+    border-color: black;
+    border-width: 0px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  .SFSULoginH1 {
+    margin-left: 800px;
+  }
+
+  .LoginButton {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .NewGatorLink {
+    margin-left: 450px;
+  }
+
+  .signUp {
+    margin-left: 10px;
+    margin-bottom: 5px;
+  }
+
+  /* Register.js below Windows*/
+
+  .Registration {
+    background-color: white;
+    margin-top: 150px;
+    margin-right: 700px;
+    margin-left: 700px;
+    border: 1px solid black;
+    border-color: black;
+    border-width: 0px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  .AccountActivation {
+    margin-left: 50px;
+  }
+
+  .ActivateAccount {
+    margin-left: 25px;
+    margin-right: 75px;
+  }
+
+  .SFSULoginB {
+    margin-top: 80px;
+    width: 450px;
+    height: 50px;
+    font-weight: 900;
+  }
+
+  .TOSCheck {
+    margin-top: 50px;
+    margin-left: 45;
+    font-weight: 700;
+  }
+
+  .SFSUNEXT {
+    width: 450px;
+    margin-top: 180px;
+    margin-bottom: 20px;
+  }
+
+  .SFSUAccount {
+    width: 450px;
+    margin-bottom: 15px;
+  }
+
+  /* Register finished, on to questionnaire */
+
+  .Questionnaire {
+    margin-top: 50px;
+    border: 1px solid black;
+    border-color: black;
+    border-width: 0px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  .QuestionH2 {
+    margin-left: 750px;
+  }
+
+  .QuestionH5 {
+    margin-left: 685px;
+  }
+
+  .QuestionNEXT {
+    margin-left: 125px;
+    margin-bottom: 40px;
+  }
+
+  .QuestionSKIP {
+    margin-left: 250px;
+  }
+  /* Desktop for Login/Register/Questionnaires are finished */
 }
-
-.SFSULoginH1 {
-  margin-left: 800px;
-}
-
-.LoginButton {
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
-.NewGatorLink {
-  margin-left: 450px;
-}
-
-.signUp {
-  margin-left: 10px;
-  margin-bottom: 5px;
-}
-
-/* Register.js below Windows*/
-
-.Registration {
-  background-color: white;
-  margin-top: 150px;
-  margin-right: 700px;
-  margin-left: 700px;
-  border: 1px solid black;
-  border-color: black;
-  border-width: 0px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
-}
-
-.AccountActivation {
-  margin-left: 50px;
-}
-
-.ActivateAccount {
-  margin-left: 25px;
-  margin-right: 75px;
-}
-
-.SFSULoginB {
-  margin-top: 80px;
-  width: 450px;
-  height: 50px;
-  font-weight: 900;
-}
-
-.TOSCheck {
-  margin-top: 50px;
-  margin-left: 45;
-  font-weight: 700;
-}
-
-.SFSUNEXT {
-  width: 450px;
-  margin-top: 180px;
-  margin-bottom: 20px;
-}
-
-.SFSUAccount {
-  width: 450px;
-  margin-bottom: 15px;
-}
-
-/* Register finished, on to questionnaire */
-
-.Questionnaire {
-  margin-top: 50px;
-  border: 1px solid black;
-  border-color: black;
-  border-width: 0px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
-}
-
-.QuestionH2 {
-  margin-left: 750px;
-}
-
-.QuestionH5 {
-  margin-left: 685px;
-}
-
-.QuestionNEXT {
-  margin-left: 125px;
-  margin-bottom: 40px;
-}
-
-.QuestionSKIP {
-  margin-left: 250px;
-}
-/* Desktop for Login/Register/Questionnaires are finished */
