@@ -157,12 +157,47 @@ export default class Events extends Component {
                     <BsArrowLeft onClick={this.toggleCreateModal} />
                   </h4>
                   <Col>
-                    <Navbar className="create-nav" bg="lg">
+                    <Navbar className="create-nav" bg="warning">
                       <Container>
                         <Navbar.Brand className="brand">Create Event</Navbar.Brand>
                       </Container>
                     </Navbar>
                     <br />
+                  </Col>
+                  <Col>
+                    <Form>
+                      <Form.Group className="create-title" controlId="formBasicEmail">
+                        <Form.Label>Title</Form.Label>
+                        <Form.Control type="text" />
+                      </Form.Group>
+
+                      <Form.Group className="create-date" controlId="formBasicPassword">
+                        <Form.Label>Date</Form.Label>
+                        <Form.Control type="date" />
+                      </Form.Group>
+
+                      <Form.Group className="create-details" controlId="exampleForm.ControlTextarea1">
+                        <Form.Label>Details</Form.Label>
+                        <Form.Control as="textarea" rows={3} />
+                      </Form.Group>
+
+                      <Row>
+                        <Col md>
+                          <Form.Group className="create-time" controlId="formBasicPassword">
+                            <Form.Label>Time Start</Form.Label>
+                            <Form.Control type="time" />
+                          </Form.Group>
+                        </Col>
+                        <Col md>
+                          <Form.Group className="create-time" controlId="formBasicPassword">
+                            <Form.Label>Time End</Form.Label>
+                            <Form.Control type="time" />
+                          </Form.Group>
+                        </Col>
+                      </Row>
+                      <Button className="button123" variant="secondary"
+                      href="/Events">Create</Button>{' '}
+                    </Form>
                   </Col>
                 </Modal>
               </div>

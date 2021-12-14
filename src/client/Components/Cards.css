@@ -6,9 +6,29 @@
 .create-nav {
   background-color: #cf9fff;
 }
-
 .brand {
-  font-family: "Lucida Console", "Courier New", monospace;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+.create-title {
+  width: 75%;
+}
+
+.create-date {
+  width: 25%;
+}
+
+.create-details {
+  width: 80%;
+}
+
+.create-time {
+  width: 50%;
+}
+
+.button123 {
+  float: right;
 }
 
 .create-event {
