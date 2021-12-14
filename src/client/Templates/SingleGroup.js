@@ -107,10 +107,9 @@ export default class Group extends Component {
                           />
                           <Card.Body>
                             <Card.Title>SFSU Cinema Club</Card.Title>
-                            <p>
-                              A space to talk about films or chat with others
-                              about related topics.
-                            </p>
+                            <p>Created : 12/14/21</p>
+                            <p>Created by : Jose Castanon</p>
+                            <p>Members : 1</p>
                           </Card.Body>
                         </Card>
                       </Col>
@@ -138,11 +137,8 @@ export default class Group extends Component {
                       <Col md="4">
                         <Card style={{ width: "100%" }}>
                           <Card.Body>
-                            <Card.Title>SFSU Cinema Club</Card.Title>
-                            <p>
-                              A space to talk about films or chat with others
-                              about related topics.
-                            </p>
+                            <Card.Title>Upcoming Events</Card.Title>
+                            <p>No upcoming events.</p>
                           </Card.Body>
                         </Card>
                       </Col>
