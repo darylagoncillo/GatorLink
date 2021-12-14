@@ -15,6 +15,7 @@ import Questionnaire2 from "./Templates/Questionnaire2";
 import Questionnaire3 from "./Templates/Questionnaire3";
 import Questionnaire4 from "./Templates/Questionnaire4";
 import Group from "./Templates/SingleGroup";
+import Footer from "./Components/Footer";
 
 export default class Routing extends Component {
   constructor(props) {
