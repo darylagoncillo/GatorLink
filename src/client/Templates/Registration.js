@@ -1,5 +1,6 @@
 import { Button, Container, Row, Col, Form,  } from "react-bootstrap";
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import Navigation from "../Components/Navigation";
 import Banners from "../Components/HeroContainer";
@@ -33,6 +34,7 @@ export default class Questionnaire extends Component {
             <Form.Check type="checkbox" label="I accept GatorLink's Terms of Service and Privacy Policy" />
           </Form.Group>
           
+          <Link to="/Questionnaire1">
           <Button
           className="SFSUNEXT"
           variant="warning"
@@ -41,7 +43,9 @@ export default class Questionnaire extends Component {
           >
             Next
           </Button>
+          </Link>
 
+          <Link to="/Login">
           <Button
           className="SFSUAccount"
           variant="secondary"
@@ -50,8 +54,9 @@ export default class Questionnaire extends Component {
           >
             Already have an account? Log In
           </Button>
+          </Link>
         </Container>
-
+        
         
       </div>
     );

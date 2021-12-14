@@ -1,5 +1,6 @@
 import { Button, Container, Row, Col, Form, FormControl} from "react-bootstrap";
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 
 import Navigation from "../Components/Navigation";
@@ -48,7 +49,7 @@ export default class Login extends Component {
                 value={this.state.password}
                 onChange={(e) => setPassword(e.target.value)}
                 />
-                <a href="/Registration">Forgot your Password?</a>
+                <Link to="/Registration">Forgot your password?</Link>
               </Form.Group>
           
               <Row>
@@ -59,10 +60,13 @@ export default class Login extends Component {
                   <Button variant="warning" block size="lg" type="submit">Login</Button>
                 </Col>
               </Row>
-              <p>
-                New to GatorLink?
-                <Button variant="secondary" size = "sm" type="submit">Sign Up</Button>
-              </p> 
+
+              <Link to="/Registration">
+                <p>
+                  New to GatorLink?
+                  <Button variant="secondary" size = "sm" type="submit">Sign Up</Button>
+                </p> 
+              </Link>
             </Container>
           </Form>
         </div>
