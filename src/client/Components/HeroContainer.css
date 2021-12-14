@@ -187,6 +187,29 @@
   }
 }
 
+@media screen and (max-width: 1024px),
+screen and (max-height: 1100px ) {
+  .text-wrapper > h1 {
+    font-size: 70px;
+    margin-top: -150px;
+    text-align: center;
+  }
+
+  .text-wrapper > p {
+    font-size: 35px;
+    margin-top: -5px;
+    text-align: center;
+  }
+
+  .banner-2 {
+    margin-top: -55px;
+  }
+
+  .square-4{
+    margin-top: 150px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .text-wrapper > h1 {
     font-size: 55px;
@@ -214,6 +237,14 @@
 
   .square-1 > p{
     font-size: 25px;
+  }
+
+  .button-1{
+    width: 150px;
+  }
+
+  .button-2{
+    width: 150px;
   }
 }
 

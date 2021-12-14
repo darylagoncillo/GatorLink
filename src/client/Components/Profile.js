@@ -29,7 +29,10 @@ function SearchResults(props) {
                 <div className="event-sidebar" />
                 <div className="box-1">
                   <h5>
-                    Profile <img className="edit-icon" src={editIcon}></img>
+                    Profile
+                    <a href="/EditProfile">
+                      <img className="edit-icon" src={editIcon}></img>
+                    </a>
                   </h5>
                   <div className="list-group">
                     <Card className="text-center-1">
@@ -85,8 +88,13 @@ function SearchResults(props) {
             <Col md="9" sm="12" xs="12">
               <Navbar bg="light" expand="lg">
                 <Container>
-                  <Navbar.Brand href="/">Groups</Navbar.Brand>
-                  <Button className="eventButton">Find Groups</Button>
+                  <Navbar.Brand href="/">Events</Navbar.Brand>
+                  <Button
+                    className="eventButton"
+                    onClick={() => props.history.push("/Event/1")}
+                  >
+                    More Events
+                  </Button>
                   <Navbar.Toggle aria-controls="basic-navbar-nav" />
                   <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto" />
@@ -240,7 +248,7 @@ function SearchResults(props) {
           </Row>
         </Container>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

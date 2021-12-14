@@ -115,16 +115,16 @@ function HeroContainer(props) {
               <Col
                 className="square-2"
                 sm={12}
-                lg={6}
-                className="d-md-block d-sm-none"
+                md={6}
+                // className="d-md-block d-sm-none"
               ></Col>
             </Row>
             <Row md={2} className="row-2">
               <Col
                 className="square-3"
                 sm={12}
-                lg={6}
-                className="d-md-block d-sm-none"
+                md={6}
+                // className="d-md-block d-xs-none"
               ></Col>
 
               <Col className="square-4">
