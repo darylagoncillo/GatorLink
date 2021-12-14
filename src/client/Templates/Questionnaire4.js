@@ -23,7 +23,7 @@ export default class Questionnaire4 extends Component {
 
   render() {
     return (
-      <div className="Questionnaire1">
+      <div className="Questionnaire4">
         <h1>Account Successfully Activated!</h1>
         <br />
         <h4>Please click continue below to be redirected to your account.</h4>
