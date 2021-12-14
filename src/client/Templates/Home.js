@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import Navigation from "../Components/Navigation";
 import Banners from "../Components/HeroContainer";
 import Profile from "../Components/Profile";
+import { retrieveCookie } from "../Components/Cookies";
 
 export default class Home extends Component {
   constructor(props) {
@@ -15,12 +16,19 @@ export default class Home extends Component {
     };
   }
 
+  home() {
+    if (retrieveCookie()) {
+      return <Profile history={this.props.history} />;
+    }
+
+    return <Banners />;
+  }
+
   render() {
     return (
       <div className="body">
         <Navigation />
-        {/* <Banners/>    */}
-        <Profile history={this.props.history} />
+        {this.home()}
       </div>
     );
   }

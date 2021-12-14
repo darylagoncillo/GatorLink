@@ -85,7 +85,7 @@ class Navigation extends Component {
             <NavDropdown.Item
               onClick={() => {
                 deleteCookie("test");
-                this.refreshPage();
+                this.props.history.push("/");
               }}
             >
               Log Out
