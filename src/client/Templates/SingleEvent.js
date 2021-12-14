@@ -18,6 +18,8 @@ import "../Components/SingleEvent.css";
 import { RiArrowGoBackLine } from "react-icons/ri";
 import Navigation from "../Components/Navigation";
 import data from "../../../event-data.json";
+import { GrAccessibility } from "react-icons/gr";
+
 
 export default class Event extends Component {
   constructor(props) {
@@ -96,7 +98,7 @@ export default class Event extends Component {
               </Button>
 
               <div className="content">
-                <Col xs={5} md={5}>
+                <Col md="6">
                   <Card style={{ width: "18rem" }}>
                     <Card.Header />
                     <Card.Img variant="top" src="/EventPictures/img-1.jpg" />
@@ -115,8 +117,10 @@ export default class Event extends Component {
                   <row>
                     <p />
                   </row>
+                </Col>
+                <Col md="6">
                   <Card className="single-mutuals" style={{ width: "18rem" }}>
-                    <Card.Header>Mutuals</Card.Header>
+                    <Card.Header><GrAccessibility /> Mutuals</Card.Header>
                     <ListGroup variant="flush">
                       <ListGroup.Item>32 Going</ListGroup.Item>
                       <ListGroup.Item>23 Interested</ListGroup.Item>
@@ -126,8 +130,8 @@ export default class Event extends Component {
                 </Col>
                 <Row className="justify-content-md-end">
                   <Col md="4" className="rsvp">
-                    <Button variant="warning">Not Interested</Button>{" "}
-                    <Button variant="warning">Going</Button>
+                    <Button variant="warning" href="/Events">Not Interested</Button>{" "}
+                    <Button variant="warning" href="/Events">Going</Button>
                   </Col>
                 </Row>
                 <br />

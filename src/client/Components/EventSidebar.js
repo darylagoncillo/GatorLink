@@ -50,27 +50,10 @@ function RenderCategories(categories, selectCategory) {
 function EventSidebar(props) {
   return (
     <>
-      <div className="sidebar">
-        <ListGroup defaultActiveKey="#link1">
-          <ListGroup.Item action href="/Events">
-            Home
-          </ListGroup.Item>
-        </ListGroup>
-        <ListGroup defaultActiveKey="#link2">
-          <ListGroup.Item action href="/Events">
-            Birthdays
-          </ListGroup.Item>
-        </ListGroup>
-        <ListGroup defaultActiveKey="#link2">
-          <ListGroup.Item action href="/Events">
-            Notifications
-          </ListGroup.Item>
-        </ListGroup>
-
-
-        
+      <div className="event-side-border">
         <div className="eventSidebar">
-        <h6 className= "event-sidebar">Your Upcoming Events</h6>
+          <br />
+          <h6 className="your-upcoming-events">Your Upcoming Events</h6>
           <p className="upcoming-title">THU, OCT 28 AT 12PM PST BASKETBALL INTRAMURAL PLAYOFFS</p>
           <h5 className="categories">Categories</h5>
         </div>

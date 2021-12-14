@@ -27,9 +27,16 @@
   }
 }
 
+.your-upcoming-events {
+  text-align: center;
+  margin-top: 1px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
 .event-sidebar {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 1px;
   margin-bottom: 5px;
   font-weight: 500;
 }
