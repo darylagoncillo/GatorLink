@@ -150,7 +150,7 @@ export default class Events extends Component {
                 <Button
                   className="create-event"
                   variant="warning"
-                  onClick={this.toggleCreateModal}
+                  onClick={this.sendToEvent}
                 >
                   Create an Event
                 </Button>
@@ -220,7 +220,7 @@ export default class Events extends Component {
                     <Button
                       className="button123"
                       variant="warning"
-                      href="/Events"
+                      href="/Event"
                     >
                       Create Event
                     </Button>

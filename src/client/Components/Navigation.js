@@ -77,7 +77,7 @@ class Navigation extends Component {
     if (this.state.isLoggedIn) {
       return (
         <Nav className="ml-auto" activeKey={location.pathname}>
-          <NavDropdown title="Profile" id="basic-nav-dropdown">
+          <NavDropdown title="Jane Doe" id="basic-nav-dropdown">
             <NavDropdown.Item href="/EditProfile">
               Edit Profile
             </NavDropdown.Item>
@@ -87,8 +87,8 @@ class Navigation extends Component {
               onClick={() => {
                 deleteCookie("test");
 
-                this.props.history.push("/");
                 this.refreshPage();
+                this.props.history.push("/");
               }}
             >
               Log Out
@@ -102,6 +102,7 @@ class Navigation extends Component {
           <Nav.Link
             onClick={() => {
               saveCookie("test");
+              window.open("https://inside.sfsu.edu/");
               this.refreshPage();
             }}
           >
