@@ -20,6 +20,7 @@ import Modal from "react-modal";
 import Navigation from "../Components/Navigation";
 import { retrieveCookie } from "../Components/Cookies";
 import data from "../../../group-data.json";
+import data2 from "../../../event-data.json";
 
 import CardItem from "../Components/GroupCard";
 import GroupSidebar from "../Components/GroupSidebar";
@@ -34,8 +35,14 @@ import {
 export default class Group extends Component {
   constructor(props) {
     super(props);
+    const categories = [];
+
+    data2.Events.forEach((element) => {
+      categories.push(element.category);
+    });
 
     this.state = {
+      categories,
       groups: data.Groups,
       newGroupModal: false,
       selectedCategory: null,
@@ -125,6 +132,8 @@ export default class Group extends Component {
             <Col md="3" sm="12" xs="12" className="sidebar">
               <div className="sidebar-contents">
                 <GroupSidebar
+                  selectedCategory={this.state.selectedCategory}
+                  categories={this.state.categories}
                   groups={this.state.groups}
                   selectCategory={this.selectCategory}
                 />

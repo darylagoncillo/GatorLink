@@ -87,64 +87,64 @@ export default class Profile extends Component {
     return (
       <div>
         <div className="body">
-          <div className="content-wrap">
+          <div className="event-side-border">
             <Container fluid className="page-content">
               <Row className="mega-row">
                 <Col md="3" sm="12" xs="12">
-                  <div className="sidebar">
-                    <div className="event-sidebar" />
-                    <div className="box-1">
-                      <h5>
-                        Profile
-                        <a href="/EditProfile">
-                          <img className="edit-icon" src={editIcon} />
-                        </a>
-                      </h5>
-                      <div className="list-group">
-                        <Card className="text-center-1">
-                          <Card.Body>
-                            <Card.Img
-                              className="profile-img"
-                              variant="top"
-                              src={profilePicture}
-                            />
-                            <p>Daniel Tarn</p>
-                            <Card.Text>
-                              Hey there! I am new to GatorLink and would love to make
-                              more friends on here.
-                            </Card.Text>
-                          </Card.Body>
-                        </Card>
-                      </div>
+                  <div className="event-side-border ">
+                    <div className="eventSidebar">
                       <div className="box-1">
-                        <h5>Social Media Handles</h5>
-                      </div>
+                        <div className="list-group  sidebar-contents">
+                          <Card className="text-center-1">
+                            <Card.Body>
+                              <h5>
+                                Profile
+                                <a href="/EditProfile">
+                                  <img className="edit-icon" src={editIcon} />
+                                </a>
+                              </h5>
+                              <Card.Img
+                                className="profile-img"
+                                src={profilePicture}
+                              />
+                              <p>Daniel Tarn</p>
+                              <Card.Text>
+                                Hey there! I am new to GatorLink and would love
+                                to make more friends on here.
+                              </Card.Text>
+                            </Card.Body>
+                          </Card>
+                        </div>
+                        <br></br>
+                        <div className="list-group sidebar-contents">
+                          <Card className="card-2">
+                            <div className="box-1">
+                              <h5>{"  "}Social Media Handles</h5>
+                            </div>
+                            <a
+                              href="/Events"
+                              data-rb-event-key="/Events"
+                              className="list-group-item list-group-item-action"
+                            >
+                              Twitter
+                            </a>
+                            <a
+                              href="/Groups"
+                              data-rb-event-key="/Groups"
+                              className="list-group-item list-group-item-action"
+                            >
+                              Instagram
+                            </a>
 
-                      <div className="list-group">
-                        <Card className="card-2">
-                          <a
-                            href="/Events"
-                            data-rb-event-key="/Events"
-                            className="list-group-item list-group-item-action"
-                          >
-                            Twitter
-                          </a>
-                          <a
-                            href="/Groups"
-                            data-rb-event-key="/Groups"
-                            className="list-group-item list-group-item-action"
-                          >
-                            Instagram
-                          </a>
-
-                          <a
-                            href="/Events"
-                            data-rb-event-key="/Events"
-                            className="list-group-item list-group-item-action"
-                          >
-                            Snapchat
-                          </a>
-                        </Card>
+                            <a
+                              href="/Events"
+                              data-rb-event-key="/Events"
+                              className="list-group-item list-group-item-action"
+                            >
+                              Snapchat
+                            </a>
+                          </Card>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -190,7 +190,6 @@ export default class Profile extends Component {
             </Container>
           </div>
         </div>
-
       </div>
     );
   }

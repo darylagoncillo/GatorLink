@@ -44,11 +44,7 @@ function HeroContainer(props) {
               <div className="col-sm-4">
                 <Card className="text-center">
                   <Card.Body>
-                    <Card.Img
-                      className="card-img"
-                      variant="top"
-                      src={eventIcon}
-                    />
+                    <Card.Img className="card-img" src={eventIcon} />
                     <p className="card-titles">Events</p>
                     <Card.Text>
                       Hundreds of events are posted on the daily by SFSU
