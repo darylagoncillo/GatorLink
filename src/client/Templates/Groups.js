@@ -24,6 +24,7 @@ import data2 from "../../../event-data.json";
 
 import CardItem from "../Components/GroupCard";
 import GroupSidebar from "../Components/GroupSidebar";
+
 import {
   BsArrowLeft,
   BsThreeDotsVertical,

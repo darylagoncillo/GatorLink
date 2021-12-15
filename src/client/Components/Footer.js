@@ -31,6 +31,17 @@ function Footer(props) {
             <a href="/Events">Events</a> | <a href="/Groups">Groups</a>
           </p>
 
+          <div className="icon-link">
+            Icons made by{" "}
+            <a href="https://www.flaticon.com/authors/fliqqer" title="Fliqqer">
+              Fliqqer
+            </a>{" "}
+            from{" "}
+            <a href="https://www.flaticon.com/" title="Flaticon">
+              www.flaticon.com
+            </a>
+          </div>
+
           <p class="footer-team-name">
             © 2021 CSC 656 Team 3 | All rights reserved | Terms of Service{" "}
           </p>
