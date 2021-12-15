@@ -150,7 +150,7 @@ export default class Events extends Component {
                 <Button
                   className="create-event"
                   variant="warning"
-                  onClick={this.sendToEvent}
+                  onClick={() => this.toggleCreateModal()}
                 >
                   Create an Event
                 </Button>
